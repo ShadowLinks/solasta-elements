@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="solasta.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/solasta.xml" />
+		</update>
+	</info>
+    <element name="Academic" type="Background" source="Solasta" id="ID_SOLASTA_BACKGROUND_ACADEMIC">
+        <description>
+            <p>You had two passions growing up: history and magic. Your teachers saw your interest in all things old and magical, and ensured that your potential was nurtured. Your mission in life is to discover the secrets of the past, both magical and mundane – and you are ready to risk your life in the pursuit of discovery. You knew of the Guild of Antiquarians, of course, but you wanted more from life than being stuck in a library all day. So, you took your backpack and set out to discover the wonders of Solasta for yourself.</p>
+            <p class="indent"></p>
+            <ul class="unstyled">
+                <li><strong>Skill Proficiencies:</strong> Arcana, Nature, Insight</li>
+                <li><strong>Tool Proficiencies:</strong> </li>
+                <li><strong>Languages:</strong> 2 of your choice</li>
+                <li><strong>Equipment:</strong> Common clothes, a notebook to keep track of your adventures, 25 gp.</li>
+            </ul>
+            <div element="ID_SOLASTA_BACKGROUND_FEATURE_RUNAWAY_SCHOLAR" />
+            <h5>SUGGESTED CHARACTERISTICS</h5>
+            <p>Academics are shaped by what they read and the teachers with whom they study. Their interests and researches affect their reactions and mannerisms. Their flaws can be some fringe idea taken to an extreme, or a trait that is harmless in the sheltered world of academia but can cause problems elsewhere.</p>
+        </description>
+        <setters>
+            <set name="short">Arcana, Nature, Insight, and 2 languages</set>
+        </setters>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_NATURE" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
+            <select type="Language" name="Language, Academi" number="2" supports="Standard||Exotic" />
+            <grant type="Background Feature" id="ID_SOLASTA_BACKGROUND_FEATURE_RUNAWAY_SCHOLAR" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+            <select type="List" name="Personality Trait" number="2">
+                <item id="1">A book is an irresistible distraction for me.</item>
+                <item id="2">I quote academic texts in every possible situation. An unsupported assertion is suspect.</item>
+                <item id="3">I take a long time to think before speaking, making sure I have considered every angle.</item>
+                <item id="4">I am tolerant (or intolerant) of other fields of study and respect (or dismiss) those who study them.</item>
+                <item id="5">I am competitive, and often challenge others to tests of knowledge.</item>
+                <item id="6">I am fiercely loyal to my alma mater, and will defend its honor at all costs.</item>
+                <item id="7">I dislike the so-called ‘real world’, preferring a secluded life of the mind.</item>
+                <item id="8">I know no fear, for my thirst for discovery overrides all other considerations.</item>
+            </select>
+            <select type="List" name="Ideal">
+                <item id="1">Knowledge. Everything is knowledge, and knowledge is everything.</item>
+                <item id="2">Education. Knowledge is useless unless it is shared.</item>
+                <item id="3">Prestige. I am determined to be the most respected scholar in my – or any – field.</item>
+                <item id="4">Power. Knowledge is power, and power belongs in the hands of the educated.</item>
+                <item id="5">Progress. Increased knowledge improves life for everyone, even if practical applications are not immediately apparent.</item>
+                <item id="6">Loyalty. I am the first in my family to become an academic, and I am determined to make them proud.</item>
+            </select>
+            <select type="List" name="Bond">
+                <item id="1">I have an academic rival whom I am determined to surpass.</item>
+                <item id="2">There is a particular mystery blocking progress in my field of study, and I am determined to be the one who solves it.</item>
+                <item id="3">My teachers and fellow students looked down on me for some reason, and I will have my revenge.</item>
+                <item id="4">Everything I learn is to help improve life for everyone – not just other academics.</item>
+                <item id="5">My mentor died before cracking a particular problem, and I will solve it in his or her honor.</item>
+                <item id="6">My particular field of study is considered foolish by mainstream academics, but I will prove them wrong.</item>
+            </select>
+            <select type="List" name="Flaw">
+                <item id="1">I am not interested in anything outside my own narrow research field.</item>
+                <item id="2">I am absent-minded, and hopeless at day-to-day tasks.</item>
+                <item id="3">I find non-academics puzzling, and have difficulty dealing with them.</item>
+                <item id="4">I have an unthinking habit of correcting errors in others’ grammar and thinking.</item>
+                <item id="5">I question everything I am told, and must find the truth through logical inquiry.</item>
+                <item id="6">My devotion to my studies means I know far less than the average person about anything outside my field.</item>
+            </select>
+        </rules>
+    </element>
+    <element name="Feature: Runaway Scholar" type="Background Feature" source="Solasta" id="ID_SOLASTA_BACKGROUND_FEATURE_RUNAWAY_SCHOLAR">
+        <description>
+            <p>You were once being considered for acceptance into a scholarly organization such as the Guild of Antiquarians, and had a mentor who sponsored you, but you decided not to enlist. You still have ties to the organization and to your former mentor. Relations could be friendly, or they might be strained because of your refusal.</p>
+        </description>
+        <sheet alt="Runaway Scholar">
+            <description>You were once being considered for acceptance into a scholarly organization such as the Guild of Antiquarians, and had a mentor who sponsored you, but you decided not to enlist. You still have ties to the organization and to your former mentor. Relations could be friendly, or they might be strained because of your refusal.</description>
+        </sheet>
+    </element>
+    <element name="Aristocrat" type="Background" source="Solasta" id="ID_SOLASTA_BACKGROUND_ARISTOCRAT">
+        <description>
+            <p>Born among the lords of your people, you have received a higher education. Your manners and speech are formal and rigid, and you have difficulties when dealing with low-ranking individuals. A life of privilege gave you enough perks to start your adventuring life with a comfortable package.</p>
+            <p class="indent"></p>
+            <ul class="unstyled">
+                <li><strong>Skill Proficiencies:</strong> History, Persuasion, Intimidation</li>
+                <li><strong>Tool Proficiencies:</strong> </li>
+                <li><strong>Languages:</strong> 2 of your choice</li>
+                <li><strong>Equipment:</strong> Fine clothes, a sigil ring of your family, 40 gp.</li>
+            </ul>
+            <div element="ID_SOLASTA_BACKGROUND_FEATURE_BLUE_BLOOD" />
+            <h5>SUGGESTED CHARACTERISTICS</h5>
+            <p>Raised in a life of wealth and privilege, aristocrats often have trouble adjusting to harsher realities. Their attitudes and mannerisms reflect this, and their flaws often revolve around the dissonance between the world they are used to and the world they encounter.</p>
+        </description>
+        <setters>
+            <set name="short">History, Persusion, Intimidation, and 2 languages</set>
+        </setters>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_HISTORY" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" />
+            <select type="Language" name="Language, Aristocrate" number="2" supports="Standard||Exotic" />
+            <grant type="Background Feature" id="ID_SOLASTA_BACKGROUND_FEATURE_BLUE_BLOOD" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+            <select type="List" name="Personality Trait" number="2">
+                <item id="1">I like the finer things in life, and will not accept food, drink, lodging, or anything else that is less than the very best.</item>
+                <item id="2">I treat the lower orders with kindness. They can’t help being poor, ignorant, and unable to help themselves.</item>
+                <item id="3">I have an unshakeable faith in my own quality to see me through any situation.</item>
+                <item id="4">My family is renowned and respected, but it can climb higher. I will see to it that it does.</item>
+                <item id="5">I find the lower orders a little threatening, and avoid them when I can.</item>
+                <item id="6">I find the lower orders interesting, and actively try to make their acquaintance.</item>
+                <item id="7">I know the aristocracy exists only as long as the social order is maintained, and try to avoid upsetting the balance of things.</item>
+                <item id="8">I live to be an example to others – especially the lower classes.</item>
+            </select>
+            <select type="List" name="Ideal">
+                <item id="1">Tradition. Society must remain as it is, despite what others may claim. Any deviation from tradition threatens to plunge society into chaos.</item>
+                <item id="2">Power. Power must remain in the hands of those who are best suited, by breeding and education, to wield it.</item>
+                <item id="3">Inherent Quality. Those born into the aristocracy are inherently superior to others in every way.</item>
+                <item id="4">Faith. The gods placed some mortals above others, and they did so for a reason.</item>
+                <item id="5">Charity. Just as a shepherd must care for the sheep, an aristocrat must take care of those less fortunate.</item>
+                <item id="6">Loyalty. Any word of deed that casts a blot on the family name is unforgivable.</item>
+            </select>
+            <select type="List" name="Bond">
+                <item id="1">My family disowned me for some trifling misdeed. I will have my revenge.</item>
+                <item id="2">My worthless brother stands to inherit everything, unless I can outshine him in some way that the family cannot ignore.</item>
+                <item id="3">My family has fallen on hard times, and I must rebuild its wealth, power, and prestige.</item>
+                <item id="4">I am devoted to a group of friends from my college days (or my military service), and act as though those days never ended.</item>
+                <item id="5">I will have justice from the political rivals who murdered my parents and cast my family down for their own gain.</item>
+                <item id="6">I am the last of my line. If it must go extinct with me, it will go out in a blaze of glory.</item>
+            </select>
+            <select type="List" name="Flaw">
+                <item id="1">I am a snob, and look down anyone who is not an aristocrat.</item>
+                <item id="2">I am competitive, and will try to best any fellow aristocrat in some way.</item>
+                <item id="3">I cannot resist good food and drink, and will binge to excess.</item>
+                <item id="4">My loyalty to my family (or my ambition) leads me to be too ruthless at some times and too trusting at others.</item>
+                <item id="5">I see others as expendable, especially if they are not aristocrats.</item>
+                <item id="6">My personal code of honor sometimes leads me to take unnecessary risks.</item>
+            </select>
+        </rules>
+    </element>
+    <element name="Feature: Blue Blood" type="Background Feature" source="Solasta" id="ID_SOLASTA_BACKGROUND_FEATURE_BLUE_BLOOD">
+        <description>
+            <p>People from the nobility recognize you as one of them. They may even know your family and title, which can be helpful in some situations.</p>
+        </description>
+        <sheet alt="Blue Blood">
+            <description>People from the nobility recognize you as one of them. They may even know your family and title, which can be helpful in some situations.</description>
+        </sheet>
+    </element>
+    <element name="Lawkeeper" type="Background" source="Solasta" id="ID_SOLASTA_BACKGROUND_LAWKEEPER">
+        <description>
+            <p>You have an instinct for spotting trouble and the force of personality to nip it in the bud. As a deputy, you learned how to spot a lie and how to discourage a troublemaker with nothing but a cold-eyed stare. And if keeping the peace and protecting the innocent required you to break a few heads, you were ready. After a while, though, dealing with petty criminals every day just wasn’t enough. You took what you had learned and embarked on a life of travel and discovery. The Marches and the Badlands have a whole different level of lawlessness – enough to keep you interested, you’re certain.</p>
+            <p class="indent"></p>
+            <ul class="unstyled">
+                <li><strong>Skill Proficiencies:</strong> Perception, Intimidation</li>
+                <li><strong>Weapon Proficiencies:</strong> Martial Weapons</li>
+                <li><strong>Languages:</strong> 1 of your choice</li>
+                <li><strong>Equipment:</strong> Common clothes, a lawkeeper’s badge from your home, 10 gp.</li>
+                <li><strong>Alighnment:</strong> Any non-chaotic</li>
+            </ul>
+            <div element="ID_SOLASTA_BACKGROUND_FEATURE_SHIELD_OF_THE_LAW" />
+            <h5>SUGGESTED CHARACTERISTICS</h5>
+            <p>Lawkeepers are shaped by their service in a city watch or other law enforcement organization, and their behavior is often based on their perception of circumstances in terms of crime and punishment. Their flaws are often traits that serve them well when pursuing and capturing criminals, but are less useful in other contexts.</p>
+        </description>
+        <setters>
+            <set name="short">Perception, Intimidation, Martial Weapons, and 1 language</set>
+        </setters>
+        <rules>
+            <select type="Language" name="Language, Lawkeeper" supports="Standard||Exotic" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_MELEE_WEAPONS" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_RANGED_WEAPONS" />
+            <grant type="Background Feature" id="ID_SOLASTA_BACKGROUND_FEATURE_SHIELD_OF_THE_LAW" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+            <select type="List" name="Personality Trait" number="2">
+                <item id="1">I speak little and listen constantly.</item>
+                <item id="2">I maintain eye contact longer than most people find comfortable.</item>
+                <item id="3">I am not above getting my hands dirty.</item>
+                <item id="4">I would rather prevent crimes and reform criminals than investigate and punish.</item>
+                <item id="5">I pretend to be less intelligent than I am, so people will underestimate me.</item>
+                <item id="6">I prefer the fringes of society, where it’s just me and the criminals.</item>
+                <item id="7">I trust no one, and believe no one.</item>
+                <item id="8">I consider myself a student of human nature.</item>
+            </select>
+            <select type="List" name="Ideal">
+                <item id="1">I consider myself a student of human nature.</item>
+                <item id="2">Justice. Sometimes it is necessary to break the law in order to obtain justice.</item>
+                <item id="3">Respect. The system only works if those below respect those above.</item>
+                <item id="4">Vengeance. Make an example of one criminal, and you deter a dozen others.</item>
+                <item id="5">Honor. Wrongs must be righted – always.</item>
+                <item id="6">Protection. The law exists to protect the weak from the strong.</item>
+            </select>
+            <select type="List" name="Bond">
+                <item id="1">I will someday get even with those who framed me for a crime I did not commit.</item>
+                <item id="2">I exposed corruption and paid the price. Those I crossed will send people after me.</item>
+                <item id="3">I am haunted by the one case I couldn’t solve.</item>
+                <item id="4">The criminals and I are locked in an endless dance. No one else matters.</item>
+                <item id="5">I serve the common people, who look to the law for protection.</item>
+                <item id="6">I saw my parents murdered, and vowed to protect others.</item>
+            </select>
+            <select type="List" name="Flaw">
+                <item id="1">I judge everyone harshly, including myself. No one is perfect, and that bothers me.</item>
+                <item id="2">I lose track of the line between reasonable force and wanton violence.</item>
+                <item id="3">I trust no one – not even fellow lawkeepers.</item>
+                <item id="4">I see the bad in everyone and the good in no one.</item>
+                <item id="5">I have too much confidence in my own reasoning.</item>
+                <item id="6">I need people to respect me – but I’ll settle for being feared.</item>
+            </select>
+        </rules>
+    </element>
+    <element name="Feature: Shield of the Law" type="Background Feature" source="Solasta" id="ID_SOLASTA_BACKGROUND_FEATURE_SHIELD_OF_THE_LAW">
+        <description>
+            <p>Your history as a lawkeeper gives you additional influence with certain bodies in your home. You have advantage when making Persuasion checks in dealings with the law enforcement authorities of your home nation.</p>
+        </description>
+        <sheet alt="Shield of the Law">
+            <description>Your history as a lawkeeper gives you additional influence with certain bodies in your home. You have advantage when making Persuasion checks in dealings with the law enforcement authorities of your home nation.</description>
+        </sheet>
+    </element>
+    <element name="Lowlife" type="Background" source="Solasta" id="ID_SOLASTA_BACKGROUND_LOWLIFE">
+        <description>
+            <p>Born in the streets, you have always been discarded by most commoners, and learned to survive with close to nothing. This made you a tough and resolved individual. Manners and education are not your strong suit, but you have learned to compensate with other qualities.</p>
+            <p class="indent"></p>
+            <ul class="unstyled">
+                <li><strong>Skill Proficiencies:</strong> Sleight of Hand, Deception</li>
+                <li><strong>Tool Proficiencies:</strong> Thieves' Tools</li>
+                <li><strong>Languages:</strong> </li>
+                <li><strong>Equipment:</strong> Worn Clothes</li>
+            </ul>
+            <div element="ID_SOLASTA_BACKGROUND_FEATURE_UNDERGROUND_NETWORK" />
+            <h5>SUGGESTED CHARACTERISTICS</h5>
+            <p>Lowlifes have grown up in the underworld of the poor and the criminal. They learned early that the world gives nothing away, and are governed primarily by self-interest. Their flaws can stem from their limited view of the world or their flexible sense of morality.</p>
+        </description>
+        <setters>
+            <set name="short">Sleight of Hand, Deception, Thieves' Tools</set>
+        </setters>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SLEIGHTOFHAND" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_DECEPTION" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_THIEVES_TOOLS" />
+            <grant type="Background Feature" id="ID_SOLASTA_BACKGROUND_FEATURE_UNDERGROUND_NETWORK" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+            <select type="List" name="Personality Trait" number="2">
+                <item id="1">My eyes are constantly darting from side to side, looking for threats and potential exits.</item>
+                <item id="2">I seem to be half-asleep sometimes, so people will underestimate me.</item>
+                <item id="3">I hold people’s gaze until they become uncomfortable.</item>
+                <item id="4">I have a habit of cleaning under my nails with a dagger as I speak.</item>
+                <item id="5">I take trouble to avoid being noticed.</item>
+                <item id="6">I dislike anyone richer than I am, and scheme to take something from them.</item>
+                <item id="7">I am not devout, but I have a superstitious belief in luck.</item>
+                <item id="8">I am uncomfortable in clean and well-lit surroundings.</item>
+            </select>
+            <select type="List" name="Ideal">
+                <item id="1">Profit. No one says money isn’t everything unless they are comfortably off.</item>
+                <item id="2">Class Strife. The rich and the poor have always been at odds.</item>
+                <item id="3">Reputation. It is good to be respected, and better to be feared.</item>
+                <item id="4">Justice. Rob the rich to feed the poor and you’ll always have friends.</item>
+                <item id="5">Ambition. One day, I’m going to run this town.</item>
+                <item id="6">Strength. There are those who do what it takes, and those who don’t last.</item>
+            </select>
+            <select type="List" name="Bond">
+                <item id="1">I can count on my crew whenever I am in my old neighborhood.</item>
+                <item id="2">There’s a price on my head, and people are after me.</item>
+                <item id="3">I first stole to feed my family, and they are still my main priority.</item>
+                <item id="4">I have a dangerous rival somewhere in the underworld.</item>
+                <item id="5">I was raised in an orphanage, and still feel a bond with it.</item>
+                <item id="6">There’s a legendary treasure that I just can’t get out of my head.</item>
+            </select>
+            <select type="List" name="Flaw">
+                <item id="1">I can’t warm to anyone of a higher social status.</item>
+                <item id="2">The prospect of a rich haul can make me greedy and careless.</item>
+                <item id="3">I take unnecessary risks in order to build a legend.</item>
+                <item id="4">I sometimes think I’m cleverer than I actually am.</item>
+                <item id="5">I trust no one except myself.</item>
+                <item id="6">I believe a little too much in “honor among thieves”.</item>
+            </select>
+        </rules>
+    </element>
+    <element name="Feature: Underground Network" type="Background Feature" source="Solasta" id="ID_SOLASTA_BACKGROUND_FEATURE_UNDERGROUND_NETWORK">
+        <description>
+            <p>You have ties with the underworld, whether you like or not. You know the rules and codes of the streets and can deal with the criminal community easily. You have advantage when making Persuasion checks in dealings with the underworld of your home nation.</p>
+        </description>
+        <sheet alt="Underground Network">
+            <description>You have ties with the underworld, whether you like or not. You know the rules and codes of the streets and can deal with the criminal community easily. You have advantage when making Persuasion checks in dealings with the underworld of your home nation.</description>
+        </sheet>
+    </element>
+    <element name="Philosopher" type="Background" source="Solasta" id="ID_SOLASTA_BACKGROUND_PHILOSOPHER">
+        <description>
+            <p>You have spent almost all of your life reading books and learning about the world of Solasta – and even other worlds. You are passionate about knowledge and an expert when it comes to study. Now you’ve decided to take a new path, to explore and discover the world by yourself.</p>
+            <p class="indent"></p>
+            <ul class="unstyled">
+                <li><strong>Skill Proficiencies:</strong> Medicine, Persasion</li>
+                <li><strong>Tool Proficiencies:</strong> Herbalism Kit</li>
+                <li><strong>Languages:</strong> 2 of your choice</li>
+                <li><strong>Equipment:</strong> Common clothes, herbalism kit, 20 gp.</li>
+            </ul>
+            <div element="ID_SOLASTA_BACKGROUND_FEATURE_HERBALIST" />
+            <h5>SUGGESTED CHARACTERISTICS</h5>
+            <p>Philosophers are shaped by their education much as academics are, but generally have a less inward-looking view. To them, almost everything is a source of interest, and their thirst for knowledge drives almost every thought and action. Their flaws tend to be an extension of their attitudes, which are not helpful in every situation.</p>
+        </description>
+        <setters>
+            <set name="short">Medicine, Persasion, Herbalism Kit, 2 Languages</set>
+        </setters>
+        <rules>
+            <grant type="Background Feature" id="ID_SOLASTA_BACKGROUND_FEATURE_HERBALIST" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+            <select type="List" name="Personality Trait" number="2">
+                <item id="1">I speak at great length about everything, using the longest words I know.</item>
+                <item id="2">I prefer books to people.</item>
+                <item id="3">I speak in aphorisms, making them up if necessary.</item>
+                <item id="4">I am unhappy in dirty and uncomfortable places.</item>
+                <item id="5">I am always focused on the big picture rather than the day-to-day reality.</item>
+                <item id="6">I am intolerant of those who cannot hold their own in philosophical discourse.</item>
+                <item id="7">I became disillusioned with academic study, and prefer to learn from experience.</item>
+                <item id="8">I am happier among nature than in a library.</item>
+            </select>
+            <select type="List" name="Ideal">
+                <item id="1">Understanding. The purpose of living is to know the world and understand how it works.</item>
+                <item id="2">Learning. Learning is living. Stop learning, and you begin to die.</item>
+                <item id="3">The World. The world has a lot of offer to one who can live in harmony with it.</item>
+                <item id="4">Curiosity. There is a whole world out there, full of people to meet and things to know.</item>
+                <item id="5">Ambition. The greatest philosophers are not in the past. They are yet to come, and I will be one of them.</item>
+                <item id="6">Faith. I respect the gods, but my true faith is knowledge.</item>
+            </select>
+            <select type="List" name="Bond">
+                <item id="1">I idolize a particular classical philosopher and see everything through the lens of their teachings.</item>
+                <item id="2">I have heard of some lost works by an ancient philosopher, and have become obsessed with finding them.</item>
+                <item id="3">I will do anything to advance current knowledge in my chosen field of study.</item>
+                <item id="4">I am fanatically loyal to a particular mentor or alma mater.</item>
+                <item id="5">A philosophical problem has intrigued me since my earliest studies. I will solve it.</item>
+                <item id="6">Legend tells of a herb (or some other substance) that everyone today believes is just a myth. I will prove them wrong.</item>
+            </select>
+            <select type="List" name="Flaw">
+                <item id="1">I can’t resist explaining something to someone – even if they know more about it than I do.</item>
+                <item id="2">I expect reality to match theory every time, and am confused when it does not.</item>
+                <item id="3">I am often absent-minded, lost in my own thoughts.</item>
+                <item id="4">When I start a research project, nothing can sway me until it is finished.</item>
+                <item id="5">If something takes my interest, I lose sight of everything else – including my own safety.</item>
+                <item id="6">My faith in reason can lead me to false conclusions, for the world is not always logical.</item>
+            </select>
+        </rules>
+    </element>
+    <element name="Feature: Herbalist" type="Background Feature" source="Solasta" id="ID_SOLASTA_BACKGROUND_FEATURE_HERBALIST">
+        <description>
+            <p>Unlike most of your former classmates, you have chosen the path of adventure, making you much more practical and efficient when it comes to finding useful plants in the wild. You collect plants and craft potions 25% faster than anyone spending his life in a lab.</p>
+        </description>
+        <sheet alt="Herbalist">
+            <description>Unlike most of your former classmates, you have chosen the path of adventure, making you much more practical and efficient when it comes to finding useful plants in the wild. You collect plants and craft potions 25% faster than anyone spending his life in a lab.</description>
+        </sheet>
+    </element>
+    <element name="Sellsword" type="Background" source="Solasta" id="ID_SOLASTA_BACKGROUND_SELLSWORD">
+        <description>
+            <p>You spent your youth in a mercenary company, and ever since your fighting skills have been available to whoever can afford them. Bloodshed and companionship have forged your character and made you both tough and bitter.</p>
+            <p class="indent"></p>
+            <ul class="unstyled">
+                <li><strong>Skill Proficiencies:</strong> Athletics, Intimidation</li>
+                <li><strong>Tool Proficiencies:</strong> Medium Armor</li>
+                <li><strong>Languages:</strong> 1 of your choice</li>
+                <li><strong>Equipment:</strong> Worn clothes, a ribbon from a past military campaign, 10 gp.</li>
+            </ul>
+            <div element="ID_SOLASTA_BACKGROUND_FEATURE_WARRIOR" />
+            <h5>SUGGESTED CHARACTERISTICS</h5>
+            <p>Sellswords have been hardened by years of service, seeing others less tough than themselves fall by the wayside. Their own toughness is sometimes an advantage and sometimes a problem. Many of their flaws stem from traits that have been over-developed by their harsh lives.</p>
+        </description>
+        <setters>
+            <set name="short">Athletics, Intimidation, Medium Armor, 1 Language</set>
+        </setters>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ATHLETICS" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" />
+            <select type="Language" name="Language, Sellsword" supports="Standard||Exotic" />
+            <grant type="Background Feature" id="ID_SOLASTA_BACKGROUND_FEATURE_WARRIOR" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+            <select type="List" name="Personality Trait" number="2">
+                <item id="1">I take little interest in others, unless I am planning to fight them.</item>
+                <item id="2">Everything is a job for pay. I have no other interests.</item>
+                <item id="3">have seen more than most, and am impossible to impress or overawe.</item>
+                <item id="4">I like food and drink to be plentiful rather than fancy.</item>
+                <item id="5">I can sleep anywhere at a moment’s notice, and wake up fully alert.</item>
+                <item id="6">I am slow to warm to people, but loyal once I do.</item>
+                <item id="7">I like to impress others with tales of my exploits.</item>
+                <item id="8">I am always on the lookout for my next job.</item>
+            </select>
+            <select type="List" name="Ideal">
+                <item id="1">Victory. In this life, you either win or you die. I intend to live.</item>
+                <item id="2">Courage. Mental weakness is more dangerous than any wound.</item>
+                <item id="3">Reputation. A good name brings good work, and a legend lets you set your own terms.</item>
+                <item id="4">Ambition. There are no old sellswords. I plan to win or buy some land and climb the ladder.</item>
+                <item id="5">Pragmatism. If it works, it’s good. If it doesn’t, it’s bad. That is the whole of my morality.</item>
+                <item id="6">Luxury. Fighting is hard and dirty work. I intend to enjoy the fruits of my victories.</item>
+            </select>
+            <select type="List" name="Bond">
+                <item id="1">Somewhere out there is a foe I failed to beat. For now.</item>
+                <item id="2">A sworn enemy is on my trail. I must be ready for them.</item>
+                <item id="3">I’ll fight for anyone who pays, but there is one cause that is dear to my heart.</item>
+                <item id="4">I long to re-establish a dissolved mercenary company of which I was once a member.</item>
+                <item id="5">There is a particular nation, or species, or other kind of enemy for which I harbor a particular hatred.</item>
+                <item id="6">I still feel a bond of loyalty toward a particular nation, or species, or other class of person with which I was once close.</item>
+            </select>
+            <select type="List" name="Flaw">
+                <item id="1">I am so hard-hearted I find it difficult to enjoy anything.</item>
+                <item id="2">I sometimes lose control in combat and become frighteningly violent.</item>
+                <item id="3">I trust no one and have few close friendships.</item>
+                <item id="4">I find it hard to settle down in one place.</item>
+                <item id="5">I am sometimes troubled by nightmares.</item>
+                <item id="6">I am quick to see someone or something as a threat, even if they are not.</item>
+            </select>
+        </rules>
+    </element>
+    <element name="Feature: Warrior" type="Background Feature" source="Solasta" id="ID_SOLASTA_BACKGROUND_FEATURE_WARRIOR">
+        <description>
+            <p>You have been a soldier all your life, and everyone who knows soldiers and soldiering can see it. This gives you advantage when talking to guards, soldiers and officers.</p>
+        </description>
+        <sheet alt="Warrior">
+            <description>You have been a soldier all your life, and everyone who knows soldiers and soldiering can see it. This gives you advantage when talking to guards, soldiers and officers.</description>
+        </sheet>
+    </element>
+    <element name="Spy" type="Background" source="Solasta" id="ID_SOLASTA_BACKGROUND_SPY">
+        <description>
+            <p>You have spent years working as a low-level diplomatic aide, learning the tricks or spycraft between the Principality, the New Empire, and the Kingdom of Gallivan. You have chosen not to take side and never became an official spy, but you have retained the skills necessary for your emancipation.</p>
+            <p class="indent"></p>
+            <ul class="unstyled">
+                <li><strong>Skill Proficiencies:</strong> Stealth, Deception</li>
+                <li><strong>Tool Proficiencies:</strong> Poisoner's Kit</li>
+                <li><strong>Languages:</strong> 2 of your choice</li>
+                <li><strong>Equipment:</strong> Fine clothes, poisoner’s Kit, 25 gp.</li>
+            </ul>
+            <div element="ID_SOLASTA_BACKGROUND_FEATURE_TRADECRAFT" />
+            <h5>SUGGESTED CHARACTERISTICS</h5>
+            <p>Subtle and charming, spies focus on manipulating others while avoiding being manipulated themselves. Masters of complex situations and cunning stratagems, their suspicious natures are often useful in their professional life but make them less well suited to other situations.</p>
+        </description>
+        <setters>
+            <set name="short">Stealth, Deception, Poisoner's Kit, 2 languages</set>
+        </setters>
+        <rules>
+            <select type="Language" name="Language, Spy" number="2" supports="Standard||Exotic" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_DECEPTION" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_POISONERS_KIT" />
+            <grant type="Background Feature" id="ID_SOLASTA_BACKGROUND_FEATURE_TRADECRAFT" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+            <select type="List" name="Personality Trait" number="2">
+                <item id="1">I find it easy to adopt a false persona.</item>
+                <item id="2">I never tell anyone anything true about myself.</item>
+                <item id="3">I am a charming conversationalist, drawing people out without their realizing it.</item>
+                <item id="4">I am at ease with all kinds of people, from the highest to the lowest.</item>
+                <item id="5">I listen more closely than I seem to, no matter who is speaking.</item>
+                <item id="6">I always sit with my back to a wall and a clear view of all entrances.</item>
+                <item id="7">I am very creative and resourceful, especially under stress.</item>
+                <item id="8">I never say die.</item>
+            </select>
+            <select type="List" name="Ideal">
+                <item id="1">Information. Information is everything. Having it, trading it, and keeping it from others is the only true power.</item>
+                <item id="2">Survival. Nothing else matters, and anything I do to stay alive is justifiable.</item>
+                <item id="3">Caution. Anyone who knows me can hurt me.</item>
+                <item id="4">The Mission. If I set out to get something, I get it. Always.</item>
+                <item id="5">Reputation. I need to be trusted by people who trust no one, which means I can never afford to fail.</item>
+                <item id="6">Patriotism. I do what I do out of loyalty, and so no one else needs to soil their hands.</item>
+            </select>
+            <select type="List" name="Bond">
+                <item id="1">I have a very useful and highly-placed asset somewhere, who must be protected at all costs.</item>
+                <item id="2">I crossed an agent – or worse, a nation – and now my life is in danger.</item>
+                <item id="3">I came so close to acquiring some vital information before being thwarted. I am determined to get it.</item>
+                <item id="4">I was framed by some unknown person and cast out of my agency. I need to find out who and why, and get my position back.</item>
+                <item id="5">I have a strange, love-hate relationship with a rival agent who has crossed my path more than once.</item>
+                <item id="6">I have a mentor who is now retired – officially, at least – but amassed many enemies over a long career.</item>
+            </select>
+            <select type="List" name="Flaw">
+                <item id="1">I am always looking for complexity, and can overlook simple explanations and solutions.</item>
+                <item id="2">I have been someone else so many times, and for so long, I am not sure who I truly am.</item>
+                <item id="3">I instinctively avoid telling anyone anything, even if they are a friend.</item>
+                <item id="4">I have no true friends – just people I use.</item>
+                <item id="5">I have no heart, and sometimes this worries me – but perhaps not as much as it should.</item>
+                <item id="6">I have no problem doing things that others would find horrifying.</item>
+            </select>
+        </rules>
+    </element>
+    <element name="Feature: Tradecraft" type="Background Feature" source="Solasta" id="ID_SOLASTA_BACKGROUND_FEATURE_TRADECRAFT">
+        <description>
+            <p>You’ve lived in the shadows long enough to recognize a fellow spy when you see one. You can communicate secretly with other spies using a secret language of keywords and subtle gestures.</p>
+        </description>
+        <sheet alt="Tradecraft">
+            <description>You’ve lived in the shadows long enough to recognize a fellow spy when you see one. You can communicate secretly with other spies using a secret language of keywords and subtle gestures.</description>
+        </sheet>
+    </element>
+</elements>
+
+<!-- 
+<element name="name" type="Background" source="Solasta" id="ID_SOLASTA_BACKGROUND_">
+        <description>
+            <p></p>
+            <p class="indent"></p>
+            <ul class="unstyled">
+                <li><strong>Skill Proficiencies:</strong> </li>
+                <li><strong>Tool Proficiencies:</strong> </li>
+                <li><strong>Languages:</strong> </li>
+                <li><strong>Equipment:</strong> </li>
+            </ul>
+            <div element="ID_BACKGROUND_FEATURE_" />
+            <h5>SUGGESTED CHARACTERISTICS</h5>
+            <p></p>
+        </description>
+        <setters>
+            <set name="short"></set>
+        </setters>
+        <rules>
+            <grant type="Background Feature" id="ID_BACKGROUND_FEATURE_" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+            <select type="List" name="Personality Trait" number="2">
+                <item id="1"></item>
+                <item id="2"></item>
+                <item id="3"></item>
+                <item id="4"></item>
+                <item id="5"></item>
+                <item id="6"></item>
+                <item id="7"></item>
+                <item id="8"></item>
+            </select>
+            <select type="List" name="Ideal">
+                <item id="1"></item>
+                <item id="2"></item>
+                <item id="3"></item>
+                <item id="4"></item>
+                <item id="5"></item>
+                <item id="6"></item>
+            </select>
+            <select type="List" name="Bond">
+                <item id="1"></item>
+                <item id="2"></item>
+                <item id="3"></item>
+                <item id="4"></item>
+                <item id="5"></item>
+                <item id="6"></item>
+            </select>
+            <select type="List" name="Flaw">
+                <item id="1"></item>
+                <item id="2"></item>
+                <item id="3"></item>
+                <item id="4"></item>
+                <item id="5"></item>
+                <item id="6"></item>
+            </select>
+        </rules>
+    </element>
+    <element name="Feature: name" type="Background Feature" source="Solasta" id="ID_SOLASTA_BACKGROUND_FEATURE_">
+        <description>
+            <p></p>
+        </description>
+        <sheet alt="name">
+            <description></description>
+        </sheet>
+    </element>
+-->
