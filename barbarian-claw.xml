@@ -190,7 +190,7 @@
             <p>Starting at 6th level, you can grow hardened scales on your forearms, helping to deflect incoming blows. While raging, you also gain resistance to the damage type of your ancestor, and gain a bonus to AC equal to your Rage Damage bonus while not wielding a shield.</p>
         </description>
         <sheet>
-            <description>While raging, you also gain resistance to {{dragon-ancestry}} and gain a +{{barbarian rage:damage}} bonus to AC while not wielding a shield.</description>
+            <description>While raging, you also gain resistance to {{dragon-ancestry:type}} and gain a +{{barbarian rage:damage}} bonus to AC while not wielding a shield.</description>
         </sheet>
     </element>
     <element name="Dragon's Blessing" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_DRAGONS_BLESSING">
@@ -198,7 +198,7 @@
             <p>Starting at 10th level, once on each of your turns when you hit a creature with a melee weapon attack, you can cause the attack to deal an extra 2d6 damage of the elemental type of your ancestor. While raging, this extra damage is increased to 4d6 instead.</p>
         </description>
         <sheet>
-            <description>Once on each of your turns when you hit a creature with a melee weapon attack, you can cause the attack to deal an extra 2d6 {{dragon-ancestry}} damage. While raging, this extra damage is increased to 4d6 instead.</description>
+            <description>Once on each of your turns when you hit a creature with a melee weapon attack, you can cause the attack to deal an extra 2d6 {{dragon-ancestry:type}} damage. While raging, this extra damage is increased to 4d6 instead.</description>
         </sheet>
     </element>
     <element name="Frightful Strike" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_FRIGHTFUL_STRIKE">
