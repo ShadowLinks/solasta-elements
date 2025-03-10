@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<update version="0.0.1">
-			<file name="solasta.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/solasta.xml" />
+			<file name="backgrounds.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/backgrounds.xml" />
 		</update>
 	</info>
     <element name="Academic" type="Background" source="Solasta" id="ID_SOLASTA_BACKGROUND_ACADEMIC">
