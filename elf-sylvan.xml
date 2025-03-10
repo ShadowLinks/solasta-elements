@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+    <info>
+        <update version="0.0.1">
+            <file name="elf-sylvan.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/elf-sylvan.xml" />
+        </update>
+    </info>
+    <element name="Sylvan Elf" type="Sub Race" source="Solasta" id="ID_SOLASTA_SUB_RACE_SYLVAN_ELF">
+        <supports>Elf</supports>
+        <description>
+            <p>As the elves turned their eyes to the path of Empire, some refused and withdrew to the forests of the east, the mountains of the north, and otherremote areas. Over millennia, these “Sylvan elves” evolved a history and culture of their own.</p>
+            <p class="indent">Most sylvan elves live in the forest of Colthannin or the wooded areas of the Snow Alliance, but there are sylvan elf enclaves in most major cities. Their outdoor skills make them useful as scouts and explorers in the Marches and the Badlands. They can be found almost anywhere except in the New Empire, where they are regarded as rebels and criminals.</p>
+            <p class="indent">Because their lineage split off from the high elves comparatively recently, the sylvan elves are similar in general appearance. Hair is usually worn shoulder length or longer and can be bound up in a ponytail or bun.</p>
+            <p class="indent"><strong><em>Ability Score Increase. </em></strong> Your Wisdom score increases by 1.</p>
+            <p class="indent"><strong><em>Elf Weapon Training. </em></strong> You have proficiency with the longsword, shortsword, shortbow, and longbow. </p>
+            <p class="indent"><strong><em>Survival Expert. </em></strong> You have proficiency in the Athletics and Survival skills. Additionally, you have advantage on any Survival rolls related to hunting and foraging.</p>
+        </description>
+        <sheet display="false"/>
+        <setters>
+            <set name="height" modifier="2d10">4'6"</set>
+            <set name="weight" modifier="1d4">100 lb.</set>
+        </setters>
+        <rules>
+            <stat name="wisdom" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+            <select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Sylvan Elf)" supports="Custom Ability Score Increase 1" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+            <grant type="Racial Trait" id="ID_RACIAL_TRAIT_ELF_WEAPON_TRAINING"/>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ATHLETICS" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+        </rules>
+    </element>
+</elements>

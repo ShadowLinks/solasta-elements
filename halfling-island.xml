@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+    <info>
+        <update version="0.0.1">
+            <file name="halfling-island.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/halfling-island.xml" />
+        </update>
+    </info>
+    <element name="Island Halfling" type="Sub Race" source="Solasta" id="ID_SOLASTA_SUB_RACE_ISLAND_HALFLING">
+        <supports>Halfling</supports>
+        <description>
+            <p>Unlike their inward-looking marsh halfling cousins, island halflings are driven by curiosity and a love of adventure. They are unmatched as sailors and shipwrights. Their vessels carry much of the trade that flows across the continent. Island halflings live for the smell of the sea, the breeze in their hair, and the rolling of a good ship underfoot.</p>
+            <p class="indent">Island halflings are a little taller and sturdier than marsh halflings. Males tend to be portly, females curvaceous. Their faces are broader and rounder than human faces, with large eyes that are generally full of merriment. Halflings frequently bind their hair up in a braid or ponytail or cover it with a hat or a kerchief.</p>
+            <p class="indent"><strong><em>Ability Score Increase. </em></strong> Your Charisma score increases by 1.</p>
+            <p class="indent"><strong><em>Perfect Balance. </em></strong> You gain proficiency in the Acrobatics skill. You also gain expertise with Acrobatics, which means your proficiency bonus is doubled for any ability check you make with it.</p>
+        </description>
+        <sheet display="false"/>
+        <setters>
+            <set name="height" modifier="2d10">4'6"</set>
+            <set name="weight" modifier="1d4">100 lb.</set>
+        </setters>
+        <rules>
+            <stat name="charisma" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+            <select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Island Halfling)" supports="Custom Ability Score Increase 1" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ACROBATICS" bonus="double"/>
+        </rules>
+    </element>
+</elements>

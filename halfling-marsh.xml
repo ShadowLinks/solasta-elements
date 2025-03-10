@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+    <info>
+        <update version="0.0.1">
+            <file name="halfling-marsh.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/halfling-marsh.xml" />
+        </update>
+    </info>
+    <element name="Marsh Halfling" type="Sub Race" source="Solasta" id="ID_SOLASTA_SUB_RACE_MARSH_HALFLING">
+        <supports>Halfling</supports>
+        <description>
+            <p>The first halflings evolved in the marshes of the north- east, and since very few outsiders ever ventured into the damp and trackless marshes, they developed in isolation . They are an inward-looking people, with little interest in others. While a few individuals always young and usually foolish – have left the fens in search of adventure and glory, most never leave Olme Fen, a place to which they are uniquely adapted, and which provides for all their needs. </p>
+            <p class="indent">Marsh halflings are slender compared to island halflings, and a little shorter on average. Their faces are broader than human faces, and oval. Their eyes are large in proportion to their faces and may protrude slightly. Their hair is usually worn shoulder length, either unbound, braided (often with twigs, bones, and shells), or bound by a woven grass or leather headband. </p>
+            <p class="indent"><strong><em>Ability Score Increase. </em></strong> Your Consitution score increases by 1.</p>
+            <p class="indent"><strong><em>Darkvison. </em></strong> Accustomed to life in the dark and dismal marshes, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.</p>
+        </description>
+        <sheet display="false"/>
+        <rules>
+            <stat name="constitution" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+            <select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Marsh Halfling)" supports="Custom Ability Score Increase 1" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+            <grant type="Vision" id="ID_VISION_DARKVISION" />
+        </rules>
+    </element>
+</elements>

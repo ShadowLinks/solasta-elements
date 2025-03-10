@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+    <info>
+        <update version="0.0.1">
+            <file name="dwarf-snow.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/dwarf-snow.xml" />
+        </update>
+    </info>
+    <element name="Snow Dwarf" type="Sub Race" source="Solasta" id="ID_SOLASTA_SUB_RACE_SNOW_DWARF">
+        <supports>Dwarf</supports>
+        <description>
+            <p></p>
+            <p class="indent"></p>
+            <p class="indent"><strong><em>Ability Score Increase. </em></strong> Your Dexterity score increases by 1.</p>
+            <p class="indent"><strong><em>Crossbow Proficiency. </em></strong> You have proficiency with crossbows of all types. </p>
+            <p class="indent"><strong><em>Snow Dwarf Endurance. </em></strong> Cold damage that you take is reduced by 3, and you automatically succeed saving throws against the effects of extreme cold (weather). Additionally, you can cast Protection from Energy (Cold) as a 3rd level spell. You must finish a long rest to cast the spell again using this trait.</p>
+        </description>
+        <sheet display="false"/>
+        <setters>
+            <set name="height" modifier="2d4">4'</set>
+            <set name="weight" modifier="2d6">130 lb.</set>
+        </setters>
+        <rules>
+            <stat name="dexterity" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+            <select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Snow Dwarf)" supports="Custom Ability Score Increase 1" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+            <grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_GROUP_CROSSBOWS"/>
+            <grant type="Racial Trait" id="ID_SOLASTA_RACIAL_TRAIT_SNOW_DWARF_ENDURANCE"/>
+        </rules>
+    </element>
+    <element name="Snow Dwarf Endurance" type="Racial Trait" source="Solasta" id="ID_SOLASTA_RACIAL_TRAIT_SNOW_DWARF_ENDURANCE">
+        <description>
+            <p> Cold damage that you take is reduced by 3, and you automatically succeed saving throws against the effects of extreme cold (weather). Additionally, you can cast Protection from Energy (Cold) as a 3rd level spell. You must finish a long rest to cast the spell again using this trait.</p>
+        </description>
+        <sheet usage="1/Long Rest">
+            <description>Cold damage that you take is reduced by 3, and you automatically succeed saving throws against the effects of extreme cold (weather). Additionally, you can cast Protection from Energy (Cold) as a 3rd level spell. You must finish a long rest to cast the spell again using this trait.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_PROTECTION_FROM_ENERGY" level="3" />
+        </rules>
+    </element>
+</elements>
