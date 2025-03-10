@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="source.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/source.xml" />
+		</update>
+	</info>
+	<element name="Solasta" type="Source" source="Core" id="ID_TA_SOLASTA">
+		<description>
+			<p>A thousand years have passed since the Cataclysm. The Manacalon Empire has been all but forgotten. Many seek the lost secrets that lie at the heart of its ruins: powerful magic wielded only by the ancient masters of old. But now, evil forces seek to harness this power unless brave heroes stand to unite against them...</p>
+            <p class="indent">Roll for initiative and discover the shattered world of Solasta with the Solasta Campaign Rulebook. This revised edition presents the full majesty and depth of the popular 5E-based Solasta: Crown of the Magister computer game and includes all of its unique archetypes for the first time! Explore ruins and dungeons for legendary treasures, learn the truth of the cataclysm that broke the world, and stop it all from happening again. You make the choices. Dice decide your destiny.</p>
+			<ul>
+				<li>Full rules for Solasta’s playable species and over 40 new subclasses, including the Path of Stone Barbarian, Swift Blade Ranger, and Court Mage Wizard.</li>
+			</ul>
+		</description>
+		<setters>
+			<set name="abbreviation">SOL</set>
+			<set name="url">https://modiphius.net/en-us/pages/solasta</set>
+			<set name="image">https://modiphius.us/cdn/shop/files/Cover_f24fd14b-ddf2-4563-a932-0c87a19f18e8_700x.png</set>
+			<set name="author" abbreviation="TA" url="https://tactical-adventures.net">Tactical Adventures</set>
+			<set name="third-party">true</set>
+			<set name="release">20230826</set>
+		</setters>
+	</element>
+</elements>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+	<info>
+		<name>Svilland</name>
+		<description>Norse themed setting and character options for D&amp;D 5e</description>
+		<author url="https://dreamrealmstorytellers.com/svilland/">Dream Realm Storytellers</author>
+		<update version="0.0.1">
+			<file name="svilland.index" url="https://raw.githubusercontent.com/ShadowLinks/svilland-elements/main/svilland.index"/>
+		</update>
+	</info>
+    <files>
+        <file name="source.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/source.xml" />
+
+        <file name="elf-sylvan.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/elf-sylvan.xml" />
+        <file name="dwarf-snow.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/dwarf-snow.xml" />
+        <file name="halfling-island.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/halfling-island.xml" />
+
+	</files>
+</index>
