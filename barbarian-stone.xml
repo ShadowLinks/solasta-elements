@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="barbarian-stone.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/barbarian-stone.xml" />
+		</update>
+	</info>
+    <element name="Path of Stone" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_BARBARIAN_STONE">
+        <supports>Primal Path</supports>

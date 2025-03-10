@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="barbarian-magebane.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/barbarian-magebane.xml" />
+		</update>
+	</info>
+    <element name="Path of the Magebane" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_BARBARIAN_MAGEBANE">
+        <supports>Primal Path</supports>
