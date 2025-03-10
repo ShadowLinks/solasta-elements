@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <index>
 	<info>
-		<name>Svilland</name>
-		<description>Norse themed setting and character options for D&amp;D 5e</description>
-		<author url="https://dreamrealmstorytellers.com/svilland/">Dream Realm Storytellers</author>
+		<name>Solasta</name>
+		<description>Solasta setting and character options for D&amp;D 5e</description>
+		<author url="https://tactical-adventures.net">Tactical Adventures</author>
 		<update version="0.0.1">
-			<file name="svilland.index" url="https://raw.githubusercontent.com/ShadowLinks/svilland-elements/main/svilland.index"/>
+			<file name="solasta.index" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/main/solasta.index"/>
 		</update>
 	</info>
     <files>
