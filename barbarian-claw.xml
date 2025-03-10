@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="barbarian-claw.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/barbarian-claw.xml" />
+		</update>
+	</info>
+    <element name="Path of the Claw" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_BARBARIAN_CLAW">
+        <supports>Primal Path</supports>
+        <description>
+            <p>Barbarians that follow the Path of the Claw are descendants of dragons that can unleash the terrible power of their lineage. Barbarian tribes that teach the Path of the Claw hold dragons in high regard. They craft artwork, shrines, and clothing that celebrates their dragon ancestry. They also make offerings to their ancestors before going into battle or when facing times of hardship. True Claw Barbarians are rare, as most aspirants cannot manifest the dragon within. However, when one manages to unleash this inner draconic rage, few can stand against them.</p>
+            <p class="indent"></p>
+            <div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_DRAGON_ANCESTRY" />
+            <div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_DRACONIC_WRATH" />
+            <div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_DRAGON_SCALES" />
+            <div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_DRAGONS_BLESSING" />
+            <div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_FRIGHTFUL_STRIKE" />
+        </description>
+        <sheet display="false">
+            <description></description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_DRAGON_ANCESTRY" level="3" />
+            <grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_DRACONIC_WRATH" level="3" />
+            <grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_DRAGON_SCALES" level="6" />
+            <grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_DRAGONS_BLESSING" level="10" />
+            <grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_FRIGHTFUL_STRIKE" level="14" />
+        </rules>
+    </element>
+    <element name="name" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_DRAGON_ANCESTRY">
+        <description>
+            <p>Starting at 3rd level, when you adopt this path, you choose a dragon type as your ancestor. The associated damage type is used by your path’s features.</p>
+            <table>
+                <thead>
+                    <tr><td>Dragon Type</td><td>Damage Type</td></tr>
+                </thead>
+                <tr><td>Brass, Red, Gold</td><td>Fire</td></tr>
+                <tr><td>Silver, White</td><td>Cold</td></tr>
+                <tr><td>Bronze, Blue</td><td>Lightning</td></tr>
+                <tr><td>Copper, Black</td><td>Acid</td></tr>
+                <tr><td>Green</td><td>Poison</td></tr>
+            </table>
+        </description>
+        <sheet display="false">
+            <description></description>
+        </sheet>
+        <rules>
+            <select type="Archetype Feature" name="Dragon Ancestry" supports="dragon-ancestry" />
+        </rules>
+    </element>
+    <element name="Dragon Ancestry: Brass" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_ANCESTRY_BRASS">
+        <supports>dragon-ancestry</supports>
+        <description>
+            <p>Fire element abilities.</p>
+        </description>
+        <sheet>
+            <description></description>
+        </sheet>
+        <rules>
+            <stat name="dragon-ancestry:type" value="fire" inline="true" />
+        </rules>
+    </element>
+    <element name="Dragon Ancestry: Gold" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_ANCESTRY_GOLD">
+        <supports>dragon-ancestry</supports>
+        <description>
+            <p>Fire element abilities.</p>
+        </description>
+        <sheet>
+            <description></description>
+        </sheet>
+        <rules>
+            <stat name="dragon-ancestry:type" value="fire"  inline="true"/>
+        </rules>
+    </element>
+    <element name="Dragon Ancestry: Red" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_ANCESTRY_RED">
+        <supports>dragon-ancestry</supports>
+        <description>
+            <p>Fire element abilities.</p>
+        </description>
+        <sheet>
+            <description></description>
+        </sheet>
+        <rules>
+            <stat name="dragon-ancestry:type" value="fire" inline="true" />
+        </rules>
+    </element>
+    <element name="Dragon Ancestry: Silver" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_ANCESTRY_SILVER">
+        <supports>dragon-ancestry</supports>
+        <description>
+            <p>Cold element abilities.</p>
+        </description>
+        <sheet>
+            <description></description>
+        </sheet>
+        <rules>
+            <stat name="dragon-ancestry:type" value="cold" inline="true" />
+        </rules>
+    </element>
+    <element name="Dragon Ancestry: White" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_ANCESTRY_WHITE">
+        <supports>dragon-ancestry</supports>
+        <description>
+            <p>Cold element abilities.</p>
+        </description>
+        <sheet>
+            <description></description>
+        </sheet>
+        <rules>
+            <stat name="dragon-ancestry:type" value="cold" inline="true" />
+        </rules>
+    </element>
+    <element name="Dragon Ancestry: Bronze" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_ANCESTRY_BRONZE">
+        <supports>dragon-ancestry</supports>
+        <description>
+            <p>Lightning element abilities.</p>
+        </description>
+        <sheet>
+            <description></description>
+        </sheet>
+        <rules>
+            <stat name="dragon-ancestry:type" value="lightning" inline="true" />
+        </rules>
+    </element>
+    <element name="Dragon Ancestry: Blue" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_ANCESTRY_BLUE">
+        <supports>dragon-ancestry</supports>
+        <description>
+            <p>Lightning element abilities.</p>
+        </description>
+        <sheet>
+            <description></description>
+        </sheet>
+        <rules>
+            <stat name="dragon-ancestry:type" value="lightning" inline="true" />
+        </rules>
+    </element>
+    <element name="Dragon Ancestry: Copper" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_ANCESTRY_COPPER">
+        <supports>dragon-ancestry</supports>
+        <description>
+            <p>Acid element abilities.</p>
+        </description>
+        <sheet>
+            <description></description>
+        </sheet>
+        <rules>
+            <stat name="dragon-ancestry:type" value="acid" inline="true" />
+        </rules>
+    </element>
+    <element name="Dragon Ancestry: Black" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_ANCESTRY_BLACK">
+        <supports>dragon-ancestry</supports>
+        <description>
+            <p>Acid element abilities.</p>
+        </description>
+        <sheet>
+            <description></description>
+        </sheet>
+        <rules>
+            <stat name="dragon-ancestry:type" value="acid" inline="true" />
+        </rules>
+    </element>
+    <element name="Dragon Ancestry: Green" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_ANCESTRY_GREEN">
+        <supports>dragon-ancestry</supports>
+        <description>
+            <p>Poison element abilities.</p>
+        </description>
+        <sheet>
+            <description></description>
+        </sheet>
+        <rules>
+            <stat name="dragon-ancestry:type" value="poison" inline="true" />
+        </rules>
+    </element>
+    <element name="Draconic Wrath" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_DRACONIC_WRATH">
+        <description>
+            <p>Starting at 3rd level, when you take the Attack action while raging, you can forgo one of your attacks to breathe a 30-foot cone of elemental damage.</p>
+            <p class="indent">Every creature in the area must make a Dexterity saving throw against a DC equal to 8 + your proficiency bonus + your Constitution modifier, taking a number of d10s damage equal to half your barbarian level on a failed save, or half as much damage on a successful one. The damage type of Draconic Wrath is determined by your dragon ancestry. Using Draconic Wrath counts as attacking a hostile creature for the purpose of extending your rage.</p>
+            <p class="indent">You can use this ability once per rage.</p>
+        </description>
+        <sheet usage="1/Rage">
+            <description>when you take the Attack action while raging, you can forgo one of your attacks to breathe a 30-foot cone of {{dragon-ancestry:type}} damage.
+            Every creature in the area must make a Dexterity saving throw against a DC {{Draconic-wrath}} taking {{level:half}}d10 on a failed save, or half as much damage on a successful one. Using Draconic Wrath counts as attacking a hostile creature for the purpose of extending your rage. </description>
+        </sheet>
+        <rules>
+            <stat name="Draconic-wrath" value="8" bonus="base"/>
+            <stat name="Draconic-wrath" value="proficiency"/>
+            <stat name="Draconic-wrath" value="constituion:modifier"/>
+
+        </rules>
+    </element>
+    <element name="Dragon Scales" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_DRAGON_SCALES">
+        <description>
+            <p>Starting at 6th level, you can grow hardened scales on your forearms, helping to deflect incoming blows. While raging, you also gain resistance to the damage type of your ancestor, and gain a bonus to AC equal to your Rage Damage bonus while not wielding a shield.</p>
+        </description>
+        <sheet>
+            <description>While raging, you also gain resistance to {{dragon-ancestry}} and gain a +{{barbarian rage:damage}} bonus to AC while not wielding a shield.</description>
+        </sheet>
+    </element>
+    <element name="Dragon's Blessing" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_DRAGONS_BLESSING">
+        <description>
+            <p>Starting at 10th level, once on each of your turns when you hit a creature with a melee weapon attack, you can cause the attack to deal an extra 2d6 damage of the elemental type of your ancestor. While raging, this extra damage is increased to 4d6 instead.</p>
+        </description>
+        <sheet>
+            <description>Once on each of your turns when you hit a creature with a melee weapon attack, you can cause the attack to deal an extra 2d6 {{dragon-ancestry}} damage. While raging, this extra damage is increased to 4d6 instead.</description>
+        </sheet>
+    </element>
+    <element name="Frightful Strike" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_CLAW_FRIGHTFUL_STRIKE">
+        <description>
+            <p>Starting at 14th level, your attacks strike fear into the enemy’s heart. While raging, after you hit a creature with a melee attack, the target must succeed a Wisdom saving throw against a DC equal to 8 + your proficiency bonus + your Strength modifier or become frightened until the start of your next turn. If a creature’s saving throw is successful, it becomes immune to your Frightful Strike for the next 24 hours.</p>
+        </description>
+        <sheet>
+            <description>While raging, after you hit a creature with a melee attack, the target must succeed a Wisdom saving throw against a DC {{frightfulstrike:dc}} or become frightened until the start of your next turn. If a creature’s saving throw is successful, it becomes immune to your Frightful Strike for the next 24 hours.</description>
+        </sheet>
+        <rules>
+            <stat name="frightfulstrike:dc" value="8" bonus="base"/>
+            <stat name="frightfulstrike:dc" value="proficiency"/>
+            <stat name="frightfulstrike:dc" value="strength:modifier"/>
+        </rules>
+    </element>
+</elements>

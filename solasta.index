@@ -17,5 +17,7 @@
         <file name="dwarf-snow.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/dwarf-snow.xml" />
         <file name="halfling-island.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/halfling-island.xml" />
 
+        <file name="barbarian-claw.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/barbarian-claw.xml" />
+        
 	</files>
 </index>
