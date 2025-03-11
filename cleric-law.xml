@@ -49,14 +49,14 @@
 			<description></description>
 		</sheet>
         <rules>
-            <grant type="Spell" level="1" id="ID_PHB_SPELL_SHEILD_OF_FAITH" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_SHIELD_OF_FAITH" />
             <grant type="Spell" level="1" id="ID_PHB_SPELL_SLEEP" />
-            <grant type="Spell" level="3" id="ID_PHB_SPELL_SEE_INVISIBILTY" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_SEE_INVISIBILITY" />
             <grant type="Spell" level="3" id="ID_PHB_SPELL_ZONE_OF_TRUTH" />
             <grant type="Spell" level="5" id="ID_PHB_SPELL_COUNTERSPELL" />
             <grant type="Spell" level="5" id="ID_PHB_SPELL_HYPNOTIC_PATTERN" />
-            <grant type="Spell" level="7" id="ID_PHB_SPELL_RESILIENT_SPHERE" />
-            <grant type="Spell" level="7" id="ID_PHB_SPELL_FAITHFUL_HOUND" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_OTILUKES_RESILIENT_SPHERE" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_MORDENKAINENS_FAITHFUL_HOUND" />
             <grant type="Spell" level="9" id="ID_PHB_SPELL_GEAS" />
             <grant type="Spell" level="9" id="ID_PHB_SPELL_HOLD_MONSTER" />
         </rules>
