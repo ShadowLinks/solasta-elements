@@ -1,3 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="fighter-spellblade.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/fighter-spellblade.xml" />
+		</update>
+	</info>
+    <element name="Spellblade" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FIGHTER_SPELLBLADE">
+        <supports>Martial Archetype</supports>	
 		<description>
 			<p></p>
 			<p class="indent"></p>
@@ -6,16 +15,18 @@
 			<div element="ID____" />
 			<div element="ID_____" />
 			<div element="ID______" />
+			<div element="ID_______" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID__" level="3" />
+			<grant type="Archetype Feature" id="ID___" level="3" />
+			<grant type="Archetype Feature" id="ID____" level="7" />
+			<grant type="Archetype Feature" id="ID_____" level="10" />
+			<grant type="Archetype Feature" id="ID______" level="15" />
+			<grant type="Archetype Feature" id="ID_______" level="18" />
 		</rules>
 	</element>
 	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
@@ -51,6 +62,14 @@
 		</sheet>
 	</element>
 	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
+		<description>
+			<p></p>
+		</description>
+		<sheet>
+			<description></description>
+		</sheet>
+	</element>
+	<element name="name" type="Archetype Feature" source="Solasta" id="ID_______">
 		<description>
 			<p></p>
 		</description>
