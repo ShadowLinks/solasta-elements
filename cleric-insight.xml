@@ -1,61 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="cleric-insight.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/cleric-insight.xml" />
+		</update>
+	</info>
+    <element name="Insight Domain" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_CLERIC_INSIGHT_DOMAIN">
+        <supports>Divine Domain</supports>
 		<description>
-			<p></p>
+			<p>The Insight Domain is associated primarily with Pakri, the goddess of law and learning. Just like their divine mistress, clerics who choose this domain can see and understand more than common mortals, tapping into some of her wisdom.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_SPELLS" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_DIVINE_INTUITION" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_INSPIRED_DIPLOMAT" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_CD_FOREKNOWLEDGE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_DIVINE_EYE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_POTENT_SPELLCASTING" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_CD_DIVINE_FOREKNOWLEDGE" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_SPELLS" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_DIVINE_INTUITION" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_INSPIRED_DIPLOMAT" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_CD_FOREKNOWLEDGE" level="2" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_DIVINE_EYE" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_POTENT_SPELLCASTING" level="8" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_CD_DIVINE_FOREKNOWLEDGE" level="17" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Insight Domain Spells" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_SPELLS">
 		<description>
-			<p></p>
+			<p>At each indicated cleric level, you add the listed spells to your spells prepared. These spells are always prepared and do not count against the number of spells you can prepare.</p>
+            <table>
+                <thead>
+                    <tr><td>Cleric Level</td><td>Spells</td></tr>
+                </thead>
+                <tr><td>1st</td><td>comprehend languages, identify</td></tr>
+                <tr><td>3rd</td><td>detect thoughts, augury</td></tr>
+                <tr><td>5th</td><td>clairvoyance, tongues</td></tr>
+                <tr><td>7th</td><td>arcane eye, locate creature</td></tr>
+                <tr><td>9th</td><td>legend lore, scrying</td></tr>
+            </table>
 		</description>
-		<sheet>
+		<sheet display="false">
 			<description></description>
 		</sheet>
+        <rules>
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_COMPREHEND_LANGUAGES" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_IDENTIFY" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_DETECT_THOUGHTS" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_AUGURY" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_CLAIRVOYANCE" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_TONGUES" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_ARCANE_EYE" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_LOCATE_CREATURE" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_LEGEND_LORE" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_SCRYING" />
+        </rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Divine Intuition" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_DIVINE_INTUITION">
 		<description>
-			<p></p>
+			<p>When you choose this domain at 1st level, you gain proficiency with the Insight skill, and your proficiency bonus is doubled for any ability check you make that uses it. You also become proficient in your choice of two of the following skills: Deception, Intimidation, Persuasion, Performance.</p>
 		</description>
-		<sheet>
+		<sheet display="false">
 			<description></description>
 		</sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" bonus="double" />
+            <select type="Proficiency" name="Proficiency, Divine Intuition" supports="ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_INTIMIDATION|ID_PROFICIENCY_SKILL_PERSUASION|ID_PROFICIENCY_SKILL_PERFORMANCE"  number="2"/>
+        </rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Inspired Diplomat" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_INSPIRED_DIPLOMAT">
 		<description>
-			<p></p>
+			<p>When you choose this domain at 1st level, you can focus on a creature you are talking to and quickly figure out how best to influence it. If you speak to a creature that can understand you for at least 1 minute, you can add your Wisdom modifier to any of your Charisma checks trying to influence it.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You can focus on a creature you are talking to and quickly figure out how best to influence it. If you speak to a creature that can understand you for at least 1 minute, you can add your Wisdom modifier to any of your Charisma checks trying to influence it.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Channel Divinity: Foreknowledge" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_CD_FOREKNOWLEDGE">
 		<description>
-			<p></p>
+			<p>Starting at 2nd level, you can use your Channel Divinity to see the immediate future and efficiently get out of harm’s way. As an action, you present your holy symbol and focus your attention on a creature you can see within 60 feet of you. The creature has disadvantage on attack rolls against you while you are focused on it.</p>
+            <p class="indent">You can use a bonus action on a subsequent turn of yours to switch your focus to another creature. Channel Divinity: Foreknowledge lasts for 1 minute or until you are incapacitated or die.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="Channel Divinity" alt="Foreknowledge">
+			<description>As an action, you present your holy symbol and focus your attention on a creature you can see within 60 feet of you. The creature has disadvantage on attack rolls against you while you are focused on it.
+            You can use a bonus action on a subsequent turn of yours to switch your focus to another creature. Channel Divinity: Foreknowledge lasts for 1 minute or until you are incapacitated or die.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
+	<element name="Divine Eye" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_DIVINE_EYE">
 		<description>
-			<p></p>
+			<p>Starting at 6th level, you are always under the effects of See Invisibility and Detect Magic.</p>
+            <p class="indent">Additionally, your proficiency bonus is doubled for any ability check when looking for traps, hidden doors, or hidden objects.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You are always under the effects of See Invisibility and Detect Magic. Additionally, your proficiency bonus is doubled for any ability check when looking for traps, hidden doors, or hidden objects.</description>
+		</sheet>
+	</element>
+	<element name="Potent Spellcasting" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_POTENT_SPELLCASTING">
+		<description>
+			<p>Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip.</p>
+		</description>
+		<sheet>
+			<description>Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip.</description>
+		</sheet>
+	</element>
+	<element name="Channel Divinity: Divine Foreknowledge" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_CD_DIVINE_FOREKNOWLEDGE">
+		<description>
+			<p>Starting at 17th level, when you use Channel Divinity: Foreknowledge, you instead gain the effects of a Foresight spell for 1 minute.</p>
+		</description>
+		<sheet usage="Channel Divinity" alt="Divine Foreknowledge">
+			<description>When you use Channel Divinity: Foreknowledge, you instead gain the effects of a Foresight spell for 1 minute.</description>
 		</sheet>
 	</element>
 </elements>

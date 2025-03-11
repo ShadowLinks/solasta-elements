@@ -8,63 +8,53 @@
     <element name="Path of Stone" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_BARBARIAN_STONE">
         <supports>Primal Path</supports>
 		<description>
-			<p></p>
+			<p>Stone Barbarians take great pride in their ability to thrive in the most hostile of environments, having fled North towards the frozen landscapes of the Snow Alliance to escape the Cataclysm. Although regarded as isolationist and aloof by outsiders, in the years after the Cataclysm many Stone Barbarians left their tribes to lead desperate survivors through the challenging times to come.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_STONE_STONE_RESILIENCE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_STONE_STRENGTH_FROM_WITHIN" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_STONE_ROCK_SOLID" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_STONE_UNYIELDING_STRENGTH" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_STONE_STONE_RESILIENCE" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_STONE_STRENGTH_FROM_WITHIN" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_STONE_ROCK_SOLID" level="10" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_STONE_UNYIELDING_STRENGTH" level="14" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Stone Resilience" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_STONE_STONE_RESILIENCE">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, while raging, you gain temporary HP equal to your Barbarian level at the end of each of your turns. They are lost if any of them are left when your rage ends.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>While raging, you gain {{level:barbarian}} temporary HP at the end of each of your turns. They are lost if any of them are left when your rage ends.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Strength From Within" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_STONE_STRENGTH_FROM_WITHIN">
 		<description>
-			<p></p>
+			<p>Starting at 6th level, whenever you make a saving throw, you can choose to replace the ability modifier with your Constitution modifier instead.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>Whenever you make a saving throw, you can choose to replace the ability modifier with your Constitution modifier instead.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Rock Solid" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_STONE_ROCK_SOLID">
 		<description>
-			<p></p>
+			<p>Starting at 10th level, while raging, you gain a +1 bonus to AC per hostile creature that you can see within 5 feet of you, up to a maximum of +4.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>While raging, you gain a +1 bonus to AC per hostile creature that you can see within 5 feet of you, up to a maximum of +4.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Unyielding Strength" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARBARIAN_STONE_UNYIELDING_STRENGTH">
 		<description>
-			<p></p>
+			<p>Starting at 14th level, you gain a bonus to your melee weapon damage rolls equal to your Constitution modifier.</p>
 		</description>
 		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
+			<description>You gain a +{{constitution:modifier}} bonus to your melee weapon damage</description>
 		</sheet>
 	</element>
 </elements>

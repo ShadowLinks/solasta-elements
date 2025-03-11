@@ -1,61 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="bard-hope.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/bard-hope.xml" />
+		</update>
+	</info>
+    <element name="College of Hope" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_BARD_HOPE">
+        <supports>Bard College</supports>
 		<description>
-			<p></p>
+			<p>Long years of misery awaited the survivors of the destruction wrought by the Cataclysm. From that despair stepped forth the Bards of the College of Hope, determined in their mission to ensure that the light of hope in people’s hearts should not be snuffed. Entertainers, counselors, and healers, they travel the lands soothing pain and bringing rare smiles to the less fortunate.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HOPE_WORDS_OF_HOPE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HOPE_WANDERING_HEALER" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HOPE_INVIGORATING_BALLAD" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HOPE_AT_ROADS_END" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HOPE_WORDS_OF_HOPE" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HOPE_WANDERING_HEALER" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HOPE_INVIGORATING_BALLAD" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HOPE_AT_ROADS_END" level="14" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Words of Hope" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HOPE_WORDS_OF_HOPE">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, when you grant a Bardic Inspiration to an ally, they roll one of their Hit Dice and gain temporary Hit Points equal to the roll + your Charisma Modifier. Additionally, they can spend that Hit Dice to heal for the same amount.</p>
+		</description>
+		<sheet>
+			<description>When you grant a Bardic Inspiration to an ally, they roll one of their Hit Dice and gain temporary Hit Points equal to the roll +{{charisma:modifier}} Additionally, they can spend that Hit Dice to heal for the same amount.</description>
+		</sheet>
+	</element>
+	<element name="Wandering Healer" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HOPE_WANDERING_HEALER">
+		<description>
+			<p>Starting at 3rd level, Prayer of Healing is added to your list of Known Spells and does not count in the total number of Spells Known. This spell can’t be replaced when leveling up.</p>
+            <p class="indent">Starting at 6th level, Mass Healing Word and Revivify are added to your list of Known Spells and do not count in the total number of Spells Known. These spells can’t be replaced when leveling up.</p>
 		</description>
 		<sheet>
 			<description></description>
 		</sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_PRAYER_OF_HEALING" level="3" />
+            <grant type="Spell" id="ID_PHB_SPELL_MASS_HEALING_WORD" level="6" />
+            <grant type="Spell" id="ID_PHB_SPELL_REVIVIFY" level="6" />
+        </rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Invigorating Ballad" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HOPE_INVIGORATING_BALLAD">
 		<description>
-			<p></p>
-		</description>
+			<p>Starting at 6th level, you can perform a rousing ballad to empower yourself and a number of friendly creatures within 60 feet of you equal to your Charisma modifier (minimum of one creature) by expending one Bardic Inspiration die at the end of a short or long rest.</p>
+            <p class="indent">You roll a Bardic Inspiration die, increasing each target’s hit point maximum by the number rolled + your Charisma modifier until the end of your next short or long rest, and healing them for the same amount.</p>
+        </description>
 		<sheet>
-			<description></description>
+			<description>ou can perform a rousing ballad to empower yourself and a number of friendly creatures within 60 feet of you equal to your Charisma modifier (minimum of one creature) by expending one Bardic Inspiration die at the end of a short or long rest.
+            You roll a Bardic Inspiration die, increasing each target’s hit point maximum by the number rolled + your Charisma modifier until the end of your next short or long rest, and healing them for the same amount.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="At Road's End" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HOPE_AT_ROADS_END">
 		<description>
-			<p></p>
+			<p>Starting at 14th level, when an ally you can see within 60 feet of you is reduced to 0 hit points, but not killed outright, you can use your reaction to restore them to half of their maximum hit points instead.</p>
+            <p class="indent">You can use this feature once per long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="1/Long Rest" action="Reaction">
+			<description>When an ally you can see within 60 feet of you is reduced to 0 hit points, but not killed outright, you can use your reaction to restore them to half of their maximum hit points instead.</description>
 		</sheet>
 	</element>
 </elements>

@@ -1,61 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="bard-tradition.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/bard-tradition.xml" />
+		</update>
+	</info>
+    <element name="College of Tradition" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_BARD_TRADITION">
+        <supports>Bard College</supports>
 		<description>
-			<p></p>
+			<p>Music is art. Art is order. Tradition Bards are descended from the Song-Wizards of the once highly regarded Manacalon Conservatory of Music, which was destroyed along with the rest of the Empire during the Cataclysm. Music theory, choreography, and dramaturgy are just a fraction of what one must master before applying to the College of Tradition. Those skilled enough to gain entry receive the finest training in music and magic in all of Solasta.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_TRADITION_AURA_OF_PREEMIENCE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_TRADITION_ANCIENT_TRADITION" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_TRADITION_VERBAL_ONSLAUGHT" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_TRADITION_MANACALONS_PERFECTION" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_TRADITION_AURA_OF_PREEMIENCE" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_TRADITION_ANCIENT_TRADITION" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_TRADITION_VERBAL_ONSLAUGHT" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_TRADITION_MANACALONS_PERFECTION" level="14" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Aura of Preemience" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_TRADITION_AURA_OF_PREEMIENCE">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, when you make a Charisma (Intimidation) or Wisdom (Insight) check, you can treat a roll of 9 or lower as a 10.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>When you make a Charisma (Intimidation) or Wisdom (Insight) check, you can treat a roll of 9 or lower as a 10.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Ancient Tradition" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_TRADITION_ANCIENT_TRADITION">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, when your Spellcasting feature lets you learn or replace a bard cantrip or spell of 1st level or higher, you can choose the new spell from either the wizard or bard spell list. You must otherwise obey all the restrictions for selecting the spell, and it becomes a bard spell for you.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>When your Spellcasting feature lets you learn or replace a bard cantrip or spell of 1st level or higher, you can choose the new spell from either the wizard or bard spell list. You must otherwise obey all the restrictions for selecting the spell, and it becomes a bard spell for you.</description>
+		</sheet>
+        <spellcasting name="Bard" extend="true">
+			<list known="true">Wizard</list>
+		</spellcasting>
+	</element>    
+	<element name="Verbal Onslaught" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_TRADITION_VERBAL_ONSLAUGHT">
+		<description>
+			<p>Starting at 6th level, as an action, you can expend one of your Bardic Inspiration to dress down a creature within 60 feet of you with such fierceness that they must succeed an Intelligence saving throw or become completely befuddled. Whenever the target makes an attack roll, an ability check, a damage roll or a saving throw, you can roll the Bardic Inspiration die you just used and subtract the number from the creature’s roll. You can do that an unlimited number of times until the start of your next turn on a failed save, or only once on a successful one. The creature is immune if it can’t hear you.</p>
+            <p class="indent">Once you use this feature, you cannot use it again until you finish a short or long rest.</p>
+		</description>
+		<sheet usage="1/Short Rest">
+			<description>As an action, you can expend one of your Bardic Inspiration to dress down a creature within 60 feet of you with such fierceness that they must succeed an Intelligence saving throw or become completely befuddled. Whenever the target makes an attack roll, an ability check, a damage roll or a saving throw, you can roll the Bardic Inspiration die you just used and subtract the number from the creature’s roll. You can do that an unlimited number of times until the start of your next turn on a failed save, or only once on a successful one. The creature is immune if it can’t hear you.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Manacalon's Perfection" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_TRADITION_MANACALONS_PERFECTION">
 		<description>
-			<p></p>
+			<p>Starting at 14th level, as a bonus action, you can use Manacalon’s Perfection on an ally. Both you and your ally gain one Bardic Inspiration die, and when you or your ally would normally roll it you instead use the highest number possible. Using Manacalon’s Perfection does not expend a use of Bardic Inspiration.</p>
+            <p class="indent">Once you use this feature, you cannot use it again until you finish a short or long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="1/Short Rest" action="Bonus Action">
+			<description>As a bonus action, you can use Manacalon’s Perfection on an ally. Both you and your ally gain one Bardic Inspiration die, and when you or your ally would normally roll it you instead use the highest number possible. Using Manacalon’s Perfection does not expend a use of Bardic Inspiration. Once you use this feature, you cannot use it again</description>
 		</sheet>
 	</element>
 </elements>

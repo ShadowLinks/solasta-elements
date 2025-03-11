@@ -1,3 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="cleric-oblivion.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/cleric-oblivion.xml" />
+		</update>
+	</info>
+    <element name="Oblivion Domain" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_CLERIC_OBLIVION_DOMAIN">
+        <supports>Divine Domain</supports>
 		<description>
 			<p></p>
 			<p class="indent"></p>
@@ -6,6 +15,8 @@
 			<div element="ID____" />
 			<div element="ID_____" />
 			<div element="ID______" />
+			<div element="ID_______" />
+			<div element="ID________" />
 		</description>
 		<sheet display="false">
 			<description></description>
@@ -16,15 +27,39 @@
 			<grant type="Archetype Feature" id="ID____" level="1" />
 			<grant type="Archetype Feature" id="ID_____" level="1" />
 			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_______" level="1" />
+			<grant type="Archetype Feature" id="ID________" level="1" />
 		</rules>
 	</element>
 	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
 		<description>
-			<p></p>
+			<p>spells</p>
+            <table>
+                <thead>
+                    <tr><td>Cleric Level</td><td>Spells</td></tr>
+                </thead>
+                <tr><td>1st</td><td>spells</td></tr>
+                <tr><td>3rd</td><td>spells</td></tr>
+                <tr><td>5th</td><td>spells</td></tr>
+                <tr><td>7th</td><td>spells</td></tr>
+                <tr><td>9th</td><td>spells</td></tr>
+            </table>
 		</description>
-		<sheet>
+		<sheet display="false">
 			<description></description>
 		</sheet>
+        <rules>
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_" />
+        </rules>
 	</element>
 	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
 		<description>
@@ -51,6 +86,22 @@
 		</sheet>
 	</element>
 	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
+		<description>
+			<p></p>
+		</description>
+		<sheet>
+			<description></description>
+		</sheet>
+	</element>
+	<element name="name" type="Archetype Feature" source="Solasta" id="ID_______">
+		<description>
+			<p></p>
+		</description>
+		<sheet>
+			<description></description>
+		</sheet>
+	</element>
+	<element name="name" type="Archetype Feature" source="Solasta" id="ID________">
 		<description>
 			<p></p>
 		</description>

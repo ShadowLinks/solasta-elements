@@ -1,62 +1,63 @@
-
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="bard-heroism.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/bard-heroism.xml" />
+		</update>
+	</info>
+    <element name="College of Heroism" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_BARD_HEROISM">
+        <supports>Bard College</supports>
 		<description>
-			<p></p>
+			<p>With their deep repertoire of songs and seemingly endless tales of heroic deeds, Heroism Bards are often seen as nothing short of heroes themselves. Their inspiring performances can embolden even the most timid heart against fear and doubt, and their indomitable spirit is an inspiration for all. No matter how grim a situation may be, Heroism Bards stand ready with an appropriate song to hand, leading others to ever greater feats, just like the heroes of old.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HEROISM_BOLSTER_MORALE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HEROISM_HEROIC_TALE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HEROISM_NEVER_THE_END" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HEROISM_SONG_OF_HEROES" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HEROISM_BOLSTER_MORALE" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HEROISM_HEROIC_TALE" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HEROISM_NEVER_THE_END" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HEROISM_SONG_OF_HEROES" level="14" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Bolster Morale" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HEROISM_BOLSTER_MORALE">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, whenever an ally rolls one of your Bardic Inspiration dice, they can roll it again and choose which roll to use.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>Whenever an ally rolls one of your Bardic Inspiration dice, they can roll it again and choose which roll to use.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Heroic Tale" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HEROISM_HEROIC_TALE">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, you can use an action to bolster an ally you can see within 30 feet for 1 hour. The target gains advantage on all saving throws and can’t be frightened for the duration of Heroic Tale.</p>
+            <p class="indent">Once you use this feature, you can’t use it again until you finish a long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="1/Long Rest">
+			<description>You can use an action to bolster an ally you can see within 30 feet for 1 hour. The target gains advantage on all saving throws and can’t be frightened for the duration of Heroic Tale.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Never the End" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HEROISM_NEVER_THE_END">
 		<description>
-			<p></p>
+			<p>Starting at 6th level, the inspiration you draw from the many heroic stories and songs you know allows you to push through, even in the most difficult times.</p>
+            <p class="indent">When you have no Bardic Inspiration left you can still give Bardic Inspiration. When you do so, you roll a Bardic Inspiration die and take psychic damage equal to twice the number rolled. This damage can’t be reduced or prevented in any way.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>When you have no Bardic Inspiration left you can still give Bardic Inspiration. When you do so, you roll a Bardic Inspiration die and take psychic damage equal to twice the number rolled. This damage can’t be reduced or prevented in any way.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Song of Heroes" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_BARD_HEROISM_SONG_OF_HEROES">
 		<description>
-			<p></p>
+			<p>Starting at 14th level, as an action, you can activate Song of Heroes for 1 minute or until your concentration ends (as if you were concentrating on a spell). During this time, you can use your bonus action to grant all allies other than yourself within 30 feet of you advantage on all their saving throws and resistance against all damage until the end of your next turn.</p>
+            <p class="indent">You can use this feature once per long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="1/Long Rest">
+			<description>Starting at 14th level, as an action, you can activate Song of Heroes for 1 minute or until your concentration ends (as if you were concentrating on a spell). During this time, you can use your bonus action to grant all allies other than yourself within 30 feet of you advantage on all their saving throws and resistance against all damage until the end of your next turn.</description>
 		</sheet>
 	</element>
 </elements>
