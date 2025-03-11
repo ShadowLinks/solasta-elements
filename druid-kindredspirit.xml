@@ -1,61 +1,216 @@
-		<description>
-			<p></p>
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="druid-kindredspirit.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/druid-kindredspirit.xml" />
+		</update>
+	</info>
+    <element name="Circle of the Kindred Spirit" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_DRUID_KINDREDSPIRIT">
+        <supports>Druid Circle</supports>			
+        <description>
+			<p>Circle of Kindred Spirit druids bond with and nurture a sacred nature spirit deep in their very souls. These kindred spirits, who can take many different forms, protect their bonded companions as long as they continue to foster an abiding harmony between civilization and nature.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_SUMMON_KINDRED_SPIRIT" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_MAGICAL_SPIRIT" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_SHARED_PAIN" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_TWO_AS_ONE" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_SUMMON_KINDRED_SPIRIT" level="2" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_MAGICAL_SPIRIT" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_SHARED_PAIN" level="10" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_TWO_AS_ONE" level="14" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Summon Kindred Spirit" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_SUMMON_KINDRED_SPIRIT">
 		<description>
-			<p></p>
+			<p>Starting at 2nd level, you can summon the spirit bound to your soul. As an action, you can expend one use of your Wild Shape feature to summon your kindred spirit to an unoccupied space within 5 feet of you that you can see, instead of assuming a beast form. It takes the form of an animal of your choice that you are familiar with, scaled up or down to be Small or Medium in size (your choice) and uses the accompanying Kindred Spirit stat block. The limitations are the same as Wild Shape for creatures with swimming or flying speed, unlocking at level 4 and 8 respectively.</p>
+            <p class="indent">As its physical form draws upon the druid, its stat block scales with the druid’s ability scores.</p>
+            <p class="indent">The Kindred Spirit is friendly to you and your companions and obeys your commands. In combat, the spirit shares your initiative count, but it takes its turn immediately after yours. It acts independently to the best of its capabilities if you do not give it clear orders. If the Kindred Spirit is reduced to 0 hit points, its ties to you are forcibly severed as it disappears, and you take a number of d4s of force damage equal to your level. The spirit manifests until it is reduced to 0 hit points, until you dismiss it using an action, or until you die.</p>
+            <p class="indent">As an action, when you already have a summoned Kindred Spirit, you can resummon it and change its form if you so choose by expending one use of your Wild Shape feature. The new spirit appears in an unoccupied space within 5 feet of you that you can see, and the old spirit disappears.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>As an action, you can expend one use of your Wild Shape feature to summon your kindred spirit to an unoccupied space within 5 feet of you that you can see, instead of assuming a beast form. It takes the form of an animal of your choice that you are familiar with, scaled up or down to be Small or Medium in size (your choice) and uses the accompanying Kindred Spirit stat block. The limitations are the same as Wild Shape for creatures with swimming or flying speed, unlocking at level 4 and 8 respectively.
+            The Kindred Spirit is friendly to you and your companions and obeys your commands. In combat, the spirit shares your initiative count, but it takes its turn immediately after yours. It acts independently to the best of its capabilities if you do not give it clear orders. If the Kindred Spirit is reduced to 0 hit points, its ties to you are forcibly severed as it disappears, and you take a number of d4s of force damage equal to your level. The spirit manifests until it is reduced to 0 hit points, until you dismiss it using an action, or until you die.
+            As an action, when you already have a summoned Kindred Spirit, you can resummon it and change its form if you so choose by expending one use of your Wild Shape feature. The new spirit appears in an unoccupied space within 5 feet of you that you can see, and the old spirit disappears.
+            </description>
 		</sheet>
+        <rules>
+            <select type="Companion" name="Kindred Spirit" supports="kindred-spirit"/> 
+        </rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Magical Spirit" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_MAGICAL_SPIRIT">
 		<description>
-			<p></p>
+			<p>Starting at 6th level, your Kindred Spirit’s attacks are now considered magical. You can also change the Spirit Strike damage type to force.</p>
+            <p class="indent">Additionally, when you cast a spell of 1st level or higher, your Kindred Spirit gains Temporary Hit Points equal to half your druid level.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>Your Kindred Spirit’s attacks are now considered magical. You can also change the Spirit Strike damage type to force.
+            Additionally, when you cast a spell of 1st level or higher, your Kindred Spirit gains {{level:druid:half}} Temporary Hit Points.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Shared Pain" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_SHARED_PAIN">
 		<description>
-			<p></p>
+			<p>Starting at 10th level, Kindred Spirits can attack twice, instead of once, whenever they use Spirit Strike on their turn.</p>
+            <p class="indent">Additionally, when you or your Kindred Spirit take damage, you can use your reaction to split the damage evenly between the two of you (after Damage Resistance and Vulnerability calculations).</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>Kindred Spirits can attack twice, instead of once, whenever they use Spirit Strike on their turn.
+            Additionally, when you or your Kindred Spirit take damage, you can use your reaction to split the damage evenly between the two of you (after Damage Resistance and Vulnerability calculations).</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Two as One" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_TWO_AS_ONE">
 		<description>
-			<p></p>
+			<p>Starting at 14th level, you have learned to fight in perfect harmony with your Kindred Spirit.</p>
+            <p class="indent">When your Kindred Spirit hits a creature with an attack, you have advantage on your attacks against the creature and it has disadvantage on saving throws against any spell you cast until the start of your Kindred Spirit’s next turn.</p>
+            <p class="indent">When you cast a spell on a creature, your Kindred Spirit’s attacks deal an additional 2d8 force damage against it until the start of your next turn.</p>
+            <p class="indent">Additionally, your Kindred Spirit automatically succeeds on its saving throws against your spells (unless you decide otherwise).</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>When your Kindred Spirit hits a creature with an attack, you have advantage on your attacks against the creature and it has disadvantage on saving throws against any spell you cast until the start of your Kindred Spirit’s next turn.
+            When you cast a spell on a creature, your Kindred Spirit’s attacks deal an additional 2d8 force damage against it until the start of your next turn.
+            Additionally, your Kindred Spirit automatically succeeds on its saving throws against your spells (unless you decide otherwise).</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
-		</sheet>
-	</element>
+     <element name="Kindred Spirit" type="Companion" source="Tanares RPG 5e" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_SPIRIT_1">
+        <supports>kindred-spirit</supports>
+        <requirements>[level:2]</requirements>
+        <description>
+            <p>Kindred Spirit</p>
+        </description>
+        <setters>
+            <set name="strength">10</set>
+            <set name="dexterity">10</set>
+            <set name="constitution">10</set>
+            <set name="intelligence">10</set>
+            <set name="wisdom">10</set>
+            <set name="charisma">10</set>
+            <set name="ac">10 + wisdom modifier</set>
+            <set name="hp">10 + half your hit points</set>
+            <set name="speed">40 ft.</set>
+            <set name="senses"></set>
+            <set name="languages">Understands your languages, but cant speak</set>
+            <set name="type">Animal</set>
+            <set name="size">Small or Medium</set>
+            <set name="alignment">unaligned</set>
+            <set name="challenge">1</set>
+            <set name="actions">ID_SOLASTA_COMPANION_ACTION_SPIRIT_STRIKE</set>
+            <set name="traits">ID_SOLASTA_COMPANION_TRAIT_LIMITED_TELEPATHY,ID_SOLASTA_COMPANION_TRAIT_PACK_TACTICS,ID_SOLASTA_COMPANION_TRAIT_SPIRIT_STATS</set>
+        </setters>
+        <rules>
+            <stat name="companion:ac" value="10"/>
+            <stat name="companion:hp:max" value="10" bonus="base"/>
+            <stat name="companion:speed" value="40" bonus="base"/>
+        </rules>
+    </element>
+    <element name="Spirit Strike" type="Companion Action" source="Tanares RPG 5e" id="ID_SOLASTA_COMPANION_ACTION_SPIRIT_STRIKE">
+        <description>
+            <p>Melee Weapon Attack: your Spell Attack Modifier to hit, reach 5 ft, one target. Hit: 1d8 + your Wisdom modifier bludgeoning, slashing, or piercing damage (your choice).</p>
+        </description>
+        <sheet>
+            <description>
+                <p>Melee Weapon Attack: your Spell Attack Modifier to hit, reach 5 ft, one target. Hit: 1d8 + your Wisdom modifier bludgeoning, slashing, or piercing damage (your choice).</p>
+            </description>
+        </sheet>
+    </element>
+    <element name="Limited Telepathy" type="Companion Trait" source="Tanares RPG 5e" id="ID_SOLASTA_COMPANION_TRAIT_LIMITED_TELEPATHY">
+        <description>
+            <p>The Kindred Spirit can magically communicate with the Druid if they are within 100 feet of each other.</p>
+        </description>
+        <sheet>
+            <description>
+                <p>The Kindred Spirit can magically communicate with the Druid if they are within 100 feet of each other.</p>
+            </description>
+        </sheet>
+    </element>
+    <element name="Pack Tactics" type="Companion Trait" source="Tanares RPG 5e" id="ID_SOLASTA_COMPANION_TRAIT_PACK_TACTICS">
+        <description>
+            <p>The Kindred Spirit has advantage on an attack roll against a creature if at least one ally is within 5 feet of the creature, and the ally isn’t incapacitated.</p>
+        </description>
+        <sheet>
+            <description>
+                <p>The Kindred Spirit has advantage on an attack roll against a creature if at least one ally is within 5 feet of the creature, and the ally isn’t incapacitated.</p>
+            </description>
+        </sheet>
+    </element>
+    <element name="Stats" type="Companion Trait" source="Tanares RPG 5e" id="ID_SOLASTA_COMPANION_TRAIT_SPIRIT_STATS">
+        <description>
+            <p></p>
+        </description>
+        <sheet>
+            <description>Ability Scores Same as your scores
+            Armor Class 10 + your Wisdom Modifier
+            Hit Points 10 + Half of your Hit Points
+            </description>
+        </sheet>
+    </element>
+     <element name="Kindred Spirit 4" type="Companion" source="Tanares RPG 5e" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_SPIRIT_4">
+        <supports>kindred-spirit</supports>
+        <requirements>[level:4]</requirements>
+        <description>
+            <p>Kindred Spirit</p>
+        </description>
+        <setters>
+            <set name="strength">10</set>
+            <set name="dexterity">10</set>
+            <set name="constitution">10</set>
+            <set name="intelligence">10</set>
+            <set name="wisdom">10</set>
+            <set name="charisma">10</set>
+            <set name="ac">10 + wisdom modifier</set>
+            <set name="hp">10 + half your hit points</set>
+            <set name="speed">40 ft.</set>
+            <set name="senses"></set>
+            <set name="languages">Understands your languages, but cant speak</set>
+            <set name="type">Animal</set>
+            <set name="size">Small or Medium</set>
+            <set name="alignment">unaligned</set>
+            <set name="challenge">1</set>
+            <set name="actions">ID_SOLASTA_COMPANION_ACTION_SPIRIT_STRIKE</set>
+            <set name="traits">ID_SOLASTA_COMPANION_TRAIT_LIMITED_TELEPATHY,ID_SOLASTA_COMPANION_TRAIT_PACK_TACTICS,ID_SOLASTA_COMPANION_TRAIT_SPIRIT_STATS</set>
+        </setters>
+        <rules>
+            <stat name="companion:ac" value="10"/>
+            <stat name="companion:hp:max" value="10" bonus="base"/>
+            <stat name="companion:speed" value="40" bonus="base"/>
+            <stat name="companion:speed:swim" value="40" bonus="base"/>
+        </rules>
+    </element>
+     <element name="Kindred Spirit 8" type="Companion" source="Tanares RPG 5e" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_SPIRIT_3">
+        <supports>kindred-spirit</supports>
+        <requirements>[level:8]</requirements>
+        <description>
+            <p>Kindred Spirit</p>
+        </description>
+        <setters>
+            <set name="strength">10</set>
+            <set name="dexterity">10</set>
+            <set name="constitution">10</set>
+            <set name="intelligence">10</set>
+            <set name="wisdom">10</set>
+            <set name="charisma">10</set>
+            <set name="ac">10 + wisdom modifier</set>
+            <set name="hp">10 + half your hit points</set>
+            <set name="speed">40 ft.</set>
+            <set name="senses"></set>
+            <set name="languages">Understands your languages, but cant speak</set>
+            <set name="type">Animal</set>
+            <set name="size">Small or Medium</set>
+            <set name="alignment">unaligned</set>
+            <set name="challenge">1</set>
+            <set name="actions">ID_SOLASTA_COMPANION_ACTION_SPIRIT_STRIKE</set>
+            <set name="traits">ID_SOLASTA_COMPANION_TRAIT_LIMITED_TELEPATHY,ID_SOLASTA_COMPANION_TRAIT_PACK_TACTICS,ID_SOLASTA_COMPANION_TRAIT_SPIRIT_STATS</set>
+        </setters>
+        <rules>
+            <stat name="companion:ac" value="10"/>
+            <stat name="companion:hp:max" value="10" bonus="base"/>
+            <stat name="companion:speed" value="40" bonus="base"/>
+            <stat name="companion:speed:swim" value="40" bonus="base"/>
+            <stat name="companion:speed:fly" value="40" bonus="base"/>
+        </rules>
+    </element>
+  
 </elements>

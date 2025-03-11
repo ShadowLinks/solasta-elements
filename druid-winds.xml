@@ -1,61 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="druid-winds.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/druid-winds.xml" />
+		</update>
+	</info>
+    <element name="Circle of Winds" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_DRUID_WINDS">
+        <supports>Druid Circle</supports>	
 		<description>
-			<p></p>
+			<p>As the Cataclysm raged and disastrously disrupted all magic on Solasta, some among the druids took it upon themselves to restore the world’s flow of mana by reshaping the prevailing winds. These Druids formed the first Circle of Wind. Millenia later, Circle of Wind Druids still travel the world, often in extremely hostile regions, doing whatever they can to heal the land.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_WINDS_SPELLS" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_WINDS_CARRIED_BY_THE_WINDS" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_WINDS_SHELTERING_BREEZE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_WINDS_TAILWIND" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_WINDS_UNFETTERED" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_WINDS_SPELLS" level="2" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_WINDS_CARRIED_BY_THE_WINDS" level="2" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_WINDS_SHELTERING_BREEZE" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_WINDS_TAILWIND" level="10" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_WINDS_UNFETTERED" level="14" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Circle of Winds Spells" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_WINDS_SPELLS">
 		<description>
-			<p></p>
+			<p>Being part of the Circle of Winds grants you access to some spells when you reach certain levels in this class, as shown on the Circle of Winds Spells table.</p>
+            <p class="indent">Once you gain access to one of these spells, you always have it prepared, and it doesn’t count against the number of spells you can prepare each day. If you gain access to a spell that doesn’t appear on the druid spell list, the spell is nonetheless a druid spell for you.</p>
+            <table>
+                <thead>
+                    <tr><td>Druid Level</td><td>Spells</td></tr>
+                </thead>
+                <tr><td>2nd</td><td>feather fall, expeditious retreat</td></tr>
+                <tr><td>3rd</td><td>gust of wind, levitate</td></tr>
+                <tr><td>5th</td><td>fly, gaseous form</td></tr>
+                <tr><td>7th</td><td>freedom of movement, conjure minor elementals</td></tr>
+                <tr><td>9th</td><td>conjure elemental, mislead</td></tr>
+            </table>
+		</description>
+		<sheet display="false">
+			<description></description>
+		</sheet>
+        <rules>
+            <grant type="Spell" level="2" id="ID_PHB_SPELL_FEATHER_FALL" />
+            <grant type="Spell" level="2" id="ID_PHB_SPELL_EXPEDITIOUS_RETREAT" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_GUST_OF_WIND" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_LEVITATE" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_FLY" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_GASEOUS_FORM" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_FREEDOM_OF_MOVEMENT" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_CONJURE_MINOR_ELEMENTALS" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_CONJURE_ELEMENTAL" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_MISLEAD" />
+        </rules>
+	</element>
+	<element name="Carried by the Winds" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_WINDS_CARRIED_BY_THE_WINDS">
+		<description>
+			<p>Starting at 2nd level, when you cast a spell of 1st level or higher, you gain the benefits of the Disengage Action, your movement becomes unaffected by difficult terrain, and your speed increases by 10 feet until the end of your turn.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>When you cast a spell of 1st level or higher, you gain the benefits of the Disengage Action, your movement becomes unaffected by difficult terrain, and your speed increases by 10 feet until the end of your turn.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Sheltering Breeze" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_WINDS_SHELTERING_BREEZE">
 		<description>
-			<p></p>
+			<p>Starting at 6th level, you can use a bonus action to shelter your allies. You and friendly creatures within 30 feet of you gain advantage on all saving throws until the start of your next turn.</p>
+            <p class="indent">You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses of it when you finish a long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="{{wisdom:modifier}}/Long Rest" action="Bonus Action">
+			<description>Starting at 6th level, you can use a bonus action to shelter your allies. You and friendly creatures within 30 feet of you gain advantage on all saving throws until the start of your next turn.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Tailwind" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_WINDS_TAILWIND">
 		<description>
-			<p></p>
+			<p>Starting at 10th level, after you cast a spell or cantrip on your turn, you can empower a creature within 120 feet of you that you can see. The target’s speed increases by 20 feet and they can take the Disengage action as a bonus action until the end of their turn.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>Starting at 10th level, after you cast a spell or cantrip on your turn, you can empower a creature within 120 feet of you that you can see. The target’s speed increases by 20 feet and they can take the Disengage action as a bonus action until the end of their turn.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Unfettered" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_WINDS_UNFETTERED">
 		<description>
-			<p></p>
+			<p>Starting at 14th level, your speed permanently increases by 5 feet and you permanently gain a +3 bonus to initiative.</p>
+            <p class="indent">Additionally, it becomes almost impossible to pin you down. If you are grappled, paralyzed, or restrained against your will, you can choose to immediately gain the benefits of Freedom of Movement for 1 minute.</p>
+            <p class="indent">Once you use this feature, you can’t use it again until you finish a short or long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="1/Short Rest">
+			<description>If you are grappled, paralyzed, or restrained against your will, you can choose to immediately gain the benefits of Freedom of Movement for 1 minute.</description>
 		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
-		</sheet>
+        <rules>
+            <stat name="speed" value="5" />
+            <stat name="initiative" value="3" />
+        </rules>
 	</element>
 </elements>

@@ -8,105 +8,104 @@
     <element name="Sun Domain" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_CLERIC_SUN_DOMAIN">
         <supports>Divine Domain</supports>
 		<description>
-			<p></p>
+			<p>The Sun Domain is associated with Arun, the Tirmarian god of nature and the elements. It developed from ancient farmers’ worship of the sun and its life-giving power. Clerics who choose this domain use the power of sunlight to heal the faithful and smite the unworthy, ensuring respect for Arun and for nature in general.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
-			<div element="ID_______" />
-			<div element="ID________" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_SUN_DOMAIN_POTENT_SPELLS" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_SUN_DOMAIN_POTENT_CD_HOLY_RADIANCE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_SUN_DOMAIN_POTENT_CD_HERALD_OF_THE_SUN" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_SUN_DOMAIN_POTENT_SOOTHING_HAND" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_SUN_DOMAIN_POTENT_SPELLCASTING" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_SUN_DOMAIN_SUN_BLESSED" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
-			<grant type="Archetype Feature" id="ID_______" level="1" />
-			<grant type="Archetype Feature" id="ID________" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_SUN_DOMAIN_POTENT_SPELLS" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_SUN_DOMAIN_POTENT_CD_HOLY_RADIANCE" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_SUN_DOMAIN_POTENT_CD_HERALD_OF_THE_SUN" level="2" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_SUN_DOMAIN_POTENT_SOOTHING_HAND" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_SUN_DOMAIN_POTENT_SPELLCASTING" level="8" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_SUN_DOMAIN_SUN_BLESSED" level="17" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Sun Domain Spells" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_SUN_DOMAIN_POTENT_SPELLS">
 		<description>
-			<p>spells</p>
+			<p>At each indicated cleric level, you add the listed spells to your spells prepared. These spells are always prepared and do not count against the number of spells you can prepare.</p>
             <table>
                 <thead>
                     <tr><td>Cleric Level</td><td>Spells</td></tr>
                 </thead>
-                <tr><td>1st</td><td>spells</td></tr>
-                <tr><td>3rd</td><td>spells</td></tr>
-                <tr><td>5th</td><td>spells</td></tr>
-                <tr><td>7th</td><td>spells</td></tr>
-                <tr><td>9th</td><td>spells</td></tr>
+                <tr><td>1st</td><td>color spray, faerie fire</td></tr>
+                <tr><td>3rd</td><td>continual flame, heat metal</td></tr>
+                <tr><td>5th</td><td>daylight, plant growth</td></tr>
+                <tr><td>7th</td><td>fire shield, wall of fire</td></tr>
+                <tr><td>9th</td><td>flame strike, hallow</td></tr>
             </table>
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
         <rules>
-            <grant type="Spell" level="1" id="ID_PHB_SPELL_" />
-            <grant type="Spell" level="1" id="ID_PHB_SPELL_" />
-            <grant type="Spell" level="3" id="ID_PHB_SPELL_" />
-            <grant type="Spell" level="3" id="ID_PHB_SPELL_" />
-            <grant type="Spell" level="5" id="ID_PHB_SPELL_" />
-            <grant type="Spell" level="5" id="ID_PHB_SPELL_" />
-            <grant type="Spell" level="7" id="ID_PHB_SPELL_" />
-            <grant type="Spell" level="7" id="ID_PHB_SPELL_" />
-            <grant type="Spell" level="9" id="ID_PHB_SPELL_" />
-            <grant type="Spell" level="9" id="ID_PHB_SPELL_" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_COLOR_SPRAY" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_FAERIE_FIRE" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_CONTINUAL_FLAME" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_HEAT_METAL" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_DAYLIGHT" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_PLANT_GROWTH" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_FIRE_SHIELD" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_WALL_OF_FIRE" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_FLAME_STRIKE" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_HALLOW" />
         </rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Holy Radiance" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_SUN_DOMAIN_POTENT_CD_HOLY_RADIANCE">
 		<description>
-			<p></p>
+			<p>When you choose this domain at 1st level, you learn the Sacred Flame and Light cantrips if you do not already know them, which don’t count against the number of cleric cantrips you know. When you cast Sacred Flame, the target has disadvantage on its saving throw.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>When you cast Sacred Flame, the target has disadvantage on its saving throw.</description>
+		</sheet>
+            <grant type="Spell" id="ID_PHB_SPELL_LIGHT" />
+            <grant type="Spell" id="ID_PHB_SPELL_SACRED_FLAME" />
+	</element>
+	<element name="Channel Divinity: Herald of the Sun" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_SUN_DOMAIN_POTENT_CD_HERALD_OF_THE_SUN">
+		<description>
+			<p>Starting at 2nd level, you can use your Channel Divinity to clad yourself in blazing fire. As an action, you start shedding bright light in a 10-foot radius and dim light for an additional 10 feet for 1 minute or until you are incapacitated or die. Any creature that moves within 10’ of you or starts their turn there either takes half your cleric level in fire or radiant damage (your choice) if they are hostile, or gains half your cleric level in temporary hit points if they are friendly.</p>
+            <p class="indent">Once a creature is affected by this feature, it can’t be affected again until the start of its next turn.</p>
+		</description>
+		<sheet usage="Channel Divinity">
+			<description> As an action, you start shedding bright light in a 10-foot radius and dim light for an additional 10 feet for 1 minute or until you are incapacitated or die. Any creature that moves within 10’ of you or starts their turn there either takes half your cleric level in fire or radiant damage (your choice) if they are hostile, or gains half your cleric level in temporary hit points if they are friendly.
+            Once a creature is affected by this feature, it can’t be affected again until the start of its next turn.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Soothing hand" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_SUN_DOMAIN_POTENT_SOOTHING_HAND">
 		<description>
-			<p></p>
+			<p>Starting at 6th level, you can touch an ally as a bonus action and remove one of the following conditions from them: Charmed, Frightened, or Incapacitated.</p>
+            <p class="indent">You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses when you finish a long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="{{wisdom:modifier}}/Long Rest">
+			<description>You can touch an ally as a bonus action and remove one of the following conditions from them: Charmed, Frightened, or Incapacitated.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Potent Spellcasting" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_SUN_DOMAIN_POTENT_SPELLCASTING">
 		<description>
-			<p></p>
+			<p>Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You add your Wisdom modifier to the damage you deal with any cleric cantrip.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
+	<element name="Sun Blessed" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_SUN_DOMAIN_SUN_BLESSED">
 		<description>
-			<p></p>
+			<p>Starting at 17th level, you gain resistance to fire and radiant damage. Once on each of your turns when you deal fire or radiant damage, you can decide to let it run wild and deal an additional 2d8 damage of the same type to one target. Other hostile creatures within 20 feet of it that aren’t behind total cover also take the same amount of damage.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="1/Turn">
+			<description>Once on each of your turns when you deal fire or radiant damage, you can decide to let it run wild and deal an additional 2d8 damage of the same type to one target. Other hostile creatures within 20 feet of it that aren’t behind total cover also take the same amount of damage.</description>
 		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_______">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID________">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
-		</sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_RADIANT" />
+        </rules>
 	</element>
 </elements>

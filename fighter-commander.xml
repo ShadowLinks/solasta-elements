@@ -1,61 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="fighter-commander.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/fighter-commander.xml" />
+		</update>
+	</info>
+    <element name="Commander" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FIGHTER_COMMANDER">
+        <supports>Martial Archetype</supports>	
 		<description>
-			<p></p>
+			<p>Standing firm at the battlefield’s center, roaring orders to their troops, the commander leads by example. Most of these disciplined warriors hail from the Kingdom of Gallivan. They are expert leaders who can easily turn the tide of a battle, greatly increasing the effectiveness of their allies with their presence alone.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_COMMANDER_BONUS_PROFICIENCIES" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_COMMANDER_ROUSING_SHOUT" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_COMMANDER_COORDINATED_DEFENSE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_COMMANDER_INVIGORATING_SHOUT" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_COMMANDER_TAKE_THEM_DOWN" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_COMMANDER_LAST_STAND" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_COMMANDER_BONUS_PROFICIENCIES" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_COMMANDER_ROUSING_SHOUT" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_COMMANDER_COORDINATED_DEFENSE" level="7" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_COMMANDER_INVIGORATING_SHOUT" level="10" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_COMMANDER_TAKE_THEM_DOWN" level="15" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_COMMANDER_LAST_STAND" level="18" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Bonus Proficiencies" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_COMMANDER_BONUS_PROFICIENCIES">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, you gain Proficiency in the Intimidation and Persuasion skills. If you are already proficient in one (or both skills), you gain proficiency in one (or two) of the following skills of your choice: Athletics, Investigation, Insight, Perception, Survival.</p>
+            <p class="indent">Additionally, whenever you make a Charisma (Intimidation) or Charisma (Persuasion) check, you gain a bonus to that check equal to your Strength modifier.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>Whenever you make a Charisma (Intimidation) or Charisma (Persuasion) check, you gain a +{{strength:modifier}} bonus to that check.</description>
+		</sheet>
+        <rules>
+            <select type="Proficiency" name="Skill Proficiency, extra (intimidation)" requirements="ID_PROFICIENCY_SKILL_INTIMIDATION" supports="ID_PROFICIENCY_SKILL_ATHLETICS|ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_SURVIVAL" />
+            <select type="Proficiency" name="Skill Proficiency, extra (Persuasion)" requirements="ID_PROFICIENCY_SKILL_PERSUASION" supports="ID_PROFICIENCY_SKILL_ATHLETICS|ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_SURVIVAL" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" requirements="!ID_PROFICIENCY_SKILL_INTIMIDATION"/>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" requirements="!ID_PROFICIENCY_SKILL_PERSUASION" />
+        </rules>
+	</element>
+	<element name="Rousing Shout" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_COMMANDER_ROUSING_SHOUT">
+		<description>
+			<p>Starting at 3rd level, you can use a bonus action to give yourself and friendly creatures within 30 feet of you advantage on their next attack until the start of your next turn.</p>
+            <p class="indent">You can use this feature a number of times equal to your Constitution modifier (minimum of once), and you regain all expended uses when you finish a Short or Long Rest.</p>
+            <p class="indent">At 10th level, Rousing Shout’s range increases to 60 feet.</p>
+		</description>
+		<sheet usage="{{constitution:modifier}}/Short Rest">
+			<description>You can use a bonus action to give yourself and friendly creatures within 30 feet of you advantage on their next attack until the start of your next turn.</description>
+            <description level="10">You can use a bonus action to give yourself and friendly creatures within 60 feet of you advantage on their next attack until the start of your next turn.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Coordinated Defense" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_COMMANDER_COORDINATED_DEFENSE">
 		<description>
-			<p></p>
+			<p>Starting at 7th level, whenever you take the Attack action, you can forgo one of your attacks to grant yourself or an ally within 30 feet of you the benefits of the Dodge Action until the start of your next turn.</p>
+            <p class="indent">You can use Coordinated Defense as many times as you can attack each turn.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="{{extra attack:count}}/Turn">
+			<description>Whenever you take the Attack action, you can forgo one of your attacks to grant yourself or an ally within 30 feet of you the benefits of the Dodge Action until the start of your next turn.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Invigoration Shout" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_COMMANDER_INVIGORATING_SHOUT">
 		<description>
-			<p></p>
+			<p>Starting at 10th level, Rousing Shout now also grants affected targets temporary hit points equal to your fighter level for 1 minute.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>Rousing Shout now also grants affected targets {{level:fighter}} temporary hit points for 1 minute.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Take Them Down" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_COMMANDER_TAKE_THEM_DOWN">
 		<description>
-			<p></p>
+			<p>Starting at 15th level, after you hit a creature with a weapon attack, you mark them until the start of your next turn. While marked, the target takes an additional 1d6 damage whenever they are hit with an attack. The damage type is the same as the attack.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>After you hit a creature with a weapon attack, you mark them until the start of your next turn. While marked, the target takes an additional 1d6 damage whenever they are hit with an attack. The damage type is the same as the attack.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
+	<element name="Last Stand" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_COMMANDER_LAST_STAND">
 		<description>
-			<p></p>
+			<p>Starting at 18th level, you become an unyielding beacon of hope on the battlefield. When you or an ally within 60 feet of you that you can see has fewer than half of their hit points remaining, you can use your reaction to activate Last Stand and emanate an aura of determination in a 60-foot radius.</p>
+            <p class="indent">While in the aura, you and friendly creatures gain a +2 bonus to attack rolls, a +2 bonus to AC, a +2 bonus to all Saving Throws and having 0 hit points doesn’t make you or your allies unconscious. Taking damage while at 0 hit points still causes death saving throw failures as normal, and three death saving throw failures still result in death.</p>
+            <p class="indent">During Last Stand, you make a Constitution Saving Throw at the end of each of your turns, starting at DC 10 and increasing by 5 each turn. Each time you fail, you suffer one level of exhaustion. The DC resets to 10 when you finish a Long Rest. You can end Last Stand at any time (requires no action), and it ends early if you become unconscious or die.</p>
+            <p class="indent">Once you use this feature, you can’t use it again until you finish a long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="1/Long Rest">
+			<description>When you or an ally within 60 feet of you that you can see has fewer than half of their hit points remaining, you can use your reaction to activate Last Stand and emanate an aura of determination in a 60-foot radius.
+            While in the aura, you and friendly creatures gain a +2 bonus to attack rolls, a +2 bonus to AC, a +2 bonus to all Saving Throws and having 0 hit points doesn’t make you or your allies unconscious. Taking damage while at 0 hit points still causes death saving throw failures as normal, and three death saving throw failures still result in death.
+            During Last Stand, you make a Constitution Saving Throw at the end of each of your turns, starting at DC 10 and increasing by 5 each turn. Each time you fail, you suffer one level of exhaustion. The DC resets to 10 when you finish a Long Rest. You can end Last Stand at any time (requires no action), and it ends early if you become unconscious or die.</description>
 		</sheet>
 	</element>
 </elements>

@@ -1,61 +1,97 @@
-		<description>
-			<p></p>
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="druid-balance.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/druid-balance.xml" />
+		</update>
+	</info>
+    <element name="Circle of Balance" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_DRUID_BALANCE">
+        <supports>Druid Circle</supports>		
+        <description>
+			<p>Druids from the Circle of Balance are rare and elusive, even amongst their peers. Little is known about them, beyond their ancient origins in the wild magics of the Cataclysm. The contradictory whispers that do mention Balance Druids paint them in a very mixed light: some talk of gentle healers, others tell of merciless executioners that slaughter with impunity. In reality, both are true: nature giveth and nature taketh away.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_BALANCE_SPELLS" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_BALANCE_GIFT_OF_LIFE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_BALANCE_COLD_EMBRACE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_BALANCE_LIFE_DRAIN" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_BALANCE_REVERSE_THE_CYCLE" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_BALANCE_SPELLS" level="2" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_BALANCE_GIFT_OF_LIFE" level="2" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_BALANCE_COLD_EMBRACE" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_BALANCE_LIFE_DRAIN" level="10" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_BALANCE_REVERSE_THE_CYCLE" level="14" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Circle of Balance Spells" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_BALANCE_SPELLS">
 		<description>
-			<p></p>
+			<p>The Circle of Balance grants you access to some spells when you reach certain levels in this class, as shown on the Circle of Balance Spells table.</p>
+            <p class="indent">Once you gain access to one of these spells, you always have it prepared, and it doesn’t count against the number of spells you can prepare each day. If you gain access to a spell that doesn’t appear on the druid spell list, the spell is nonetheless a druid spell for you.</p>
+            <table>
+                <thead>
+                    <tr><td>Druid Level</td><td>Spells</td></tr>
+                </thead>
+                <tr><td>2nd</td><td>cure wounds, inflict wounds</td></tr>
+                <tr><td>3rd</td><td>lesser restoration, prayer of healing</td></tr>
+                <tr><td>5th</td><td>mass healing word, revivify</td></tr>
+                <tr><td>7th</td><td>death ward, blight</td></tr>
+                <tr><td>9th</td><td>mass cure wounds, antilife shell</td></tr>
+            </table>
 		</description>
-		<sheet>
+		<sheet display="false">
 			<description></description>
 		</sheet>
+        <rules>
+            <grant type="Spell" level="2" id="ID_PHB_SPELL_CURE_WOUNDS" />
+            <grant type="Spell" level="2" id="ID_PHB_SPELL_INFLICT_WOUNDS" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_LESSER_RESTORATION" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_PRAYER_OF_HEALING" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_MASS_HEALING_WORD" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_REVIVIFY" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_DEATH_WARD" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_BLIGHT" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_MASS_CURE_WOUNDS" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_ANTILIFE_SHELL" />
+        </rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Gift of Life" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_BALANCE_GIFT_OF_LIFE">
 		<description>
-			<p></p>
+			<p>Starting at 2nd level, when you cast a spell of 1st level or higher which restores hit points to a creature, they also regain an additional amount of hit points equal to half your druid level at the start of their next turn.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>When you cast a spell of 1st level or higher which restores hit points to a creature, they also regain an additional {{level:druid:half}} hit points at the start of their next turn.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Cold Embrace" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_BALANCE_COLD_EMBRACE">
 		<description>
-			<p></p>
+			<p>Starting at 6th level, when you cast a spell of 1st level or higher, hostile creatures hit by that spell attack or who fail a save against that spell take necrotic damage equal to your Proficiency Bonus and can’t regain hit points until the start of your next turn.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>When you cast a spell of 1st level or higher, hostile creatures hit by that spell attack or who fail a save against that spell take {{proficiency}} necrotic damage and can’t regain hit points until the start of your next turn.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Life Drain" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_BALANCE_LIFE_DRAIN">
 		<description>
-			<p></p>
+			<p>Starting at 10th level, whenever a creature other than yourself that you can see within 30 feet of you takes damage, you can use your reaction to heal a different creature you can see within 30 feet by half of the amount of damage taken.</p>
+            <p class="indent">You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses of it when you finish a long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="{{wisdom:modifier}}/Long Rest">
+			<description>Whenever a creature other than yourself that you can see within 30 feet of you takes damage, you can use your reaction to heal a different creature you can see within 30 feet by half of the amount of damage taken.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
+	<element name="Reverse the Cycle" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_BALANCE_REVERSE_THE_CYCLE">
 		<description>
-			<p></p>
+			<p>Starting at 14th level, the Circle of Balance protects its disciples from an early death. When you are reduced to 0 hit points and thereby fall unconscious, all hostile creatures within 60 feet of you must roll a Constitution saving throw, taking 2d8 + half your druid levels necrotic damage on a failed save, or half as a much on a successful one. You then regain hit points equal to the total amount of damage dealt and immediately rise to your feet.</p>
+            <p class="indent">If there are no hostile creatures within 60 feet of you, or if you decide not to use the feature when reduced to 0 hit points, Reverse the Cycle does not activate.</p>
+            <p class="indent">Once you use this feature, you can’t use it again until you finish a long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="1/Long Rest">
+			<description>When you are reduced to 0 hit points and thereby fall unconscious, all hostile creatures within 60 feet of you must roll a Constitution saving throw, taking 2d8 +{{level:druid:half}} necrotic damage on a failed save, or half as a much on a successful one. You then regain hit points equal to the total amount of damage dealt and immediately rise to your feet.
+            If there are no hostile creatures within 60 feet of you, or if you decide not to use the feature when reduced to 0 hit points, Reverse the Cycle does not activate.</description>
 		</sheet>
 	</element>
 </elements>

@@ -8,105 +8,137 @@
     <element name="Mischief Domain" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_CLERIC_MISCHIEF_DOMAIN">
         <supports>Divine Domain</supports>
 		<description>
-			<p></p>
+			<p>The Mischief Domain is associated with Misaye, who smiles upon all those who stand in defiance of the rules, and is naturally beloved by gamblers, swindlers, rogues and other unruly types. One does not only pray to Misaye for luck, but also for change and freedom, and to be liberated from all obligations in order to pursue one’s dreams.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
-			<div element="ID_______" />
-			<div element="ID________" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_SPELLS" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_ELUSIVE_TARGET" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_BORROWED_LUCK" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_TRICKSTER" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_CD_PLAYFUL_WHISPERS" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_POTENT_SPELLCASTING" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_BOTTOMLESS_LUCK" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
-			<grant type="Archetype Feature" id="ID_______" level="1" />
-			<grant type="Archetype Feature" id="ID________" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_SPELLS" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_TRICKSTER" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_BORROWED_LUCK" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_CD_PLAYFUL_WHISPERS" level="2" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_ELUSIVE_TARGET" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_POTENT_SPELLCASTING" level="8" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_BOTTOMLESS_LUCK" level="17" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Mischief Domain Spells" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_SPELLS">
 		<description>
-			<p>spells</p>
+			<p>At each indicated cleric level, you add the listed spells to your spells prepared. These spells are always prepared and do not count against the number of spells you can prepare.</p>
             <table>
                 <thead>
                     <tr><td>Cleric Level</td><td>Spells</td></tr>
                 </thead>
-                <tr><td>1st</td><td>spells</td></tr>
-                <tr><td>3rd</td><td>spells</td></tr>
-                <tr><td>5th</td><td>spells</td></tr>
-                <tr><td>7th</td><td>spells</td></tr>
-                <tr><td>9th</td><td>spells</td></tr>
+                <tr><td>1st</td><td>silent image, grease</td></tr>
+                <tr><td>3rd</td><td>blur, invisibility</td></tr>
+                <tr><td>5th</td><td>hypnotic pattern, nondetection</td></tr>
+                <tr><td>7th</td><td>confusion, greater invisibility</td></tr>
+                <tr><td>9th</td><td>dream, mislead</td></tr>
             </table>
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
         <rules>
-            <grant type="Spell" level="1" id="ID_PHB_SPELL_" />
-            <grant type="Spell" level="1" id="ID_PHB_SPELL_" />
-            <grant type="Spell" level="3" id="ID_PHB_SPELL_" />
-            <grant type="Spell" level="3" id="ID_PHB_SPELL_" />
-            <grant type="Spell" level="5" id="ID_PHB_SPELL_" />
-            <grant type="Spell" level="5" id="ID_PHB_SPELL_" />
-            <grant type="Spell" level="7" id="ID_PHB_SPELL_" />
-            <grant type="Spell" level="7" id="ID_PHB_SPELL_" />
-            <grant type="Spell" level="9" id="ID_PHB_SPELL_" />
-            <grant type="Spell" level="9" id="ID_PHB_SPELL_" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_SILENT_IMAGE" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_GREASE" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_BLUR" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_INVISIBILITY" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_HYPNOTIC_PATTERN" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_NONDETECTION" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_CONFUSION" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_GREATER_INVISIBILITY" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_DREAM" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_MISLEAD" />
         </rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Borrowed Luck" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_BORROWED_LUCK">
 		<description>
-			<p></p>
+			<p>When you choose this domain at 1st level, your deity grants you the ability to alter fate through luck. When you fail an attack roll, an ability check, or a saving throw, and you don’t have disadvantage on that roll, you can use your reaction to reroll the d20. You must use the new roll, even if you had advantage.</p>
+            <p class="indent">You can use Borrowed Luck a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses when you finish a long rest.</p>
+            <p class="indent">You can decide to use Borrowed Luck even if you no longer have any uses left. However, doing so will curse you with bad luck. For each time you use Borrowed Luck beyond the limit, the DM can give you disadvantage on one attack roll, ability check, or saving throw until you finish a long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="{{wisdom:modifier}}/Long Rest">
+			<description>When you fail an attack roll, an ability check, or a saving throw, and you don’t have disadvantage on that roll, you can use your reaction to reroll the d20. You must use the new roll, even if you had advantage.
+            You can decide to use Borrowed Luck even if you no longer have any uses left. However, doing so will curse you with bad luck. For each time you use Borrowed Luck beyond the limit, the DM can give you disadvantage on one attack roll, ability check, or saving throw until you finish a long rest.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Trickster" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_TRICKSTER">
 		<description>
-			<p></p>
+			<p>When you choose this domain at 1st level, you gain proficiency in the Deception skill. If you are already proficient in it, you gain proficiency in one of the following skills of your choice: Sleight of Hand, Stealth, Performance, or Persuasion.</p>
+            <p class="indent">You also learn the Vicious Mockery cantrip if you do not already know it, which is cleric cantrip for you and doesn’t count against the number of cleric cantrips you know.</p>
 		</description>
 		<sheet>
-			<description></description>
+		</sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_VICIOUS_MOCKERY" />
+            <select type="Proficiency" name="Skill Proficiency, Trickster" supports="ID_PROFICIENCY_SKILL_SLEIGHTOFHAND|ID_PROFICIENCY_SKILL_PERFORMANCE|ID_PROFICIENCY_SKILL_STEALTH|ID_PROFICIENCY_SKILL_PERSUASION" requirements="ID_PROFICIENCY_SKILL_DECEPTION"/>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_DECEPTION" requirments="!ID_PROFICIENCY_SKILL_DECEPTION" />
+        </rules>
+	</element>
+	<element name="Channel Divinity: Playful Whispers" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_CD_PLAYFUL_WHISPERS">
+		<description>
+			<p>Starting at 2nd level, you can use your Channel Divinity to create confusion on the battlefield. As an action, you become invisible and each hostile creature within 10 feet of you must make a Wisdom saving throw. On a failure, a creature must roll a d8 at the start of its turn to determine the effect, which lasts until the start of your next turn.</p>
+            <p class="indent">Your invisibility wears off at the start of your next turn or when you attack or cast a spell.</p>
+            <table>
+                <thead>
+                    <tr><td>d8</td><td>Behavior</td></tr>
+                </thead>
+                <tr><td>1</td><td>The creature has advantage on its attack rolls.</td></tr>
+                <tr><td>2</td><td>The creature has disadvantage on its attack rolls.</td></tr>
+                <tr><td>3</td><td>The creature uses its action and movement to make a melee attack against the nearest creature. If it can’t reach anyone, the creature does nothing this turn.</td></tr>
+                <tr><td>4</td><td>The creature has a speed of 0.</td></tr>
+                <tr><td>5</td><td>The creature is blinded.</td></tr>
+                <tr><td>6</td><td>The creature is restrained.</td></tr>
+                <tr><td>7</td><td>The creature is incapacitated.</td></tr>
+                <tr><td>8</td><td>The creature can act and move normally.</td></tr>
+            </table>
+		</description>
+		<sheet usage="Channel Divinity" alt="Playful Whispers">
+			<description>You can use your Channel Divinity to create confusion on the battlefield. As an action, you become invisible and each hostile creature within 10 feet of you must make a Wisdom saving throw. On a failure, a creature must roll a d8 at the start of its turn to determine the effect, which lasts until the start of your next turn.
+            Your invisibility wears off at the start of your next turn or when you attack or cast a spell.
+            1 The creature has advantage on its attack rolls.
+            2 The creature has disadvantage on its attack rolls.
+            3 The creature uses its action and movement to make a melee attack against the nearest creature. If it can’t reach anyone, the creature does nothing this turn.
+            4 The creature has a speed of 0.
+            5 The creature is blinded.
+            6 The creature is restrained.
+            7 The creature is incapacitated.
+            8 The creature can act and move normally.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Elusive Target" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_ELUSIVE_TARGET">
 		<description>
-			<p></p>
+			<p>Starting at 6th level, after you are hit by a melee attack roll, you can use your reaction to gain the benefits of the Dodge Action and Disengage Action until the end of your next turn.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet action="Reaction">
+			<description>After you are hit by a melee attack roll, you can use your reaction to gain the benefits of the Dodge Action and Disengage Action until the end of your next turn.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
+	<element name="Potent Spellcasting" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_POTENT_SPELLCASTING">
 		<description>
-			<p></p>
+			<p>Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You add your Wisdom modifier to the damage you deal with any cleric cantrip.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_______">
+	<element name="Bottomless Luck" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_BOTTOMLESS_LUCK">
 		<description>
-			<p></p>
+			<p>Starting at 17th level, you can use your bonus action to gain advantage on your attack rolls, ability checks, and saving throws for 1 minute.</p>
+            <p class="indent">Once you use this feature, you can’t use it again until you finish a long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID________">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
+		<sheet action="Bonus Action" usage="1/Long Rest">
+			<description>You can use your bonus action to gain advantage on your attack rolls, ability checks, and saving throws for 1 minute.</description>
 		</sheet>
 	</element>
 </elements>
