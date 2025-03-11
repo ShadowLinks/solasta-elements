@@ -1,61 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="monk-survival.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/monk-survival.xml" />
+		</update>
+	</info>
+    <element name="Way of Survival" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_MONK_SURVIVAL">
+        <supports>Monastic Tradition</supports>	
 		<description>
-			<p></p>
+			<p>Monks following the Way of Survival are often described as gentle monsters. Their intimidating bodies are often latticed with brutal training scars, but they are known for their peaceful and humble demeanors. Even when threatened physically, Survival Monks rarely retaliate, instead waiting for their attackers to tire and give up of their own accord.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_SURVIVAL_DEFENSIVE_STANCE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_SURVIVAL_UNBREAKABLE_BODY" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_SURVIVAL_UNMOVING_STRENGTH" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_SURVIVAL_IMMORTAL" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_SURVIVAL_DEFENSIVE_STANCE" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_SURVIVAL_UNBREAKABLE_BODY" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_SURVIVAL_UNMOVING_STRENGTH" level="11" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_SURVIVAL_IMMORTAL" level="17" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Defensive Stance" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_SURVIVAL_DEFENSIVE_STANCE">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, you gain a +2 Bonus to AC while you are not wearing any armor and aren’t incapacitated.</p>
+            <p class="indent">Additionally, when you use Patient Defense, you gain advantage to your attack rolls until the start of your next turn.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You gain a +2 Bonus to AC while you are not wearing any armor and aren’t incapacitated.
+            Additionally, when you use Patient Defense, you gain advantage to your attack rolls until the start of your next turn.</description>
+		</sheet>
+        <rules>
+            <stat name="ac" value="2" equipped="[armor:none]" alt="Defensive Stance"/>
+        </rules>
+	</element>
+	<element name="Unbreakable Body" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_SURVIVAL_UNBREAKABLE_BODY">
+		<description>
+			<p>Starting at 6th level, at the start of your turn, if you have taken damage since the start of your last turn, you regain hit points up to half your Monk level or the total amount of damage taken, whichever is lower.</p>
+            <p class="indent">Additionally, when you use Patient Defense, you gain resistance to all damage types until the start of your next turn.</p>
+		</description>
+		<sheet>
+			<description>At the start of your turn, if you have taken damage since the start of your last turn, you regain up to {{level:monk:half}} hit points or half the total amount of damage taken, whichever is lower.
+            Additionally, when you use Patient Defense, you gain resistance to all damage types until the start of your next turn.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Unmoveable Strength" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_SURVIVAL_UNMOVING_STRENGTH">
 		<description>
-			<p></p>
+			<p>Starting at 11th level, your unarmed strikes and monk weapon attacks deal extra damage equal to your Constitution modifier.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>Your unarmed strikes and monk weapon attacks deal {{constitution:modifier}} extra damage.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Immortal" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_SURVIVAL_IMMORTAL">
 		<description>
-			<p></p>
+			<p>Starting at 17th level, you become near unkillable. When you are reduced to 0 hit points, you can decide to immediately regain half your maximum hit points and half of your maximum ki points.</p>
+            <p class="indent">Once you use this feature, you can’t use it again until you finish a long rest.</p>
+            <p class="indent">Additionally, when you are subjected to an effect that would kill you instantaneously without dealing damage, that effect is negated.</p>
 		</description>
-		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="1/Long Rest">
+			<description>When you are reduced to 0 hit points, you can decide to immediately regain half your maximum hit points and half of your maximum ki points.
+            Additionally, when you are subjected to an effect that would kill you instantaneously without dealing damage, that effect is negated.</description>
 		</sheet>
 	</element>
 </elements>

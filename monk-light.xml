@@ -1,61 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="monk-light.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/monk-light.xml" />
+		</update>
+	</info>
+    <element name="Way of Light" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_MONK_LIGHT">
+        <supports>Monastic Tradition</supports>	
 		<description>
-			<p></p>
+			<p>In the wake of the Cataclysm’s darkness and horror, a group of monks specialized in protecting survivors against the monsters that lurked in the dark. The veterans of this tumultuous era founded the Way of Light. Its practitioners focus on bringing light into darkness and hunting down predators who prey on unsuspecting victims.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_LIGHT_LUMINOUS_KI" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_LIGHT_BLINDING_FLASH" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_LIGHT_RADIANT_STRIKES" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_LIGHT_ONE_WITH_THE_LIGHT" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_LIGHT_LUMINOUS_KI" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_LIGHT_BLINDING_FLASH" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_LIGHT_RADIANT_STRIKES" level="11" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_LIGHT_ONE_WITH_THE_LIGHT" level="17" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Luminous Ki" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_LIGHT_LUMINOUS_KI">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, you gain the Light cantrip if you don’t already know it. You can cast the Light cantrip without material components.</p>
+            <p class="indent">Whenever you hit a creature with one of the attacks granted by your Flurry of Blows, they start emitting bright light in a 5-foot radius around them and dim light for an additional 10 feet until the end of your next turn. The affected creature can’t benefit from being invisible while under the effects of Luminous Ki.</p>
+            <p class="indent">When an enemy creature starts their turn under the effect of Luminous Ki, they take radiant damage equal to one roll of your Martial Arts die.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>Whenever you hit a creature with one of the attacks granted by your Flurry of Blows, they start emitting bright light in a 5-foot radius around them and dim light for an additional 10 feet until the end of your next turn. The affected creature can’t benefit from being invisible while under the effects of Luminous Ki.
+            When an enemy creature starts their turn under the effect of Luminous Ki, they take radiant damage equal to one roll of your Martial Arts die.</description>
+		</sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_LIGHT" />
+        </rules>
+	</element>
+	<element name="Blinding Flash" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_LIGHT_BLINDING_FLASH">
+		<description>
+			<p>Starting at 6th level, as a bonus action, you can spend 2 Ki Points to generate a blinding burst of light. All creatures within 15 feet of you must roll a Constitution saving throw, taking radiant damage equal to three rolls of your Martial Arts die on a failed save or half as much on a successful one. After a failed save, a target is also blinded and affected by Luminous Ki until the end of your next turn.</p>
+            <p class="indent">As a bonus action, you can spend 2 Ki Points to generate a blinding burst of light. All creatures within 15 feet of you must roll a Constitution saving throw, taking radiant damage equal to three rolls of your Martial Arts die on a failed save or half as much on a successful one. After a failed save, a target is also blinded and affected by Luminous Ki until the end of your next turn.</p>
+		</description>
+		<sheet action="Bonus Action">
+			<description>As a bonus action, you can spend 2 Ki Points to generate a blinding burst of light. All creatures within 15 feet of you must roll a Constitution saving throw, taking radiant damage equal to three rolls of your Martial Arts die on a failed save or half as much on a successful one. After a failed save, a target is also blinded and affected by Luminous Ki until the end of your next turn.
+            A creature is immune if it can’t see you.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Radiant Strikes" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_LIGHT_RADIANT_STRIKES">
 		<description>
-			<p></p>
+			<p>Starting at 11th level, when you hit a creature under the effect of Luminous Ki with an unarmed strike, you deal an additional 1d6 radiant damage and regain 1 ki point.</p>
+            <p class="indent">You can regain no more than 1 ki point per turn using this feature.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>When you hit a creature under the effect of Luminous Ki with an unarmed strike, you deal an additional 1d6 radiant damage and regain 1 ki point.
+            You can regain no more than 1 ki point per turn using this feature.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="One with the Light" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_LIGHT_ONE_WITH_THE_LIGHT">
 		<description>
-			<p></p>
+			<p>Starting at 17th level, if no creature is under the effect of Luminous Ki at the start of your turn, the closest enemy to you within 30 feet becomes affected with Luminous Ki.</p>
+            <p class="indent">Additionally, you gain the following benefits while you are in bright light.</p>
+            <ul>
+                <li>You can change your unarmed strike damage type to radiant.</li>
+                <li>Once per turn, when a creature hits you with an attack, you can spend 1 ki point to make it reroll its attack. The creature must use this new roll.</li>
+            </ul>
 		</description>
 		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
+			<description>If no creature is under the effect of Luminous Ki at the start of your turn, the closest enemy to you within 30 feet becomes affected with Luminous Ki.
+            Additionally, you gain the following benefits while you are in bright light.
+            -You can change your unarmed strike damage type to radiant.
+            -Once per turn, when a creature hits you with an attack, you can spend 1 ki point to make it reroll its attack. The creature must use this new roll.</description>
 		</sheet>
 	</element>
 </elements>

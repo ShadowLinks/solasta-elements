@@ -8,73 +8,296 @@
     <element name="Spellblade" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FIGHTER_SPELLBLADE">
         <supports>Martial Archetype</supports>	
 		<description>
-			<p></p>
+			<p>To the high elves of the Manacalon Empire, magic was just as much a weapon as a sword or bow, and their soldiers received limited training allowing them to cast low-level spells. This tradition has survived and become popular among all species, especially in the Principality of Masgarth where the Circle of Danantar is regarded as the best training school for spellblades outside the New Empire.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
-			<div element="ID_______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_SPELLBLADE_SPELLCASTING" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_SPELLBLADE_INTO_THE_FRAY" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_SPELLBLADE_MAGIC_CONDUIT" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_SPELLBLADE_ARCANE_SHIELD" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_SPELLBLADE_SWIFT_CAST" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_SPELLBLADE_ARCANE_DANCE" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="3" />
-			<grant type="Archetype Feature" id="ID___" level="3" />
-			<grant type="Archetype Feature" id="ID____" level="7" />
-			<grant type="Archetype Feature" id="ID_____" level="10" />
-			<grant type="Archetype Feature" id="ID______" level="15" />
-			<grant type="Archetype Feature" id="ID_______" level="18" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_SPELLBLADE_SPELLCASTING" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_SPELLBLADE_INTO_THE_FRAY" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_SPELLBLADE_MAGIC_CONDUIT" level="7" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_SPELLBLADE_ARCANE_SHIELD" level="10" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_SPELLBLADE_SWIFT_CAST" level="15" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_SPELLBLADE_ARCANE_DANCE" level="18" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
-		<description>
-			<p></p>
+    <element name="Spellcasting" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_SPELLBLADE_SPELLCASTING">
+        <description>
+            <p>Beginning when you choose this archetype at 3rd level, you gain the ability to cast wizard spells.</p>
+            <p class="indent"><strong><i></i></strong>Cantrips. You learn two cantrips of your choice from the wizard spell list. You learn an additional cantrip at 10th level.</p>
+            <p class="indent"><strong><i></i></strong>Spell Slots. The spellblade Spellcasting table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell’s level or higher. You regain all expended spell slots when you finish a long rest.</p>
+            <p class="indent"><strong><i></i></strong>Spells Known of 1st Level and Higher. You know three 1st-level wizard spells of your choice, which you must choose from the conjuration, evocation, transmutation, or enchantment spells on the wizard spell list.</p>
+            <p class="indent">The Spells Known column of the Spellblade Spellcasting table shows when you learn more wizard spells of 1st level or higher. Each of these spells must be a conjuration, evocation, transmutation, or enchantment spell of your choice, and must be of a level for which you have spell slots.</p>
+            <p class="indent">Whenever you gain a level in this class, you can replace one of the wizard spells you know with another spell of your choice from the wizard spell list. The new spell must be of a level for which you have spell slots, and it must be from one of the four schools mentioned above.</p>            
+            <p class="indent"><strong><i></i></strong>Spellcasting Ability. Intelligence is your spellcasting ability for your wizard spells since you learn your spells through study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one.</p>
+            <center>
+                <p>
+                    <strong>Spell save DC</strong>
+                    = 8 + your proficiency bonus + your Intelligence modifier
+                </p>
+                <p>
+                    <strong>Spell attack modifier</strong>
+                    = your proficiency bonus + your Intelligence modifier
+                </p>
+            </center>
+            <h5 class="caption">SPELLBLADE SPELLCASTING</h5>
+            <table class="class-features">
+                <thead>
+                    <tr>
+                        <td class="col-10">Fighter Level</td>
+                        <td class="col-10">Cantrips Known</td>
+                        <td class="col-10">Spells Known</td>
+                        <td>1st</td>
+                        <td>2nd</td>
+                        <td>3rd</td>
+                        <td>4th</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>3rd</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>4th</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>5th</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>6th</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>7th</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>8th</td>
+                    <td>2</td>
+                    <td>6</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>9th</td>
+                    <td>2</td>
+                    <td>6</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>10th</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>11th</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>12th</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>13th</td>
+                    <td>3</td>
+                    <td>9</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>14th</td>
+                    <td>3</td>
+                    <td>10</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>15th</td>
+                    <td>3</td>
+                    <td>10</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>16th</td>
+                    <td>3</td>
+                    <td>11</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>17th</td>
+                    <td>3</td>
+                    <td>11</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>18th</td>
+                    <td>3</td>
+                    <td>11</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>19th</td>
+                    <td>3</td>
+                    <td>12</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>20th</td>
+                    <td>3</td>
+                    <td>13</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                </tr>
+            </table>
 		</description>
-		<sheet>
+		<sheet display="false">
 			<description></description>
 		</sheet>
+        <spellcasting name="Spellblade" ability="Intelligence" prepare="false" allowReplace="true">
+            <list>Wizard,(Conjuration||Transmutation||Enchantment||Evocation)</list>
+        </spellcasting>
+        <rules>
+            <grant type="Grants" id="ID_INTERNAL_GRANT_MULTICLASS_SPELLCASTING_SLOTS_THIRD" requirements="ID_INTERNAL_GRANT_MULTICLASS"/>
+            <stat name="spellblade:spellcasting:slots:1" value="2" level="3"/>
+            <stat name="spellblade:spellcasting:slots:1" value="1" level="4"/>
+            <stat name="spellblade:spellcasting:slots:1" value="1" level="7"/>
+            <stat name="spellblade:spellcasting:slots:2" value="2" level="7"/>
+            <stat name="spellblade:spellcasting:slots:2" value="1" level="10"/>
+            <stat name="spellblade:spellcasting:slots:3" value="2" level="13"/>
+            <stat name="spellblade:spellcasting:slots:3" value="1" level="16"/>
+            <stat name="spellblade:spellcasting:slots:4" value="1" level="19"/>
+            <select type="Spell" name="Cantrip (Spellblade)" supports="Wizard, 0" level="3" number="2" spellcasting="Spellblade"/>
+            <select type="Spell" name="Cantrip (Spellblade)" supports="Wizard, 0" level="10" number="1" spellcasting="Spellblade"/>
+            <select type="Spell" name="Spellcasting (Spellblade)" supports="$(spellcasting:list), 1" level="3" number="2" spellcasting="Spellblade"/>
+            <select type="Spell" name="Spellcasting (Spellblade)" supports="$(spellcasting:list), $(spellcasting:slots)" level="4" spellcasting="Spellblade"/>
+            <select type="Spell" name="Spellcasting (Spellblade)" supports="$(spellcasting:list), $(spellcasting:slots)" level="7" spellcasting="Spellblade"/>
+            <select type="Spell" name="Spellcasting (Spellblade)" supports="$(spellcasting:list), $(spellcasting:slots)" level="10" spellcasting="Spellblade"/>
+            <select type="Spell" name="Spellcasting (Spellblade)" supports="$(spellcasting:list), $(spellcasting:slots)" level="11" spellcasting="Spellblade"/>
+            <select type="Spell" name="Spellcasting (Spellblade)" supports="$(spellcasting:list), $(spellcasting:slots)" level="13" spellcasting="Spellblade"/>
+            <select type="Spell" name="Spellcasting (Spellblade)" supports="$(spellcasting:list), $(spellcasting:slots)" level="16" spellcasting="Spellblade"/>
+            <select type="Spell" name="Spellcasting (Spellblade)" supports="$(spellcasting:list), $(spellcasting:slots)" level="19" spellcasting="Spellblade"/>
+        </rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Into the Fray" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_SPELLBLADE_INTO_THE_FRAY">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, you can use any melee weapon you are proficient with as a spellcasting focus for your wizard spells and can perform their somatic components with the weapon instead of your hand.</p>
+            <p class="indent">Additionally, being within 5 feet of a hostile creature does not impose disadvantage on your ranged spell attack rolls.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You can use any melee weapon you are proficient with as a spellcasting focus for your wizard spells and can perform their somatic components with the weapon instead of your hand.
+            Additionally, being within 5 feet of a hostile creature does not impose disadvantage on your ranged spell attack rolls.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Magic Conduit" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_SPELLBLADE_MAGIC_CONDUIT">
 		<description>
-			<p></p>
+			<p>Starting at 7th level, when you cast a cantrip or a spell of 1st level or higher that has an original casting time of 1 action, you also imbue the weapon you are currently wielding until the end of your next turn. While imbued, your weapon attacks deal an additional 1d10 force damage.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>When you cast a cantrip or a spell of 1st level or higher that has an original casting time of 1 action, you also imbue the weapon you are currently wielding until the end of your next turn. While imbued, your weapon attacks deal an additional 1d10 force damage.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Arcane Shield" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_SPELLBLADE_ARCANE_SHIELD">
 		<description>
-			<p></p>
+			<p>Starting at 10th level, when you cast a spell of 1st level or higher, you gain Temporary Hit Points equal to five times the spell slot level used.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>When you cast a spell of 1st level or higher, you gain Temporary Hit Points equal to five times the spell slot level used.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
+	<element name="Swift Cast" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_SPELLBLADE_SWIFT_CAST">
 		<description>
-			<p></p>
+			<p>Starting at 15th level, when you cast a spell that has a casting time of 1 action, you can change the casting time to 1 bonus action for this casting.</p>
+            <p class="indent">Once you use this feature, you must finish a short or long rest before you can use it again.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="1/Short Rest">
+			<description>When you cast a spell that has a casting time of 1 action, you can change the casting time to 1 bonus action for this casting.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_______">
+	<element name="Arcane Dance" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_SPELLBLADE_ARCANE_DANCE">
 		<description>
-			<p></p>
+			<p>Starting at 18th level, you can hone your focus and attune to the magic surrounding you for a short moment. You can use a bonus action to gain the following benefit for 1 minute.</p>
+            <ul>
+                <li>When you cast a spell of 1st level or higher, you gain a bonus to AC, attack rolls, and saving throws equal to the spell slot level used until the end of your next turn. This bonus does not stack with itself.</li>
+            </ul>
+            <p class="indent">Once you use this feature, you must finish a short or long rest before you can use it again.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="1/Short Rest" action="Bonus Action">
+			<description>For 1 minute when you cast a spell of 1st level or higher, you gain a bonus to AC, attack rolls, and saving throws equal to the spell slot level used until the end of your next turn. This bonus does not stack with itself.</description>
 		</sheet>
 	</element>
 </elements>

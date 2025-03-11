@@ -1,61 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="monk-freedom.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/monk-freedom.xml" />
+		</update>
+	</info>
+    <element name="Way of Freedom" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_MONK_FREEDOM">
+        <supports>Monastic Tradition</supports>	
 		<description>
-			<p></p>
+			<p>The Way of Freedom was originally developed by Manacalon slaves. As they were forbidden weapons by their masters, they secretly practiced unarmed techniques. When the Cataclysm came, it was a disaster for most, but for many Manacalon slaves it was their chance for liberation. The first Freedom Monks were at the forefront of those slave revolts, leading</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_FREEDOM_SWIFT_STEPS" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_FREEDOM_SWIRLING_DANCE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_FREEDOM_UNENDING_STRIKES" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_FREEDOM_FOREVER_FREE" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_FREEDOM_SWIFT_STEPS" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_FREEDOM_SWIRLING_DANCE" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_FREEDOM_UNENDING_STRIKES" level="11" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_FREEDOM_FOREVER_FREE" level="17" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Swift Steps" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_FREEDOM_SWIFT_STEPS">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, you can use Flurry of Blows without taking the Attack action on your turn. Additionally, when you use Flurry of Blows, you gain advantage on your next attack roll, and you gain the benefits of the Dash action until the end of your turn.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You can use Flurry of Blows without taking the Attack action on your turn. Additionally, when you use Flurry of Blows, you gain advantage on your next attack roll, and you gain the benefits of the Dash action until the end of your turn.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Swirling Dance" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_FREEDOM_SWIRLING_DANCE">
 		<description>
-			<p></p>
+			<p>Starting at 6th level, when a creature within 5 feet of you that you can see misses you with an attack, you can use your reaction to make a melee attack against that creature.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet action="Reaction">
+			<description>When a creature within 5 feet of you that you can see misses you with an attack, you can use your reaction to make a melee attack against that creature.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Unending Strikes" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_FREEDOM_UNENDING_STRIKES">
 		<description>
-			<p></p>
+			<p>Starting at 11th level, when you use Flurry of Blows, you can make up to one additional attack with it. If three Flurry of Blows attacks hit their target on your turn, you regain 1 ki point.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>When you use Flurry of Blows, you can make up to one additional attack with it. If three Flurry of Blows attacks hit their target on your turn, you regain 1 ki point.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Forever Free" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_MONK_FREEDOM_FOREVER_FREE">
 		<description>
-			<p></p>
+			<p>Starting at 17th level, you can remove one of the following conditions from yourself at the start of each of your turns: Paralyzed, Restrained, or Grappled.</p>
+            <p class="indent">Additionally, when you use your Step of the Wind, you become able to walk on air. You gain the benefits of both the Dash and Disengage actions, and you have a flying speed equal to your walking speed until the end of your turn.</p>
 		</description>
 		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
+			<description>You can remove one of the following conditions from yourself at the start of each of your turns: Paralyzed, Restrained, or Grappled.
+            Additionally, when you use your Step of the Wind, you become able to walk on air. You gain the benefits of both the Dash and Disengage actions, and you have a flying speed equal to your walking speed until the end of your turn.</description>
 		</sheet>
 	</element>
 </elements>

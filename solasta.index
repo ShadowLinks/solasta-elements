@@ -21,7 +21,32 @@
         <file name="barbarian-magebane.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/barbarian-magebane.xml" />
         <file name="barbarian-stone.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/barbarian-stone.xml" />
 
+        <file name="bard-heroism.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/bard-heroism.xml" />
+        <file name="bard-hope.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/bard-hope.xml" />
+        <file name="bard-tradition.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/bard-tradition.xml" />
+
+        <file name="cleric-battle.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/cleric-battle.xml" />
+        <file name="cleric-elemental.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/cleric-elemental.xml" />
+        <file name="cleric-insight.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/cleric-insight.xml" />
+        <file name="cleric-law.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/cleric-law.xml" />
+        <file name="cleric-mischief.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/cleric-mischief.xml" />
+        <file name="cleric-oblivion.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/cleric-oblivion.xml" />
+        <file name="cleric-sun.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/cleric-sun.xml" />
+
+        <file name="druid-balance.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/druid-balance.xml" />
+        <file name="druid-kindredspirit.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/druid-kindredspirit.xml" />
+        <file name="druid-winds.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/druid-winds.xml" />
+
+        <file name="fighter-commander.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/fighter-commander.xml" />
+        <file name="fighter-mountaineer.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/fighter-mountaineer.xml" />
+        <file name="fighter-spellblade.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/fighter-spellblade.xml" />
+
+        <file name="monk-freedom.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/monk-freedom.xml" />
+        <file name="monk-light.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/monk-light.xml" />
+        <file name="monk-survival.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/monk-survival.xml" />
+		
         
+
 
 	</files>
 </index>

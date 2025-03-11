@@ -8,73 +8,85 @@
     <element name="Mountaineer" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FIGHTER_MOUNTIANEER">
         <supports>Martial Archetype</supports>	
 		<description>
-			<p></p>
-			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
-			<div element="ID_______" />
+			<p>Most of Solasta’s martial traditions have their roots in the elite army corps of the Manacalon Empire or the Tirmarian Inquisition. Mountaineers are born out of the ashes of the Cataclysm. For generations, the Marches and the mountains that stand between the Badlands and the more civilized nations have been infested by orcs and other monsters. Many of these creatures make their lairs in dark tunnels, narrow canyons, and cramped ruins. This is the world of the mountaineer.</p>
+			<p class="indent">Mountaineers are specially trained to fight and survive in rocky and vertical environments. They are masters of the shield, which is as much a weapon as a protection in their skilled hands. While mountaineers do not fit the ideal of the elegant, noble warrior, they are impressively efficient monster killers.</p>
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_MOUNTIANEER_SHIELD_EXPERT" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_MOUNTIANEER_CLOSE_QUARTERS" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_MOUNTIANEER_TUNNEL_FIGHTER" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_MOUNTIANEER_SHIELD_BASH" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_MOUNTIANEER_WATCHFUL_SENTRY" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_MOUNTIANEER_EXPERT_TUNNEL_FIGHTER" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="3" />
-			<grant type="Archetype Feature" id="ID___" level="3" />
-			<grant type="Archetype Feature" id="ID____" level="7" />
-			<grant type="Archetype Feature" id="ID_____" level="10" />
-			<grant type="Archetype Feature" id="ID______" level="15" />
-			<grant type="Archetype Feature" id="ID_______" level="18" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_MOUNTIANEER_SHIELD_EXPERT" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_MOUNTIANEER_CLOSE_QUARTERS" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_MOUNTIANEER_TUNNEL_FIGHTER" level="7" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_MOUNTIANEER_SHIELD_BASH" level="10" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_MOUNTIANEER_WATCHFUL_SENTRY" level="15" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_MOUNTIANEER_EXPERT_TUNNEL_FIGHTER" level="18" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Shield Expert" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_MOUNTIANEER_SHIELD_EXPERT">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, you gain the ability to use a shield as a 1d4 bludgeoning damage martial weapon.</p>
+            <p class="indent">When you take the Attack action, you can use a bonus action to try to shove or make one melee weapon attack with your shield at a target within 5 feet of you. You use your Strength modifier for the attack and damage rolls.</p>
+            <p class="indent">Additionally, if you aren’t incapacitated, you can add your shield’s AC bonus to any Dexterity saving throw you make against a spell or other harmful effect that targets only you. If you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you can use your reaction to take no damage if you succeed on the saving throw, interposing your shield between yourself and the source of the effect.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You gain the ability to use a shield as a 1d4 bludgeoning damage martial weapon.
+            When you take the Attack action, you can use a bonus action to try to shove or make one melee weapon attack with your shield at a target within 5 feet of you. You use your Strength modifier for the attack and damage rolls.
+            Additionally, if you aren’t incapacitated, you can add your shield’s AC bonus to any Dexterity saving throw you make against a spell or other harmful effect that targets only you. If you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you can use your reaction to take no damage if you succeed on the saving throw, interposing your shield between yourself and the source of the effect.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Close Quarters" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_MOUNTIANEER_CLOSE_QUARTERS">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, you can move through the space of any creature that is of a size larger than yours.</p>
+            <p class="indent">Additionally, when you move a creature that is no more than one size larger than you that is within 5 feet of you, you can decide to swap places with it instead of pushing it away.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You can move through the space of any creature that is of a size larger than yours.
+            Additionally, when you move a creature that is no more than one size larger than you that is within 5 feet of you, you can decide to swap places with it instead of pushing it away</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Tunnel Fighter" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_MOUNTIANEER_TUNNEL_FIGHTER">
 		<description>
-			<p></p>
+			<p>Starting at 7th level, when you are within 5 feet of a wall or other obstacle that could grant you total cover, you gain a +2 bonus to AC.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>When you are within 5 feet of a wall or other obstacle that could grant you total cover, you gain a +2 bonus to AC.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Shield Bash" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_MOUNTIANEER_SHIELD_BASH">
 		<description>
-			<p></p>
+			<p>Starting at 10th level, when you hit a creature with your shield, it must make a Constitution saving throw against a DC equal to 8 + your proficiency bonus + your Strength modifier. On a failed save, the target’s speed is halved and it can’t take a Bonus Action or a Reaction until the start of your next turn.</p>
+            <p class="indent">You can use this feature a number of times equal to your Proficiency Bonus, and you regain all expended uses of it when you finish a short or long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>When you hit a creature with your shield, it must make a Constitution saving throw against a {{shield-bash:dc}} DC. On a failed save, the target’s speed is halved and it can’t take a Bonus Action or a Reaction until the start of your next turn.</description>
+		</sheet>
+        <rules>
+            <stat name="shield-bash:dc" value="8" bonus="base" />
+            <stat name="shield-bash:dc" value="proficiency" />
+            <stat name="shield-bash:dc" value="strength:modifier" />
+        </rules>
+	</element>
+	<element name="Watchful Sentry" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_MOUNTIANEER_WATCHFUL_SENTRY">
+		<description>
+			<p>Starting at 15th level, when a creature you can see attacks a target that is no more than one size larger than you that is within 5 feet of you, you can use your reaction to swap place with the target and force that attack to target you instead. That movement does not provoke opportunity attacks.</p>
+		</description>
+		<sheet action="Reaction">
+			<description>When a creature you can see attacks a target that is no more than one size larger than you that is within 5 feet of you, you can use your reaction to swap place with the target and force that attack to target you instead. That movement does not provoke opportunity attacks.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
+	<element name="Expert Tunnel Fighter" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_FIGHTER_MOUNTIANEER_EXPERT_TUNNEL_FIGHTER">
 		<description>
-			<p></p>
+			<p>Starting at 18th level, Tunnel Fighter also works when you are within 5 feet of a friendly creature no less than one size smaller than you that isn’t unconscious, and grants an additional +2 bonus to your weapon attack rolls.</p>
 		</description>
 		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_______">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
+			<description>Tunnel Fighter also works when you are within 5 feet of a friendly creature no less than one size smaller than you that isn’t unconscious, and grants an additional +2 bonus to your weapon attack rolls.</description>
 		</sheet>
 	</element>
 </elements>
