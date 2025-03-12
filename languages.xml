@@ -1,0 +1,20 @@
+<elements>
+    <info>
+        <name>Languages</name>
+        <description></description>
+        <update version="0.0.1">
+            <file name="langauges.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/languages.xml"/>
+        </update>
+    </info>
+     <element name="Timarian" type="Language" source="Solasta" id="ID_LANGUAGE_TIMARIAN">
+        <supports>Exotic</supports>
+        <description>
+            <p>Typically spoken by the Timarians.</p>
+        </description>
+        <setters>
+            <set name="exotic">true</set>
+            <set name="speakers">Timarians</set>
+            <set name="script">—</set>
+        </setters>
+    </element>
+</elements>
