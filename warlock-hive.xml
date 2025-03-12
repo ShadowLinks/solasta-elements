@@ -1,61 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="warlock-hive.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/warlock-hive.xml" />
+		</update>
+	</info>
+    <element name="The Hive" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_WARLOCK_HIVE">
+        <supports>Otherworldly Patron</supports>
 		<description>
-			<p></p>
+			<p>Originally created by the Manacalon Empire to dispose of undesired waste and unruly slaves, the Redeemers changed dramatically in the centuries following the Cataclysm. Few are the scholars who have gained any insight on these insect-like creatures, as they are incredibly hostile and dangerous. Yet, some claim that the Redeemers are actually controlled by an entity that one needs but listen to in order to be granted extraordinary powers…</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_HIVE_SPELLS" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_HIVE_WEAKENING_PHEROMONES" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_HIVE_MAGIC_COUNTER" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_HIVE_ANTIMAGIC_CHITIN" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_HIVE_REACTIVE_CARAPACE" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_HIVE_SPELLS" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_HIVE_WEAKENING_PHEROMONES" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_HIVE_MAGIC_COUNTER" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_HIVE_ANTIMAGIC_CHITIN" level="10" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_HIVE_REACTIVE_CARAPACE" level="14" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Hive Expanded Spells" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_HIVE_SPELLS">
 		<description>
-			<p></p>
+			<p>The Hive lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.</p>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td>detect magic, faerie fire</td></tr>
+				<tr><td>2nd</td><td>acid arrow, detect thoughts</td></tr>
+				<tr><td>3rd</td><td>protection from energy, stinking cloud</td></tr>
+				<tr><td>4th</td><td>giant insect, stoneskin</td></tr>
+				<tr><td>5th</td><td>cloudkill, insect plague</td></tr>
+			</table>
 		</description>
 		<sheet>
 			<description></description>
 		</sheet>
+		<spellcasting nme="Warlock" extend="true">
+			<extend>id=ID_PHB_SPELL_DETECT_MAGIC</extend>
+			<extend>id=ID_PHB_SPELL_FAERIE_FIRE</extend>
+			<extend>id=ID_PHB_SPELL_MELFS_ACID_ARROW</extend>
+			<extend>id=ID_PHB_SPELL_DETECT_THOUGHTS</extend>
+			<extend>id=ID_PHB_SPELL_PROTECTION_FROM_ENERGY</extend>
+			<extend>id=ID_PHB_SPELL_STINKING_CLOUD</extend>
+			<extend>id=ID_PHB_SPELL_GIANT_INSECT</extend>
+			<extend>id=ID_PHB_SPELL_STONESKIN</extend>
+			<extend>id=ID_PHB_SPELL_CLOUDKILL</extend>
+			<extend>id=ID_PHB_SPELL_INSECT_PLAGUE</extend>
+		</spellcasting>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Weakening Pheromones" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_HIVE_WEAKENING_PHEROMONES">
 		<description>
-			<p></p>
+			<p>Starting at 1st level, after you damage a creature with a spell, you can affect it with pheromones for up to 1 minute (no action required). A creature affected by pheromones has disadvantage on their next saving throw, after which the pheromones dissipate.</p>
+			<p class="indent">Once you use this feature, you cannot use it again until you finish a short or long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="1/Short Rest">
+			<description>After you damage a creature with a spell, you can affect it with pheromones for up to 1 minute (no action required). A creature affected by pheromones has disadvantage on their next saving throw, after which the pheromones dissipate.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Magic Counter" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_HIVE_MAGIC_COUNTER">
 		<description>
-			<p></p>
+			<p>Starting at 6th level, you learn Counterspell, and it doesn’t count against the number of warlock spells you know. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a short or long rest. You can also cast it using any spell slots you have.</p>
+			<p class="indent">Whenever Counterspell requires you to make an ability check (or your target to make a saving throw) as part of casting it, you can add your proficiency  to the ability check (or spell save DC).</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You learn Counterspell, and it doesn’t count against the number of warlock spells you know. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a short or long rest. You can also cast it using any spell slots you have.
+			Whenever Counterspell requires you to make an ability check (or your target to make a saving throw) as part of casting it, you can add your proficiency  to the ability check (or spell save DC).</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_COUNTERSPELL" />
+		</rules>
+	</element>
+	<element name="Antimagic Chitin" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_HIVE_ANTIMAGIC_CHITIN">
+		<description>
+			<p>Starting at 10th level, you have advantage on saving throws against spells.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on saving throws against spells.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Reactive Carapace" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_HIVE_REACTIVE_CARAPACE">
 		<description>
-			<p></p>
+			<p>Starting at 14th level, when you are about to take damage from a spell, you immediately gain temporary Hit Points equal to 1d10 + your Warlock level (no action required) until the end of your next turn.</p>
+			<p class="indent"></p>Once you use this feature, you cannot use it again until the end of your next turn.
 		</description>
 		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
+			<description>Starting at 14th level, when you are about to take damage from a spell, you immediately gain temporary Hit Points equal to 1d10 + {{level:warlock}} (no action required) until the end of your next turn. Once you use this feature, you cannot use it again until the end of your next turn.</description>
 		</sheet>
 	</element>
 </elements>
