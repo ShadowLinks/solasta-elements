@@ -1,61 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="paladin-motherland.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/paladin-motherland.xml" />
+		</update>
+	</info>
+    <element name="Oath of The Motherland" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_PALADIN_MOTHERLAND">
+        <supports>Sacred Oath</supports>
 		<description>
-			<p></p>
+			<p>Trained by the oldest communities of Solasta, these paladins dedicate their lives to restoring the pre-apocalyptic world, saving the land from its decay, and bringing life back where it belongs, despite its violent and volcanic nature. They reject the term “Badlands” and instead call it the “Motherland.”</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<h5 class="caption">TENANTS OF THE MOTHERLAND</h5>
+            <p>Though the exact words and strictures of the oath of the Motherland vary, paladins of this oath share these tenets.</p>
+            <p class="indent">
+                <b><i>The Motherland belongs to the people. </i></b>
+                Whatever monsters and thieves have taken from the rightful inhabitants of the Motherland, all these things must be returned to them.
+            </p>
+            <p class="indent">
+                <b><i>The Motherland belongs to the people.</i></b>
+                Whatever monsters and thieves have taken from the rightful inhabitants of the Motherland, all these things must be returned to them.
+            </p>
+            <p class="indent">
+                <b><i>Death to the corrupters of the Motherland.</i></b>
+                 All monsters, invaders, and others who would claim the Motherland for themselves will face merciless death by fire.
+            </p>
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_SPELLS" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_CD" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_VOLCANIC_AURA" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_HEART_OF_LAVA" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_BLAZING_AVENGER" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_CD" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_VOLCANIC_AURA" level="7" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_HEART_OF_LAVA" level="15" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_BLAZING_AVENGER" level="20" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Oath of the Motherland Spells" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_SPELLS">
 		<description>
-			<p></p>
+			<p>You gain oath spells at the paladin levels listed. Once you gain access to an oath spell, you always have it prepared. Oath spells don’t count against the number of spells you can prepare each day.</p>
+			<table>
+				<thead>
+					<tr><td>Paladin Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>3rd</td><td>bane, burning hands</td></tr>
+				<tr><td>5th</td><td>branding smite, scorching ray</td></tr>
+				<tr><td>9th</td><td>fireball, protection from energy</td></tr>
+				<tr><td>13th</td><td>wall of fire, stoneskin</td></tr>
+				<tr><td>17th</td><td>flame strike, wall of stone</td></tr>
+			</table>
 		</description>
-		<sheet>
+		<sheet display="false">
 			<description></description>
 		</sheet>
+		<rules>
+			<grant type="Spell" level="3" id="ID_PHB_SPELL_BANE" />
+			<grant type="Spell" level="3" id="ID_PHB_SPELL_BURNING_HANDS" />
+			<grant type="Spell" level="5" id="ID_PHB_SPELL_BRANDING_SMITE" />
+			<grant type="Spell" level="5" id="ID_PHB_SPELL_SCORCHING_RAY" />
+			<grant type="Spell" level="9" id="ID_PHB_SPELL_FIREBALL" />
+			<grant type="Spell" level="9" id="ID_PHB_SPELL_PROTECTION_FROM_ENERGY" />
+			<grant type="Spell" level="13" id="ID_PHB_SPELL_WALL_OF_FIRE" />
+			<grant type="Spell" level="13" id="ID_PHB_SPELL_STONESKIN" />
+			<grant type="Spell" level="17" id="ID_PHB_SPELL_FLAME_STRIKE" />
+			<grant type="Spell" level="17" id="ID_PHB_SPELL_WALL_OF_STONE" />
+		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Channel Divinity" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_CD">
 		<description>
-			<p></p>
+			<p>When you take this oath at 3rd level, you gain the following two Channel Divinity options.</p>
+			<p class="indent"><strong>Fiery Wrath.</strong> As an action, you can use your Channel Divinity to make fire spurt from the ground and envelop a creature you can see within 30 feet of you. The target rolls a Dexterity saving throw, taking 2d6 + your paladin level of fire damage on a failed save, or half as much damage on a successful one. After a failed save, a target is also engulfed in flames for up to 1 minute, taking your palad</p>
+			<p class="indent">A creature can use an action on its turn to extinguish the flames.</p>
+			<p class="indent"><strong>Fiery Presence. </strong>As an action, you can use your Channel Divinity to burn as brightly as the sun. Hostile creatures within 30 feet of you that are not behind total cover must succeed a Constitution saving throw or be blinded for up to 1 minute. At the end of each of its turns, a blinded target can make another Constitution saving throw. On a success, it is no longer blinded.</p>
 		</description>
-		<sheet>
+		<sheet display="False">
 			<description></description>
 		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_CD_WRATH" />			
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_CD_PRESENCE" />
+		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Fiery Wrath" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_CD_WRATH">
 		<description>
 			<p></p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="Channel Divinity">
+			<description>As an action, you can use your Channel Divinity to make fire spurt from the ground and envelop a creature you can see within 30 feet of you. The target rolls a Dexterity saving throw, taking 2d6 + your paladin level of fire damage on a failed save, or half as much damage on a successful one. After a failed save, a target is also engulfed in flames for up to 1 minute, taking your paladin level in fire damage at the start of each of its turns. A creature can use an action on its turn to extinguish the flames.</description>
+		</sheet>
+	</element>>
+	<element name="Fiery Presence" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_CD_PRESENCE">
+		<description>
+			<p></p>
+		</description>
+		<sheet usage="Channel Divinity">
+			<description>As an action, you can use your Channel Divinity to burn as brightly as the sun. Hostile creatures within 30 feet of you that are not behind total cover must succeed a Constitution saving throw or be blinded for up to 1 minute. At the end of each of its turns, a blinded target can make another Constitution saving throw. On a success, it is no longer blinded.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Volcanic Aura" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_VOLCANIC_AURA">
 		<description>
-			<p></p>
+			<p>Starting at 7th level, you and friendly creatures within 10 feet of you gain resistance to fire and +1 bonus to AC.</p>
+			<p class="indent">At 18th level, the range of this aura increases to 30 feet.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You and friendly creatures within 10 feet of you gain resistance to fire and +1 bonus to AC.</description>
+			<description level="18">You and friendly creatures within 30 feet of you gain resistance to fire and +1 bonus to AC.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
+	<element name="Heart of Lava" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_HEART_OF_LAVA">
 		<description>
-			<p></p>
+			<p>tarting at 15th level, you are immune to fire and your skin covers with stone scales when you are in danger, reducing bludgeoning, piercing, and slashing damage that you take by 5.</p>
+			<p class="indent">Additionally, your attacks and spells ignore resistance to fire damage.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You are immune to fire and your skin covers with stone scales when you are in danger, reducing bludgeoning, piercing, and slashing damage that you take by 5.
+			Additionally, your attacks and spells ignore resistance to fire damage.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_FIRE" />
+		</rules>
+	</element>
+	<element name="Blazing Avenger" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_BLAZING_AVENGER">
+		<description>
+			<p>Starting at 20th level, you gain the ability to become an avatar of the Motherland. As a bonus action, you gain the following benefits for 1 minute.</p>
+			<ul>
+                <li>Your melee weapon attacks deal an additional 2d6 fire damage.</li>
+                <li>If a creature is immune to fire damage, fire damage you deal against it is halved instead of negated.</li>
+                <li>Once on each of your turns, when you hit a creature with a melee weapon attack, you can force it to make a Dexterity saving throw. On a failed save, the creature is engulfed in flames as it were affected by your Channel Divinity: Fiery Wrath. If a target’s saving throw is successful or the effect ends for it, the target is immune to this effect for the next 24 hours.</li>
+            </ul>
+			<p class="indent">Once you use this feature, you cannot use it again until you finish a long rest.</p>
+		</description>
+		<sheet action="Bonus Action" usage="1/Long Rest">
+			<description> As a bonus action, you gain the following benefits for 1 minute.
+			-Your melee weapon attacks deal an additional 2d6 fire damage.
+			-If a creature is immune to fire damage, fire damage you deal against it is halved instead of negated.
+			-Once on each of your turns, when you hit a creature with a melee weapon attack, you can force it to make a Dexterity saving throw. On a failed save, the creature is engulfed in flames as it were affected by your Channel Divinity: Fiery Wrath. If a target’s saving throw is successful or the effect ends for it, the target is immune to this effect for the next 24 hours.</description>
 		</sheet>
 	</element>
 </elements>

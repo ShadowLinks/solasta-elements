@@ -1,61 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="paladin-tirmar.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/paladin-tirmar.xml" />
+		</update>
+	</info>
+    <element name="Oath of Tirmar" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_PALADIN_TIRMAR">
+        <supports>Sacred Oath</supports>
 		<description>
-			<p></p>
+			<p>These paladins belong to an old order that is descended from the Tirmarian Inquisition. They are devoted to the destruction of their ancient enemies, the legendary shape-shifting Sorr-Akkath. Their tenets retain the pain inflicted by their ancestors and integrate the need to avoid being deceived and fighting the wrong enemies. They conduct their rituals in the old language of Tirmar and bear symbols of the old Inquisition. Since many believe that the Sorr-Akkath are either fictitious boogeymen or became extinct long ago, paladins of this oath are sometimes regarded as dangerously obsessed.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<h5 class="caption">TENANTS OF TIRMAR</h5>
+            <p></p>
+            <p class="indent">
+                <b><i>Truth must prevail. </i></b>
+                Evil roots itself in lies and deception. Truth is the key to the triumph of good.
+            </p>
+            <p class="indent">
+                <b><i>Bring light to the darkness. </i></b>
+                Light is the weapon of truth against the secrets and lies of darkness. Bring the light and you will vanquish evil.
+            </p>
+            <p class="indent">
+                <b><i>Do not let evil blind you. </i></b>
+                Let not your zeal bring suffering to the innocent. Evil will try to trick you into doing so.
+            </p>
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_SPELLS" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_CD" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_TIMARIAN_GRUDGE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_AURA_OF_VIGILANCE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_HUNT_THEM_DOWN" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_VIGILANT_PURIFIER" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_CD" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_TIMARIAN_GRUDGE" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_AURA_OF_VIGILANCE" level="7" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_HUNT_THEM_DOWN" level="15" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_VIGILANT_PURIFIER" level="20" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Oath of Tirmar Spels" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_SPELLS">
 		<description>
-			<p></p>
+			<p>You gain oath spells at the paladin levels listed. Once you gain access to an oath spell, you always have it prepared. Oath spells don’t count against the number of spells you can prepare each day.</p>
+			<table>
+				<thead>
+					<tr><td>Paladin Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>3rd</td><td>faerie fire, shield</td></tr>
+				<tr><td>5th</td><td>see invisibility, moonbeam</td></tr>
+				<tr><td>9th</td><td>daylight, dispel magic</td></tr>
+				<tr><td>13th</td><td>compulsion, banishment</td></tr>
+				<tr><td>17th</td><td>hold monster, wall of force</td></tr>
+			</table>
 		</description>
-		<sheet>
+		<sheet display="false">
 			<description></description>
 		</sheet>
+		<rules>
+			<grant type="Spell" level="3" id="ID_PHB_SPELL_FAERIE_FIRE" />
+			<grant type="Spell" level="3" id="ID_PHB_SPELL_SHIELD" />
+			<grant type="Spell" level="5" id="ID_PHB_SPELL_SEE_INVISIBILITY" />
+			<grant type="Spell" level="5" id="ID_PHB_SPELL_MOONBEAM" />
+			<grant type="Spell" level="9" id="ID_PHB_SPELL_DAYLIGHT" />
+			<grant type="Spell" level="9" id="ID_PHB_SPELL_DISPEL_MAGIC" />
+			<grant type="Spell" level="13" id="ID_PHB_SPELL_COMPULSION" />
+			<grant type="Spell" level="13" id="ID_PHB_SPELL_BANISHMENT" />
+			<grant type="Spell" level="17" id="ID_PHB_SPELL_HOLD_MONSTER" />
+			<grant type="Spell" level="17" id="ID_PHB_SPELL_WALL_OF_FORCE" />
+		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Channel Divinity" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_CD">
 		<description>
-			<p></p>
+			<p>When you take this oath at 3rd level, you gain the following two Channel Divinity options.</p>
+			<p class="indent"><strong>Golden Speech. </strong>As a bonus action, you can use your Channel Divinity to easily grasp people’s attention. For the next 10 minutes, you have advantage on Charisma (Persuasion) and Charisma (Intimidation) checks.</p>
+			<p class="indent"><strong>Enforce Reality. </strong>As a bonus action when you hit a creature with a melee weapon attack on your turn, you can use your Channel Divinity to apply the effects of the Dispel Magic spell onto the target. Additionally, if the creature is not in its natural shape due to magic or supernatural means, it must succeed a Charisma saving throw or instantly revert to its original form. After a failed save, they can’t assume a different form for 1 hour.</p>
 		</description>
-		<sheet>
+		<sheet display="false">
 			<description></description>
 		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_CD_SPEECH" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_CD_REALITY" />
+		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Golden Speech" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_CD_SPEECH">
 		<description>
 			<p></p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="Channel Divinity" action="Bonus Action">
+			<description>As a bonus action, you can use your Channel Divinity to easily grasp people’s attention. For the next 10 minutes, you have advantage on Charisma (Persuasion) and Charisma (Intimidation) checks.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Enforce Reality" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_CD_REALITY">
 		<description>
 			<p></p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="Channel Divinity" action="Bonus Action">
+			<description>As a bonus action when you hit a creature with a melee weapon attack on your turn, you can use your Channel Divinity to apply the effects of the Dispel Magic spell onto the target. Additionally, if the creature is not in its natural shape due to magic or supernatural means, it must succeed a Charisma saving throw or instantly revert to its original form. After a failed save, they can’t assume a different form for 1 hour.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
+	<element name="Timarian Grudge" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_TIMARIAN_GRUDGE">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, your Divine Smite deals an additional 1d8 damage if the target is a shapechanger as if it were an undead or a fiend, and your Divine Sense also detects shapechangers on top of celestials, fiends, and undead</p>
+			<p class="indent">If you are playing in the Solasta Campaign Setting, you also become proficient in the Tirmarian language.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>Starting at 3rd level, your Divine Smite deals an additional 1d8 damage if the target is a shapechanger as if it were an undead or a fiend, and your Divine Sense also detects shapechangers on top of celestials, fiends, and undead</description>
+		</sheet>
+		<rules>
+			<grant type="Language" id="ID_LANGUAGE_TIMARIAN" />
+		</rules>
+	</element>
+	<element name="Aura of Vigilance" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_AURA_OF_VIGILANCE">
+		<description>
+			<p>Starting at 7th level, while you are conscious, you and friendly creatures within 10 feet of you have blindsight out to a range of 10 feet.</p>
+			<p class="indent">At 18th level, the range of this aura increases to 30 feet, and the range of blindsight increases to 30 feet.</p>
+		</description>
+		<sheet>
+			<description>While you are conscious, you and friendly creatures within 10 feet of you have blindsight out to a range of 10 feet.</description>
+			<description level="18">While you are conscious, you and friendly creatures within 30 feet of you have blindsight out to a range of 30 feet.</description>
+		</sheet>
+	</element>
+	<element name="Hunt Them Down" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_HUNT_THEM_DOWN">
+		<description>
+			<p>Starting at 15th level, you become the bane of all shapechangers, giving you the following benefits.</p>
+			<ul>
+                <li>Whenever you hit a creature with a melee weapon attack, you reduce their speed by 15 feet until the start of your next turn. This effect stacks.</li>
+                <li>Using Divine Sense grants you Truesight with a range of 60 feet until the end of your next turn.</li>
+            </ul>
+		</description>
+		<sheet>
+			<description>Whenever you hit a creature with a melee weapon attack, you reduce their speed by 15 feet until the start of your next turn. This effect stacks.
+			Using Divine Sense grants you Truesight with a range of 60 feet until the end of your next turn.</description>
+		</sheet>
+	</element>
+	<element name="Vigilant Purifier" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_VIGILANT_PURIFIER">
+		<description>
+			<p>Starting at 20th level, you permanently gain advantage on Initiative rolls and can no longer be surprised.</p>
+			<p class="indent">Additionally, as a bonus action, you become an avatar of vigilance against wolves in sheep’s clothing. For the next minute, you gain the following benefits.</p>
+			<ul>
+                <li>Your melee weapon attacks deal an additional 2d6 fire damage.</li>
+                <li>If a creature is immune to fire damage, fire damage you deal against it is halved instead of negated.</li>
+                <li>Once on each of your turns, when you hit a creature with a melee weapon attack, you can force it to make a Dexterity saving throw. On a failed save, the creature is engulfed in flames as it were affected by your Channel Divinity: Fiery Wrath. If a target’s saving throw is successful or the effect ends for it, the target is immune to this effect for the next 24 hours.</li>
+            </ul>
+			<p class="indent">Once you use this feature, you cannot use it again until you finish a long rest.</p>
+		</description>
+		<sheet action="Bonus Action" usage="1/Long Rest">
+			<description>You permanently gain advantage on Initiative rolls and can no longer be surprised.
+			Additionally, as a bonus action, you become an avatar of vigilance against wolves in sheep’s clothing. For the next minute, you gain the following benefits.
+			-Your melee weapon attacks deal an additional 2d6 fire damage.
+			-If a creature is immune to fire damage, fire damage you deal against it is halved instead of negated.
+			-Once on each of your turns, when you hit a creature with a melee weapon attack, you can force it to make a Dexterity saving throw. On a failed save, the creature is engulfed in flames as it were affected by your Channel Divinity: Fiery Wrath. If a target’s saving throw is successful or the effect ends for it, the target is immune to this effect for the next 24 hours.</description>
 		</sheet>
 	</element>
 </elements>
