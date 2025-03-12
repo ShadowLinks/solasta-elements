@@ -27,66 +27,71 @@
 			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_TIMEKEEPER_TIME_WARP" level="14" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_TIMEKEEPER_SPELLS">
+	<element name="Time Keeper Expanded Spells" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_TIMEKEEPER_SPELLS">
 		<description>
-			<p></p>
+			<p>The Timekeeper lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.</p>
 			<table>
 				<thead>
 					<tr><td>Spell Level</td><td>Spells</td></tr>
 				</thead>
-				<tr><td>1st</td><td>data1</td></tr>
-				<tr><td>2nd</td><td>data2</td></tr>
-				<tr><td>3rd</td><td>data3</td></tr>
-				<tr><td>4th</td><td>data4</td></tr>
-				<tr><td>5th</td><td>data5</td></tr>
+				<tr><td>1st</td><td>longstrider, magic missile</td></tr>
+				<tr><td>2nd</td><td>blur, knock</td></tr>
+				<tr><td>3rd</td><td>haste, slow</td></tr>
+				<tr><td>4th</td><td>resilient sphere, freedom of movement</td></tr>
+				<tr><td>5th</td><td>raise dead, wall of force</td></tr>
 			</table>
 		</description>
-		<sheet>
+		<sheet display="false">
 			<description></description>
 		</sheet>
 		<spellcasting nme="Warlock" extend="true">
-			<extend>id=ID_PHB_SPELL_</extend>
-			<extend>id=ID_PHB_SPELL_</extend>
-			<extend>id=ID_PHB_SPELL_</extend>
-			<extend>id=ID_PHB_SPELL_</extend>
-			<extend>id=ID_PHB_SPELL_</extend>
-			<extend>id=ID_PHB_SPELL_</extend>
-			<extend>id=ID_PHB_SPELL_</extend>
-			<extend>id=ID_PHB_SPELL_</extend>
-			<extend>id=ID_PHB_SPELL_</extend>
-			<extend>id=ID_PHB_SPELL_</extend>
+			<extend>id=ID_PHB_SPELL_LONGSTRIDER</extend>
+			<extend>id=ID_PHB_SPELL_MAGIC_MISSILE</extend>
+			<extend>id=ID_PHB_SPELL_BLUR</extend>
+			<extend>id=ID_PHB_SPELL_KNOCK</extend>
+			<extend>id=ID_PHB_SPELL_HASTE</extend>
+			<extend>id=ID_PHB_SPELL_SLOW</extend>
+			<extend>id=ID_PHB_SPELL_OTILUKES_RESILIENT_SPHERE</extend>
+			<extend>id=ID_PHB_SPELL_FREEDOM_OF_MOVEMENT</extend>
+			<extend>id=ID_PHB_SPELL_RAISE_DEAD</extend>
+			<extend>id=ID_PHB_SPELL_WALL_OF_FORCE</extend>
 		</spellcasting>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_TIMEKEEPER_TEMPORTAL_DISTORTION">
+	<element name="Temporal Distortion" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_TIMEKEEPER_TEMPORTAL_DISTORTION">
 		<description>
-			<p></p>
+			<p>Starting at 1st level, when you cast a spell of 1st level or higher, hostile creatures hit by that spell attack or who fail a save against that spell cannot take reactions until the start of their next turn.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>When you cast a spell of 1st level or higher, hostile creatures hit by that spell attack or who fail a save against that spell cannot take reactions until the start of their next turn.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_TIMEKEEPER_TIME_SHIFT">
+	<element name="Time Shift" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_TIMEKEEPER_TIME_SHIFT">
 		<description>
-			<p></p>
+			<p>Starting at 6th level, when you are damaged, you can use your reaction to jump back in time. You briefly vanish from your current plane of existence (as in the Blink spell) into a time rift, negating the damage and effects you received from the immediate event that caused you to Time Shift.</p>
+			<p class="indent">At the start of your next turn, you return to an unoccupied space of your choice that you can see within 10 feet of the space you vanished from. If no unoccupied space is available within that range, you appear in the nearest unoccupied space (chosen at random if more than one space is equally near).</p>
+			<p class="indent">After you use this feature, you can’t use it again until you complete a long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="1/Long Rest" action="Reaction">
+			<description>When you are damaged, you can use your reaction to jump back in time. You briefly vanish from your current plane of existence (as in the Blink spell) into a time rift, negating the damage and effects you received from the immediate event that caused you to Time Shift.
+			At the start of your next turn, you return to an unoccupied space of your choice that you can see within 10 feet of the space you vanished from. If no unoccupied space is available within that range, you appear in the nearest unoccupied space (chosen at random if more than one space is equally near).</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_TIMEKEEPER_ACCELERATE">
+	<element name="Accelerate" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_TIMEKEEPER_ACCELERATE">
 		<description>
-			<p></p>
+			<p>Starting at 10th level, you can use a bonus action to briefly accelerate an ally within 30 feet. They gain the effects of the Haste spell until the start of your next turn, but they do not suffer from lethargy when this feature ends.</p>
+			<p class="indent">You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses of it when you finish a long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>You can use a bonus action to briefly accelerate an ally within 30 feet. They gain the effects of the Haste spell until the start of your next turn, but they do not suffer from lethargy when this feature ends.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_TIMEKEEPER_TIME_WARP">
+	<element name="Time Warp" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WARLOCK_TIMEKEEPER_TIME_WARP">
 		<description>
-			<p></p>
+			<p>Starting at 14th level, on your turn, you can take one additional action on top of your regular action and a possible bonus action.</p>
+			<p class="indent">Once you use this feature, you must finish a long rest before you can use it again.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="1/Long Rest">
+			<description>On your turn, you can take one additional action on top of your regular action and a possible bonus action.</description>
 		</sheet>
 	</element>
 </elements>

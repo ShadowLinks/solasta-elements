@@ -41,7 +41,7 @@
 				<tr><td>5th</td><td>cloudkill, insect plague</td></tr>
 			</table>
 		</description>
-		<sheet>
+		<sheet display="false">
 			<description></description>
 		</sheet>
 		<spellcasting nme="Warlock" extend="true">
