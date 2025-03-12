@@ -1,61 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="sorcerer-manapainter.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/sorcerer-manapainter.xml" />
+		</update>
+	</info>
+    <element name="Mana Painter" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_SORCERER_MANAPAINTER">
+        <supports>Sorcerous Origin</supports>		
 		<description>
-			<p></p>
+			<p>After the Cataclysm, most spellcasters died or completely lost the ability to use magic. However, as the years passed, rare children were born with the natural ability to draw mana to them from the surrounding environment and then manipulate it. Referred to as Mana Painters, they were highly regarded in the first centuries following the Cataclysm as they could still actively use magic, and were thus a source of much hope.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_MANAPAINTER_ORIGIN_MAGIC" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_MANAPAINTER_MANA_SHIELD" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_MANAPAINTER_MANA_ABSORBTION" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_MANAPAINTER_MANA_DRAIN" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_MANAPAINTER_MANA_CONDUIT" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_MANAPAINTER_ORIGIN_MAGIC" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_MANAPAINTER_MANA_SHIELD" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_MANAPAINTER_MANA_ABSORBTION" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_MANAPAINTER_MANA_DRAIN" level="14" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_MANAPAINTER_MANA_CONDUIT" level="18" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Origin Magic" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_MANAPAINTER_ORIGIN_MAGIC">
 		<description>
-			<p></p>
+			<p>Starting at 1st level, you learn additional spells when you reach certain levels in this class, as shown on the Mana Painter Spells table. Each of these spells counts as a sorcerer spell for you, but it doesn’t count against the number of sorcerer spells you know.</p>
+			<p class="indent">When you gain a level in this class, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be from the sorcerer or druid spell list, and it becomes a sorcerer spell for you.</p>
+			<table>
+				<thead>
+					<tr><td>Sorcerer Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td>entangle, faerie fire</td></tr>
+				<tr><td>3rd</td><td>spike growth, heat metal</td></tr>
+				<tr><td>5th</td><td>call lightning, wind wall</td></tr>
+				<tr><td>7th</td><td>control water, giant insect</td></tr>
+				<tr><td>9th</td><td>awaken, tree stride</td></tr>
+			</table>
+		</description>
+		<sheet >
+			<description>When you gain a level in this class, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be from the sorcerer or druid spell list, and it becomes a sorcerer spell for you.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" level="1" id="ID_PHB_SPELL_ENTANGLE" />
+			<grant type="Spell" level="1" id="ID_PHB_SPELL_FAERIE_FIRE" />
+			<grant type="Spell" level="3" id="ID_PHB_SPELL_SPIKE_GROWTH" />
+			<grant type="Spell" level="3" id="ID_PHB_SPELL_HEAT_METAL" />
+			<grant type="Spell" level="5" id="ID_PHB_SPELL_CALL_LIGHTNING" />
+			<grant type="Spell" level="5" id="ID_PHB_SPELL_WIND_WALL" />
+			<grant type="Spell" level="7" id="ID_PHB_SPELL_CONTROL_WATER" />
+			<grant type="Spell" level="7" id="ID_PHB_SPELL_GIANT_INSECT" />
+			<grant type="Spell" level="9" id="ID_PHB_SPELL_AWAKEN" />
+			<grant type="Spell" level="9" id="ID_PHB_SPELL_TREE_STRIDE" />
+		</rules>
+	</element>
+	<element name="Mana Shield" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_MANAPAINTER_MANA_SHIELD">
+		<description>
+			<p>Starting at 1st level, whenever you cast a spell of 1st level or higher, you gain temporary hit points equal to three times the level of the spell.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>Whenever you cast a spell of 1st level or higher, you gain {{painter-mana-shield:hp}} temporary hit points.</description>
+		</sheet>
+		<rules>
+			<stat name="painter-mana-shield:hp" value="level" bonus="base" />
+			<stat name="painter-mana-shield:hp" value="level" />
+			<stat name="painter-mana-shield:hp" value="level" />
+		</rules>
+	</element>
+	<element name="Mana Absorbtion" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_MANAPAINTER_MANA_ABSORBTION">
+		<description>
+			<p>Starting at 6th level, whenever you make a saving throw against a spell, you can choose to replace the ability modifier with your Charisma modifier instead.</p>
+		</description>
+		<sheet>
+			<description>Whenever you make a saving throw against a spell, you can choose to replace the ability modifier with your Charisma modifier instead.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Mana Drain" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_MANAPAINTER_MANA_DRAIN">
 		<description>
-			<p></p>
+			<p>Starting at 14th level, when you see a creature within 60 feet of you casting a spell, you can use your reaction to leech its magic. The targets of the spell have advantage on their saving throws against it, and its damage is halved if it deals any damage. The first time you use this power after each long rest, you also regain a number of sorcery points equal to the level of the spell leeched. Once you use this feature, you can’t use it again until you finish a short or long rest, unless you spend 5 sorcery points to use it again.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet action="Reaction">
+			<description>When you see a creature within 60 feet of you casting a spell, you can use your reaction to leech its magic. The targets of the spell have advantage on their saving throws against it, and its damage is halved if it deals any damage. The first time you use this power after each long rest, you also regain a number of sorcery points equal to the level of the spell leeched. Once you use this feature, you can’t use it again until you finish a short or long rest, unless you spend 5 sorcery points to use it again.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Mana Conduit" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_MANAPAINTER_MANA_CONDUIT">
 		<description>
-			<p></p>
+			<p>Starting at 18th level, as a bonus action you can over-infuse yourself with magic. For the next minute, you gain the following benefits.</p>
+			<ul>
+				<li>When casting a spell, you can decide to use two different Metamagic options at once.</li>
+				<li>Whenever you use Metamagic on a spell, you can decide to substitute any number of sorcery points spent by taking the same amount of d8 in force damage instead. This damage ignores resistance and immunity.</li>
+			</ul>
+			<p class="indent">Once you use this feature, you cannot use it again until you finish a long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="1/Long Rest">
+			<description>As a bonus action you can over-infuse yourself with magic. For the next minute, you gain the following benefits.
+			When casting a spell, you can decide to use two different Metamagic options at once.
+			Whenever you use Metamagic on a spell, you can decide to substitute any number of sorcery points spent by taking the same amount of d8 in force damage instead. This damage ignores resistance and immunity.</description>
 		</sheet>
 	</element>
 </elements>

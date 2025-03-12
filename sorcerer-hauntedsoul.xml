@@ -1,61 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="sorcerer-hauntedsoul.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/sorcerer-hauntedsoul.xml" />
+		</update>
+	</info>
+    <element name="Haunted Soul" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_SORCERER_HAUNTEDSOUL">
+        <supports>Sorcerous Origin</supports>
 		<description>
-			<p></p>
+			<p>Like all Solastan sorcerers, the so-called “haunted souls” are the result of the Cataclysm. The unprecedented death resulting from that terrible event caused some with a deep magical affinity to be permanently haunted by spirits. Most simply went mad and few survived for long. However, a small number learned to live with and control the spirits, leading to an entirely new form of magic.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_HAUNTEDSOUL_ORIGIN_MAGIC" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_HAUNTEDSOUL_A_HELPING_HAND" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_HAUNTEDSOUL_VENGEFUL_SPIRIT" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_HAUNTEDSOUL_SOUL_DRAIN" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_HAUNTEDSOUL_HORRIFYING_FORM" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_HAUNTEDSOUL_ORIGIN_MAGIC" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_HAUNTEDSOUL_A_HELPING_HAND" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_HAUNTEDSOUL_VENGEFUL_SPIRIT" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_HAUNTEDSOUL_SOUL_DRAIN" level="14" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_HAUNTEDSOUL_HORRIFYING_FORM" level="18" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Origin Magic" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_HAUNTEDSOUL_ORIGIN_MAGIC">
 		<description>
-			<p></p>
+			<p>Starting at 1st level, you learn additional spells when you reach certain levels in this class, as shown on the Haunted Soul Spells table. Each of these spells counts as a sorcerer spell for you, but it doesn’t count against the number of sorcerer spells you know.</p>
+			<p class="indent">Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an enchantment or a necromancy spell from the sorcerer, warlock, or wizard spell list, and it becomes a sorcerer spell for you.</p>
+			<table>
+				<thead>
+					<tr><td>Sorcerer Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td>bane, inflict wounds</td></tr>
+				<tr><td>3rd</td><td>entrall, ray of enfeeblement</td></tr>
+				<tr><td>5th</td><td>animate dead, bestow curse</td></tr>
+				<tr><td>7th</td><td>compulsion, phantasmal killer</td></tr>
+				<tr><td>9th</td><td>dream, geas</td></tr>
+			</table>
 		</description>
 		<sheet>
-			<description></description>
+			<description>>Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an enchantment or a necromancy spell from the sorcerer, warlock, or wizard spell list, and it becomes a sorcerer spell for you.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" level="1" id="ID_PHB_SPELL_BANE" />
+			<grant type="Spell" level="1" id="ID_PHB_SPELL_INFLICT_WOUNDS" />
+			<grant type="Spell" level="3" id="ID_PHB_SPELL_ENTHRALL" />
+			<grant type="Spell" level="3" id="ID_PHB_SPELL_RAY_OF_ENFEEBLEMENT" />
+			<grant type="Spell" level="5" id="ID_PHB_SPELL_ANIMATE_DEAD" />
+			<grant type="Spell" level="5" id="ID_PHB_SPELL_BESTOW_CURSE" />
+			<grant type="Spell" level="7" id="ID_PHB_SPELL_COMPULSION" />
+			<grant type="Spell" level="7" id="ID_PHB_SPELL_PHANTASMAL_KILLER" />
+			<grant type="Spell" level="9" id="ID_PHB_SPELL_DREAM" />
+			<grant type="Spell" level="9" id="ID_PHB_SPELL_GEAS" />
+		</rules>
+	</element>
+	<element name="A Helping Hand" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_HAUNTEDSOUL_A_HELPING_HAND">
+		<description>
+			<p>Starting at 1st level, you learn the Chill Touch spell, which doesn’t count against the number of sorcerer cantrips you know.</p>
+			<p class="indent">Whenever you cast a spell of 1st level or higher that has a casting time of 1 action, you can cast Chill Touch as a Bonus Action on the same turn.</p>
+		</description>
+		<sheet>
+			<description>Whenever you cast a spell of 1st level or higher that has a casting time of 1 action, you can cast Chill Touch as a Bonus Action on the same turn.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_CHILL_TOUCH" />
+		</rules>
+	</element>
+	<element name="Vengeful Spirit" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_HAUNTEDSOUL_VENGEFUL_SPIRIT">
+		<description>
+			<p>Starting at 6th level, when a creature within 60 feet of you that you can see damages you, you can use your reaction and spend 2 sorcery points to haunt it until the end of your next turn. Attack rolls made against the haunted target have advantage.</p>
+			<p class="indent">Additionally, you gain resistance to necrotic damage.</p>
+		</description>
+		<sheet>
+			<description>When a creature within 60 feet of you that you can see damages you, you can use your reaction and spend 2 sorcery points to haunt it until the end of your next turn. Attack rolls made against the haunted target have advantage.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC" />
+		</rules>
+	</element>
+	<element name="Soul Drain" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_HAUNTEDSOUL_SOUL_DRAIN">
+		<description>
+			<p>Starting at 14th level, you can touch a creature that has died within the last minute as an action. You regain expended sorcery points up to half the enemy’s number of Hit Dice or half your Sorcerer level, whichever is lower.</p>
+			<p class="indent">Once you use this feature, you cannot use it again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>ou can touch a creature that has died within the last minute as an action. You regain expended sorcery points up to half the enemy’s number of Hit Dice or {{level:sorcerer:half}}, whichever is lower.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Horrifying Form" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_HAUNTEDSOUL_HORRIFYING_FORM">
 		<description>
-			<p></p>
+			<p>Starting at 18th level, you can spend 6 sorcery points as a bonus action to let the haunted spirit take partial possession of you. As you transform, you let out a ghastly wail and all hostile creatures within 60 feet of you that can hear you must make a Constitution saving throw or be paralyzed until the end of your next turn. While in this form, you gain the following benefits.</p>
+			<ul>
+				<li>You gain a flying speed equal to your current speed.</li>
+				<li>You become immune to necrotic damage.</li>
+				<li>Whenever you use Metamagic on a spell, you can reduce the sorcery points spent by 1 (minimum 0).</li>
+				<li>Once per turn, you can focus your dreadful gaze onto a creature you can see within 60 feet of you (no action required). The target must succeed a Wisdom saving throw or become frightened for 1 minute. A frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target’s saving throw is successful or the effect ends for it, the target is immune to it for the next 24 hours.</li>
+			</ul>
+			<p class="indent">You remain in this form for 1 minute. It ends early if you are incapacitated, if you die, or if you dismiss it as a bonus action.</p>
 		</description>
 		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
+			<description>You can spend 6 sorcery points as a bonus action to let the haunted spirit take partial possession of you. As you transform, you let out a ghastly wail and all hostile creatures within 60 feet of you that can hear you must make a Constitution saving throw or be paralyzed until the end of your next turn. While in this form, you gain the following benefits.
+			-You gain a flying speed equal to your current speed.
+			-You become immune to necrotic damage.
+			-Whenever you use Metamagic on a spell, you can reduce the sorcery points spent by 1 (minimum 0).
+			-Once per turn, you can focus your dreadful gaze onto a creature you can see within 60 feet of you (no action required). The target must succeed a Wisdom saving throw or become frightened for 1 minute. A frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target’s saving throw is successful or the effect ends for it, the target is immune to it for the next 24 hours.
+			You remain in this form for 1 minute. It ends early if you are incapacitated, if you die, or if you dismiss it as a bonus action.</description>
 		</sheet>
 	</element>
 </elements>

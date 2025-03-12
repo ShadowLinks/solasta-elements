@@ -1,61 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="rogue-hoodlum.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/rogue-hoodlum.xml" />
+		</update>
+	</info>
+    <element name="Hoodlum" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_ROGUE_HOODLUM">
+        <supports>Roguish Archetype</supports>
 		<description>
-			<p></p>
+			<p>Not all rogues are stealthy, agile individuals who creep through the shadows. Sometimes the guild just needs muscle. Usually former mercenaries or gangland enforcers, hoodlums are bullies who gang up on their victims. Never fighting fair, they pull every trick in the book to get an edge on their opponents. After all, for someone to win, there must be a loser. And hoodlums have already lost too much.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_HOODLUM_MEAN_MUG" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_HOODLUM_THE_RIGHT_TOOLS" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_HOODLUM_MENACING" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_HOODLUM_DIRTY_FIGHTING" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_HOODLUM_THE_OTHER_CHEEK" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_HOODLUM_MEAN_MUG" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_HOODLUM_THE_RIGHT_TOOLS" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_HOODLUM_MENACING" level="9" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_HOODLUM_DIRTY_FIGHTING" level="13" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_HOODLUM_THE_OTHER_CHEEK" level="17" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Mean Mug" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_HOODLUM_MEAN_MUG">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, whenever you make a Charisma (Intimidation) check, you can add your Strength modifier to that check. </p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>Whenever you make a Charisma (Intimidation) check, you can add your Strength modifier to that check. </description>
+		</sheet>
+		<rules>
+			<stat name="intimidation:misc" value="strength:modifier" />
+		</rules>
+	</element>
+	<element name="The Right Tools" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_HOODLUM_THE_RIGHT_TOOLS">
+		<description>
+			<p>Starting at 3rd level, you gain proficiency with martial weapons, medium armor, and shields.</p>
+			<p class="indent">Additionally, you can use your Sneak Attack with melee weapons that don’t have the finesse property.</p>
+		</description>
+		<sheet>
+			<description>You can use your Sneak Attack with melee weapons that don’t have the finesse property.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" />
+		</rules>
+	</element>
+	<element name="Menacing" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_HOODLUM_MENACING">
+		<description>
+			<p>Starting at 9th level, when you deal Sneak Attack damage on your turn, the target has disadvantage on attack rolls against you until the start of your next turn.</p>
+		</description>
+		<sheet>
+			<description>When you deal Sneak Attack damage on your turn, the target has disadvantage on attack rolls against you until the start of your next turn.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Dirty Fighting" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_HOODLUM_DIRTY_FIGHTING">
 		<description>
-			<p></p>
+			<p>Starting at 13th level, you can use a bonus action to catch a creature that you can see within the reach of your melee weapon off-guard. The target must succeed a Constitution saving throw against a DC equal to 8 + your proficiency bonus + your Strength modifier or be blinded and incapacitated until the end of your next turn. A creature who is affected by this feature cannot be affected by it again for 24 hours.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet action="Bonus Action">
+			<description>You can use a bonus action to catch a creature that you can see within the reach of your melee weapon off-guard. The target must succeed a Constitution saving throw against a DC {{dirty-fighting:dc}} or be blinded and incapacitated until the end of your next turn. A creature who is affected by this feature cannot be affected by it again for 24 hours.</description>
 		</sheet>
+		<rules>
+			<stat name="dirty-fighting:dc" value="8" bonus="base" />
+			<stat name="dirty-fighting:dc" value="proficiency" />
+			<stat name="dirty-fighting:dc" value="strength:modifier" />
+		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="The Other Cheek" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_HOODLUM_THE_OTHER_CHEEK">
 		<description>
-			<p></p>
+			<p>Starting at 17th level, your hit point maximum increases by an amount equal to three times your level. Whenever you gain a level thereafter, your hit point increases by an additional 3 hit points.</p>
+			<p class="indent">Further, when you use Uncanny Dodge and the attacker is within the reach of your melee weapon, you can immediately make an attack with that weapon against it as part of your reaction. You can use your Sneak Attack against that target even if you don’t have advantage on that attack roll, but not if you have disadvantage on it.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet action="Reaction">
+			<description>When you use Uncanny Dodge and the attacker is within the reach of your melee weapon, you can immediately make an attack with that weapon against it as part of your reaction. You can use your Sneak Attack against that target even if you don’t have advantage on that attack roll, but not if you have disadvantage on it.</description>
 		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
-		</sheet>
+		<rules>
+			<stat name="hp" value="level" />
+			<stat name="hp" value="level" />
+			<stat name="hp" value="level" />
+		</rules>
 	</element>
 </elements>

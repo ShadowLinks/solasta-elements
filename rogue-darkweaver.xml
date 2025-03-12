@@ -1,61 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="rogue-darkweaver.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/rogue-darkweaver.xml" />
+		</update>
+	</info>
+    <element name="Darkweaver" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_ROGUE_DARKWEAVER">
+        <supports>Roguish Archetype</supports>
 		<description>
-			<p></p>
+			<p>Trained by a secret society that extends throughout the kingdoms of Solasta, Darkweavers have developed techniques to exploit darkness and strike fear into their enemies and have mastered the arts of crafting and using poison.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_DARKWEAVER_SPIDERS_BLESSING" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_DARKWEAVER_HANGING_PREDATOR" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_DARKWEAVER_WEB_CRAWLER" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_DARKWEAVER_VENOMOUS_BITE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_DARKWEAVER_RAVAGING_TOXICITY" />
 		</description>
 		<sheet display="false">
-			<description></description>
+			<description>They are mostly known for their uncanny climbing ability and their skilled use of the advantage of height. Firing arrows from above, they can strike down their targets with a brutal efficiency that ground-based archers cannot match. They can also drop onto unsuspecting targets with lethal effect. Moving unseen in the darkness or waiting in a shadowed corner of the ceiling, the venomous Darkweaver is evasive and deadly.</description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_DARKWEAVER_SPIDERS_BLESSING" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_DARKWEAVER_HANGING_PREDATOR" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_DARKWEAVER_WEB_CRAWLER" level="19" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_DARKWEAVER_VENOMOUS_BITE" level="13" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_DARKWEAVER_RAVAGING_TOXICITY" level="17" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Spider's Blessing" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_DARKWEAVER_SPIDERS_BLESSING">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, you gain proficiency with the poisoner’s kit and you can use the bonus action granted by your Cunning Action to apply poison to your weapon or a piece of ammunition. Whenever you use a poison, you can choose to substitute its DC with your Poison DC equal to 8 + your proficiency bonus + your Intelligence modifier.</p>
+			<p class="indent">Additionally, you gain a climbing speed equal to your walking speed.</p>
+		</description>
+		<sheet action="Bonus Action">
+			<description>You can use the bonus action granted by your Cunning Action to apply poison to your weapon or a piece of ammunition. Whenever you use a poison, you can choose to substitute its DC with your Poison DC {{spiders-blessing:dc}}</description>
+		</sheet>
+		<rules>
+			<stat name="spiders-blessing:dc" value="8" bonus="base"/>
+			<stat name="spiders-blessing:dc" value="proficiency" />
+			<stat name="spiders-blessing:dc" value="intelligence:modifier" />
+			<stat name="speed:climb" value="speed" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_POISONERS_KIT" />
+		</rules>
+	</element>
+	<element name="Hanging Predator" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_DARKWEAVER_HANGING_PREDATOR">
+		<description>
+			<p>Starting at 3rd level, you gain an additional way to use your Sneak Attack: you don’t need advantage on your attack roll to use Sneak Attack against a creature if it is at a lower elevation than you, and you don’t have disadvantage on the attack roll. All the other rules for Sneak Attack still apply to you.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You don’t need advantage on your attack roll to use Sneak Attack against a creature if it is at a lower elevation than you, and you don’t have disadvantage on the attack roll. All the other rules for Sneak Attack still apply to you.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Web Crawler" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_DARKWEAVER_WEB_CRAWLER">
 		<description>
-			<p></p>
+			<p>Starting at 9th level, moving through difficult terrain costs you no extra movement. You also have advantage on saving throws against spells and effects that would make you restrained or paralyzed.</p>
+			<p class="indent">Additionally, attacks you make and poisons you use ignore resistance to poison damage. If a creature is immune to a poison damage, poison damage you deal against it is halved instead of negated.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>Moving through difficult terrain costs you no extra movement. You also have advantage on saving throws against spells and effects that would make you restrained or paralyzed.
+			Additionally, attacks you make and poisons you use ignore resistance to poison damage. If a creature is immune to a poison damage, poison damage you deal against it is halved instead of negated.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Venomous Bite" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_DARKWEAVER_VENOMOUS_BITE">
 		<description>
-			<p></p>
+			<p>Starting at 13th level, you can infuse a weapon with magical poison through an hour-long process using a poisoner’s kit. The weapon loses its infusion if you die or if you infuse a different weapon.</p>
+			<p class="indent">When you deal Sneak Attack damage with your infused weapon, your target must roll a Constitution saving throw against your Poison DC {{spiders-blessing:dc}}, taking 2d6 + your intelligence modifier in poison damage on a failed save, or half as much damage on a successful one. After a failed save, a target is also poisoned until the end of your next turn.</p>
+			<p class="indent">Additionally, you can now inflict the poisoned condition on creatures that are immune to it.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You can infuse a weapon with magical poison through an hour-long process using a poisoner’s kit. The weapon loses its infusion if you die or if you infuse a different weapon.
+			When you deal Sneak Attack damage with your infused weapon, your target must roll a Constitution saving throw against your Poison DC {{spiders-blessing:dc}}, taking 2d6 + your intelligence modifier in poison damage on a failed save, or half as much damage on a successful one. After a failed save, a target is also poisoned until the end of your next turn.
+			Additionally, you can now inflict the poisoned condition on creatures that are immune to it.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Ravaging Toxicity" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_DARKWEAVER_RAVAGING_TOXICITY">
 		<description>
-			<p></p>
+			<p>Starting at 17th level, when you hit a creature that is poisoned with a weapon attack, you can double the damage of that attack against the creature.</p>
+			<p class="indent">You can use this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="{{intelligence:modifier}}/Long Rest">
+			<description>When you hit a creature that is poisoned with a weapon attack, you can double the damage of that attack against the creature.</description>
 		</sheet>
 	</element>
 </elements>

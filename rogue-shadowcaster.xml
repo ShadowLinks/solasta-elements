@@ -1,61 +1,290 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="rogue-shadowcaster.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/rogue-shadowcaster.xml" />
+		</update>
+	</info>
+    <element name="Shadowcaster" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_ROGUE_SHADOWCASTER">
+        <supports>Roguish Archetype</supports>		
 		<description>
-			<p></p>
+			<p>Trained in the arcane arts as well as in roguish skills, shadowcasters are stealthy magic users whose abilities make it almost impossible to guard against their attacks. They move with greater freedom than other rogues, being capable of teleporting short distances. Masters of the discipline are said to be able to evade even the most accurate blows by just vanishing.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_SHADOWCASTER_SPELLCASTING" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_SHADOWCASTER_SHADOW_CASTING" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_SHADOWCASTER_INTO_THE_SHADOWS" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_SHADOWCASTER_SHADOW_RETRIBUTION" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_SHADOWCASTER_SHADOW_ESCAPE" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_SHADOWCASTER_SPELLCASTING" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_SHADOWCASTER_SHADOW_CASTING" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_SHADOWCASTER_INTO_THE_SHADOWS" level="9" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_SHADOWCASTER_SHADOW_RETRIBUTION" level="13" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_SHADOWCASTER_SHADOW_ESCAPE" level="17" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Spellcasting" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_SHADOWCASTER_SPELLCASTING">
 		<description>
 			<p></p>
+			<p class="indent"><strong><i></i></strong>Beginning when you choose this archetype at 3rd level, you gain the ability to cast wizard spells.</p>
+			<p class="indent"><strong><i>Cantrips. </i></strong>You learn two cantrips of your choice from the wizard spell list. You learn an additional cantrip at 10th level.</p>
+			<p class="indent"><strong><i>Spell Slots. </i></strong>The Shadowcaster Spellcasting table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell’s level or higher. You regain all expended spell slots when you finish a long rest.</p>
+			<p class="indent"><strong><i>Spells Known of 1st Level and Higher. </i></strong>You know three 1st-level wizard spells of your choice, which you must choose from the conjuration, evocation, necromancy, or transmutation spells on the wizard spell list.</p>
+			<p class="indent">The Spells Known column of the Shadowcaster Spellcasting table shows when you learn more wizard spells of 1st level or higher. Each of these spells must be a conjuration, evocation, necromancy, or transmutation spell of your choice, and must be of a level for which you have spell slots.</p>
+			<p class="indent">Whenever you gain a level in this class, you can replace one of the wizard spells you know with another spell of your choice from the wizard spell list. The new spell must be of a level for which you have spell slots, and it must be from one of the four schools mentioned above.</p>
+			<p class="indent"><strong><i>Spellcasting Ability. </i></strong>Intelligence is your spellcasting ability for your wizard spells since you learn your spells through study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one.</p>
+			<center>
+                <p>
+                    <strong>Spell save DC</strong>
+                    = 8 + your proficiency bonus + your Intelligence modifier
+                </p>
+                <p>
+                    <strong>Spell attack modifier</strong>
+                    = your proficiency bonus + your Intelligence modifier
+                </p>
+            </center>
+			<h5 class="caption">SHADOWCASTER SPELLCASTING</h5>
+            <table class="class-features">
+                <thead>
+                    <tr>
+                        <td class="col-10">Rogue Level</td>
+                        <td class="col-10">Cantrips Known</td>
+                        <td class="col-10">Spells Known</td>
+                        <td>1st</td>
+                        <td>2nd</td>
+                        <td>3rd</td>
+                        <td>4th</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>3rd</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>4th</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>5th</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>6th</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>7th</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>8th</td>
+                    <td>2</td>
+                    <td>6</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>9th</td>
+                    <td>2</td>
+                    <td>6</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>10th</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>11th</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>12th</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>13th</td>
+                    <td>3</td>
+                    <td>9</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>14th</td>
+                    <td>3</td>
+                    <td>10</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>15th</td>
+                    <td>3</td>
+                    <td>10</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>16th</td>
+                    <td>3</td>
+                    <td>11</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>17th</td>
+                    <td>3</td>
+                    <td>11</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>18th</td>
+                    <td>3</td>
+                    <td>11</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>19th</td>
+                    <td>3</td>
+                    <td>12</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>20th</td>
+                    <td>3</td>
+                    <td>13</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                </tr>
+            </table>
+		</description>
+		<spellcasting name="Shadowcaster" ability="Intelligence" prepare="false" allowReplace="true">
+            <list>Wizard,(Conjuration||Transmutation||Necromancy||Evocation)</list>
+        </spellcasting>
+        <rules>
+            <grant type="Grants" id="ID_INTERNAL_GRANT_MULTICLASS_SPELLCASTING_SLOTS_THIRD" requirements="ID_INTERNAL_GRANT_MULTICLASS"/>
+            <stat name="shadowcaster:spellcasting:slots:1" value="2" level="3"/>
+            <stat name="shadowcaster:spellcasting:slots:1" value="1" level="4"/>
+            <stat name="shadowcaster:spellcasting:slots:1" value="1" level="7"/>
+            <stat name="shadowcaster:spellcasting:slots:2" value="2" level="7"/>
+            <stat name="shadowcaster:spellcasting:slots:2" value="1" level="10"/>
+            <stat name="shadowcaster:spellcasting:slots:3" value="2" level="13"/>
+            <stat name="shadowcaster:spellcasting:slots:3" value="1" level="16"/>
+            <stat name="shadowcaster:spellcasting:slots:4" value="1" level="19"/>
+            <select type="Spell" name="Cantrip (Shadowcaster)" supports="Wizard, 0" level="3" number="2" spellcasting="Shadowcaster"/>
+            <select type="Spell" name="Cantrip (Shadowcaster)" supports="Wizard, 0" level="10" number="1" spellcasting="Shadowcaster"/>
+            <select type="Spell" name="Spellcasting (Shadowcaster)" supports="$(spellcasting:list), 1" level="3" number="2" spellcasting="Shadowcaster"/>
+            <select type="Spell" name="Spellcasting (Shadowcaster)" supports="$(spellcasting:list), $(spellcasting:slots)" level="4" spellcasting="Shadowcaster"/>
+            <select type="Spell" name="Spellcasting (Shadowcaster)" supports="$(spellcasting:list), $(spellcasting:slots)" level="7" spellcasting="Shadowcaster"/>
+            <select type="Spell" name="Spellcasting (Shadowcaster)" supports="$(spellcasting:list), $(spellcasting:slots)" level="10" spellcasting="Shadowcaster"/>
+            <select type="Spell" name="Spellcasting (Shadowcaster)" supports="$(spellcasting:list), $(spellcasting:slots)" level="11" spellcasting="Shadowcaster"/>
+            <select type="Spell" name="Spellcasting (Shadowcaster)" supports="$(spellcasting:list), $(spellcasting:slots)" level="13" spellcasting="Shadowcaster"/>
+            <select type="Spell" name="Spellcasting (Shadowcaster)" supports="$(spellcasting:list), $(spellcasting:slots)" level="16" spellcasting="Shadowcaster"/>
+            <select type="Spell" name="Spellcasting (Shadowcaster)" supports="$(spellcasting:list), $(spellcasting:slots)" level="19" spellcasting="Shadowcaster"/>
+        </rules>
+	</element>
+	<element name="Shadow Casting" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_SHADOWCASTER_SHADOW_CASTING">
+		<description>
+			<p>Starting at 3rd level, you gain an additional way to use your Sneak Attack. You can use your Sneak Attack when you damage enemies with spells which require an attack roll as if you were using a finesse or a ranged weapon. All the other rules for Sneak Attack still apply to you.</p>\
+			<p class="indent">Additionally, you can choose to replace your Intelligence modifier with your Dexterity modifier when making a melee or ranged spell attack.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You gain an additional way to use your Sneak Attack. You can use your Sneak Attack when you damage enemies with spells which require an attack roll as if you were using a finesse or a ranged weapon. All the other rules for Sneak Attack still apply to you.
+			Additionally, you can choose to replace your Intelligence modifier with your Dexterity modifier when making a melee or ranged spell attack.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Into the Shadows" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_SHADOWCASTER_INTO_THE_SHADOWS">
 		<description>
-			<p></p>
+			<p>Starting at 9th level, you can quickly fall back into your own shadow and reappear somewhere else. As a bonus action, you teleport up to 25 feet to an unoccupied space that you can see. You can use this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses of it when you finish a short or long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="{{intelligence:modifier}}/Short Rest" action="Bonus Action">
+			<description>As a bonus action, you teleport up to 25 feet to an unoccupied space that you can see. You can use this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses of it when you finish a short or long rest.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Shadow Retribution" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_SHADOWCASTER_SHADOW_RETRIBUTION">
 		<description>
-			<p></p>
+			<p>Starting at 13th level, you learn two cantrips from any class. The chosen cantrips count as wizard spells for you and are included in the number in the Cantrips Known column of the Shadowcaster Spellcasting table.</p>
+			<p class="indent">Additionally, when you are damaged by a spell and you can see the caster, you can use your reaction to cast a cantrip at them. The cantrip must have a casting time of 1 action and must target only that creature. The creature must also be within range of the cantrip.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet action="Reaction">
+			<description>When you are damaged by a spell and you can see the caster, you can use your reaction to cast a cantrip at them. The cantrip must have a casting time of 1 action and must target only that creature. The creature must also be within range of the cantrip.</description>
 		</sheet>
+		<rules>
+			<select type="Spell" name="Spell, Shadow Retribution" supports="0" number="2" />
+		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Shadow Escape" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_ROGUE_SHADOWCASTER_SHADOW_ESCAPE">
 		<description>
-			<p></p>
+			<p>Starting at 17th level, you gain an additional way to use Into the Shadows. When you are hit by an attack, you can use your reaction to use Into the Shadows to teleport up to 25 feet to an unoccupied space that you can see and negate the effect and damage of that attack.</p>
 		</description>
-		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
+		<sheet action="Reaction">
+			<description>When you are hit by an attack, you can use your reaction to use Into the Shadows to teleport up to 25 feet to an unoccupied space that you can see and negate the effect and damage of that attack.</description>
 		</sheet>
 	</element>
 </elements>
