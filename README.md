@@ -6,6 +6,6 @@ https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/s
 
 Races- COMPLETE - Not all were different from base 5e so I only added the different ones.
 
-Subclasses-
+Subclasses- COMPLETE
 
 backgrounds- COMPLETE - acolyte was duplicate of PHB version.
