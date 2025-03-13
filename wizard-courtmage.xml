@@ -1,61 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="wizard-courtmage.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/wizard-courtmage.xml" />
+		</update>
+	</info>
+    <element name="Court Mage" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_WIZARD_COURTMAGE">
+        <supports>Arcane Tradition</supports>
 		<description>
-			<p></p>
+			<p>In a society where magic is prevalent, it is only natural to have spellcasters in the role of bodyguards. Originally an order of the Manacalon Empire, court mages are wizards who specialize in protecting their clients with steel and magic. Having a court mage at your side is seen as a symbol of prestige as only the wealthy, or those considered irreplaceable, are ever granted one.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_COURTMAGE_ALWAYS_PREPARED" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_COURTMAGE_SPELL_SHIELD" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_COURTMAGE_CAREFUL_PROTECTOR" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_COURTMAGE_SHIELD_RESONANCE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_COURTMAGE_SHIELD_SHATTER" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_COURTMAGE_ALWAYS_PREPARED" level="2" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_COURTMAGE_SPELL_SHIELD" level="2" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_COURTMAGE_CAREFUL_PROTECTOR" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_COURTMAGE_SHIELD_RESONANCE" level="10" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_COURTMAGE_SHIELD_SHATTER" level="14" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Always Prepared" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_COURTMAGE_ALWAYS_PREPARED">
 		<description>
-			<p></p>
+			<p>Starting at 2nd level, you gain proficiency with shields.</p>
+			<p class="indent">Additionally, you gain the Protection Fighting Style, allowing you to use a reaction when wielding a shield to impose disadvantage on an attack roll made against a target other than you that is within 5 feet of you. If you already have this Fighting Style from another class, you may replace the option from that class with a different one available to the class.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet action="Reaction">
+			<description>You gain the Protection Fighting Style, allowing you to use a reaction when wielding a shield to impose disadvantage on an attack roll made against a target other than you that is within 5 feet of you. If you already have this Fighting Style from another class, you may replace the option from that class with a different one available to the class.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" />
+		</rules>
+	</element>
+	<element name="Spell Shield" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_COURTMAGE_SPELL_SHIELD">
+		<description>
+			<p>Starting at 2nd level, you can use an action to create a powerful spell shield around yourself and a friendly creature you can see within 30 feet of you.</p>
+			<p class="indent">A spell shield has a hit point maximum equal to three times your wizard level. Whenever a creature under the effect of Spell Shield takes damage, the shield takes the damage instead. If this damage reduces the shield to 0 hit points, it disappears and the creature takes any remaining damage.</p>
+			<p class="indent">The spell shield also disappears after 10 minutes, when you use this feature again, or if a shielded creature becomes separated by more than 30 feet from you. At level 14, the range of the spell shield increases to 60 feet.</p>
+			<p class="indent">You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses of it when you finish a long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>You can use an action to create a powerful spell shield around yourself and a friendly creature you can see within 30 feet of you.
+			A spell shield has a hit point maximum equal to three times your wizard level. Whenever a creature under the effect of Spell Shield takes damage, the shield takes the damage instead. If this damage reduces the shield to 0 hit points, it disappears and the creature takes any remaining damage.
+			The spell shield also disappears after 10 minutes, when you use this feature again, or if a shielded creature becomes separated by more than 30 feet from you. At level 14, the range of the spell shield increases to 60 feet.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Careful Protector" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_COURTMAGE_CAREFUL_PROTECTOR">
 		<description>
-			<p></p>
+			<p>Starting at 6th level, you can use a bonus action to teleport to an unoccupied space within 5 feet of a creature protected by Spell Shield other than yourself.</p>
+			<p class="indent">Additionally, when you are within 5 feet of a friendly creature and you are not incapacitated, they gain a +2 bonus to AC.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet action="Bonus Action">
+			<description>You can use a bonus action to teleport to an unoccupied space within 5 feet of a creature protected by Spell Shield other than yourself.
+			Additionally, when you are within 5 feet of a friendly creature and you are not incapacitated, they gain a +2 bonus to AC.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Shield Resonance" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_COURTMAGE_SHIELD_RESONANCE">
 		<description>
-			<p></p>
+			<p>Starting at 10th level, you can choose one damage type when you create your Spell Shield. You and your shielded ally gain resistance to that damage type while under the effect of Spell Shield.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You can choose one damage type when you create your Spell Shield. You and your shielded ally gain resistance to that damage type while under the effect of Spell Shield.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Shield Shatter" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_COURTMAGE_SHIELD_SHATTER">
 		<description>
-			<p></p>
+			<p>Starting at 14th level, when a Spell Shield is reduced to 0 hit points, it shatters in a bright flash. Hostile creatures within 15 feet of it must succeed a Constitution saving throw or become blinded, deafened, and silenced (incapable of casting spells that include a verbal component) until the end of their next turn. Additionally, the remaining strands of magic create a last layer of protection on its former target, granting them resistance to all damage types until the start of their next turn.</p>
 		</description>
 		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
+			<description>When a Spell Shield is reduced to 0 hit points, it shatters in a bright flash. Hostile creatures within 15 feet of it must succeed a Constitution saving throw or become blinded, deafened, and silenced (incapable of casting spells that include a verbal component) until the end of their next turn. Additionally, the remaining strands of magic create a last layer of protection on its former target, granting them resistance to all damage types until the start of their next turn.</description>
 		</sheet>
 	</element>
 </elements>
