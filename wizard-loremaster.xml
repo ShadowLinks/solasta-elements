@@ -2,10 +2,10 @@
 <elements>
 	<info>
 		<update version="0.0.1">
-			<file name="wizard-greenmage.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/wizard-greenmage.xml" />
+			<file name="wizard-loremaster.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/wizard-loremaster.xml" />
 		</update>
 	</info>
-    <element name="Greenmage" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_WIZARD_GREENMAGE">
+    <element name="Loremaster" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_WIZARD_LOREMASTER">
         <supports>Arcane Tradition</supports>
 		<description>
 			<p></p>
