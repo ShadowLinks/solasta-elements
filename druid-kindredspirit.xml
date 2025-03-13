@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="druid-kindredspirit.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/druid-kindredspirit.xml" />
 		</update>
 	</info>
@@ -75,7 +75,7 @@
             Additionally, your Kindred Spirit automatically succeeds on its saving throws against your spells (unless you decide otherwise).</description>
 		</sheet>
 	</element>
-     <element name="Kindred Spirit" type="Companion" source="Tanares RPG 5e" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_SPIRIT_1">
+     <element name="Kindred Spirit" type="Companion" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_SPIRIT_1">
         <supports>kindred-spirit</supports>
         <requirements>[level:2]</requirements>
         <description>
@@ -106,7 +106,7 @@
             <stat name="companion:speed" value="40" bonus="base"/>
         </rules>
     </element>
-    <element name="Spirit Strike" type="Companion Action" source="Tanares RPG 5e" id="ID_SOLASTA_COMPANION_ACTION_SPIRIT_STRIKE">
+    <element name="Spirit Strike" type="Companion Action" source="Solasta" id="ID_SOLASTA_COMPANION_ACTION_SPIRIT_STRIKE">
         <description>
             <p>Melee Weapon Attack: your Spell Attack Modifier to hit, reach 5 ft, one target. Hit: 1d8 + your Wisdom modifier bludgeoning, slashing, or piercing damage (your choice).</p>
         </description>
@@ -116,7 +116,7 @@
             </description>
         </sheet>
     </element>
-    <element name="Limited Telepathy" type="Companion Trait" source="Tanares RPG 5e" id="ID_SOLASTA_COMPANION_TRAIT_LIMITED_TELEPATHY">
+    <element name="Limited Telepathy" type="Companion Trait" source="Solasta" id="ID_SOLASTA_COMPANION_TRAIT_LIMITED_TELEPATHY">
         <description>
             <p>The Kindred Spirit can magically communicate with the Druid if they are within 100 feet of each other.</p>
         </description>
@@ -126,7 +126,7 @@
             </description>
         </sheet>
     </element>
-    <element name="Pack Tactics" type="Companion Trait" source="Tanares RPG 5e" id="ID_SOLASTA_COMPANION_TRAIT_PACK_TACTICS">
+    <element name="Pack Tactics" type="Companion Trait" source="Solasta" id="ID_SOLASTA_COMPANION_TRAIT_PACK_TACTICS">
         <description>
             <p>The Kindred Spirit has advantage on an attack roll against a creature if at least one ally is within 5 feet of the creature, and the ally isn’t incapacitated.</p>
         </description>
@@ -136,7 +136,7 @@
             </description>
         </sheet>
     </element>
-    <element name="Stats" type="Companion Trait" source="Tanares RPG 5e" id="ID_SOLASTA_COMPANION_TRAIT_SPIRIT_STATS">
+    <element name="Stats" type="Companion Trait" source="Solasta" id="ID_SOLASTA_COMPANION_TRAIT_SPIRIT_STATS">
         <description>
             <p></p>
         </description>
@@ -147,7 +147,7 @@
             </description>
         </sheet>
     </element>
-     <element name="Kindred Spirit 4" type="Companion" source="Tanares RPG 5e" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_SPIRIT_4">
+     <element name="Kindred Spirit 4" type="Companion" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_SPIRIT_4">
         <supports>kindred-spirit</supports>
         <requirements>[level:4]</requirements>
         <description>
@@ -179,7 +179,7 @@
             <stat name="companion:speed:swim" value="40" bonus="base"/>
         </rules>
     </element>
-     <element name="Kindred Spirit 8" type="Companion" source="Tanares RPG 5e" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_SPIRIT_3">
+     <element name="Kindred Spirit 8" type="Companion" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_DRUID_KINDREDSPIRIT_SPIRIT_3">
         <supports>kindred-spirit</supports>
         <requirements>[level:8]</requirements>
         <description>
