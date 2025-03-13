@@ -1,61 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="ranger-swiftblade.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/ranger-swiftblade.xml" />
+		</update>
+	</info>
+    <element name="Swift Blade" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_RANGER_SWIFTBLADE">
+        <supports>Ranger Archetype</supports>
 		<description>
-			<p></p>
+			<p>Originally removing themselves from the Manacalon Empire, the sylvan elves long kept a neutral stance towards their high elven brethren. However, as the Empire grew ever larger, the Swift Blades formed in response. Tasked to slow down the Empire’s militaristic expansion by removing high priority targets, they were fast, hard to catch, and extremely deadly. As Swift Blades prefer to get up close and personal to make sure of the kill, they quickly gained a fearful reputation across Solasta.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SWIFTBLADE_BLADE_DANCE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SWIFTBLADE_QUICK_STEPS" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SWIFTBLADE_UNCATCHABLE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SWIFTBLADE_BLADE_FLURRY" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SWIFTBLADE_BATTLE_FOCUS" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SWIFTBLADE_BLADE_DANCE" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SWIFTBLADE_QUICK_STEPS" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SWIFTBLADE_UNCATCHABLE" level="7" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SWIFTBLADE_BLADE_FLURRY" level="11" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SWIFTBLADE_BATTLE_FOCUS" level="15" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Blade Dance" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SWIFTBLADE_BLADE_DANCE">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, when you are wielding a melee weapon in each hand, you gain a +2 bonus to AC.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>When you are wielding a melee weapon in each hand, you gain a +2 bonus to AC.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Quick Steps" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SWIFTBLADE_QUICK_STEPS">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, your speed increases by 10 feet. Additionally, when you take the Dash action, opportunity attacks against you are made with disadvantage.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>When you take the Dash action, opportunity attacks against you are made with disadvantage.</description>
+		</sheet>
+		<rules>
+			<stat name="speed" value="10" />
+		</rules>
+	</element>
+	<element name="Uncatchable" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SWIFTBLADE_UNCATCHABLE">
+		<description>
+			<p>Starting at 7th level, you become extremely hard to pin down. When you take damage, you can use your reaction to become invisible until the end of your next turn.</p>
+			<p class="indent">Once you use this feature, you can’t do so again until you finish a short or long rest.</p>
+		</description>
+		<sheet action="Reaction" usage="1/Short Rest">
+			<description>You can use your reaction to become invisible until the end of your next turn.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Blade Flurry" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SWIFTBLADE_BLADE_FLURRY">
 		<description>
-			<p></p>
+			<p>Starting at 11th level, when you engage in two-weapon fighting, you can make two attacks instead of one as a bonus action with the weapon you’re holding in your other hand. If you have the Two-Weapon fighting style, you add your ability modifier to the damage of both these attacks.</p>
+			<p class="indent">Additionally, when you use your reaction to make an opportunity attack while wielding two one-handed melee weapons, you can also make one attack with the weapon you’re holding in your other hand as part of the opportunity attack.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>When you engage in two-weapon fighting, you can make two attacks instead of one as a bonus action with the weapon you’re holding in your other hand. If you have the Two-Weapon fighting style, you add your ability modifier to the damage of both these attacks.
+			Additionally, when you use your reaction to make an opportunity attack while wielding two one-handed melee weapons, you can also make one attack with the weapon you’re holding in your other hand as part of the opportunity attack.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Battle Focus" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SWIFTBLADE_BATTLE_FOCUS">
 		<description>
-			<p></p>
+			<p>Starting at 15th level, on your turn, you can enter a heightened state of battle focus (no action required). You gain the following benefits until the start of your next turn.</p>
+			<ul>
+                <li>Your melee weapon attacks deal an additional 1d8 damage of the weapon damage type.</li>
+                <li>Your melee weapon attacks score a critical hit on a roll of 18, 19, or 20 on the d20.</li>
+            </ul>
+			<p class="indent">You can use this feature a number of times equal to your Proficiency Bonus, and you regain all expended uses of it when you finish a long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>On your turn, you can enter a heightened state of battle focus (no action required). You gain the following benefits until the start of your next turn.
+			Your melee weapon attacks deal an additional 1d8 damage of the weapon damage type.
+			Your melee weapon attacks score a critical hit on a roll of 18, 19, or 20 on the d20.
+			</description>
 		</sheet>
 	</element>
 </elements>

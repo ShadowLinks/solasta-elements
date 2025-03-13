@@ -1,61 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="ranger-shadowtamer.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/ranger-shadowtamer.xml" />
+		</update>
+	</info>
+    <element name="Shadow Tamer" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_RANGER_SHADOWTAMER">
+        <supports>Ranger Archetype</supports>
 		<description>
-			<p></p>
+			<p>Used to wandering the desolate Badlands, shadow tamers know the lore and languages of darkness, traps, and the underground world. They walk without fear where others would hesitate to tread. Simply put, a shadow tamer is at ease where others are not. The countless hazards of the Badlands include darkness, monsters, rough terrain, bad weather, and chaos. Shadow tamers take all these dangers in their stride. Heights, depths, darkness, monsters: none of these bother them. In fact, they make them deadlier. In a monster’s den, they are the greater monster.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SHADOWTAMER_SHADOW_TAMER_MAGIC" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SHADOWTAMER_HUNTER_IN_THE_DARK" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SHADOWTAMER_TRACKING_SIGHT" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SHADOWTAMER_PROWLER" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SHADOWTAMER_SWIFT_RETALIATION" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SHADOWTAMER_PREDATOR_AND_PREY" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SHADOWTAMER_SHADOW_TAMER_MAGIC" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SHADOWTAMER_HUNTER_IN_THE_DARK" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SHADOWTAMER_TRACKING_SIGHT" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SHADOWTAMER_PROWLER" level="7" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SHADOWTAMER_SWIFT_RETALIATION" level="11" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SHADOWTAMER_PREDATOR_AND_PREY" level="15" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Shadow Tamer Magic" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SHADOWTAMER_SHADOW_TAMER_MAGIC">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Shadow Tamer Spells table. The spell counts as a ranger spell for you, but it doesn’t count against the number of ranger spells you know.</p>
+			<table>
+				<thead>
+					<tr><td>d6</td><td>Spell</td></tr>
+				</thead>
+				<tr><td>3rd</td><td>entangle</td></tr>
+				<tr><td>5th</td><td>invisibility</td></tr>
+				<tr><td>9th</td><td>meld into stone</td></tr>
+				<tr><td>13th</td><td>faithful hound</td></tr>
+				<tr><td>17th</td><td>scrying</td></tr>
+			</table>
 		</description>
-		<sheet>
+		<sheet display="false">
 			<description></description>
 		</sheet>
+		<rules>
+			<grant type="Spell" level="3" id="ID_PHB_SPELL_ENTANGLE" />
+			<grant type="Spell" level="5" id="ID_PHB_SPELL_INVISIBILITY" />
+			<grant type="Spell" level="9" id="ID_PHB_SPELL_MELD_INTO_STONE" />
+			<grant type="Spell" level="13" id="ID_PHB_SPELL_MORDENKAINENS_FAITHFUL_HOUND" />
+			<grant type="Spell" level="17" id="ID_PHB_SPELL_SCRYING" />
+		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Hunter in the Dark" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SHADOWTAMER_HUNTER_IN_THE_DARK">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, you gain darkvision with a range of 60 feet. If you already have darkvision from your species, its range increases by 30 feet.</p>
+			<p class="indent">Additionally, when you make a weapon attack against a creature that is in dim light or darkness or marked by your Tracking Sight, the creature takes extra damage equal to your proficiency bonus.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description requirements="!ID_VISION_DARKVISION">You gain darkvision with a range of 60 feet.
+			Additionally, when you make a weapon attack against a creature that is in dim light or darkness or marked by your Tracking Sight, the creature takes {{proficiency}} extra damage.</description>
+			<description>You gain darkvision with a range of 60 feet. If you already have darkvision from your species, its range increases by 30 feet.
+			Additionally, when you make a weapon attack against a creature that is in dim light or darkness or marked by your Tracking Sight, the creature takes {{proficiency}} extra damage.</description>
+		</sheet>
+		<rules>
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+		</rules>
+	</element>
+	<element name="Tracking Sight" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SHADOWTAMER_TRACKING_SIGHT">
+		<description>
+			<p>At 3rd level, as a bonus action, you can mark a target that you can see for 1 hour. The marked target is perfectly visible to you even through total cover as long as they are within the range of your darkvision.</p>
+			<p class="indent">Once you use this feature, you cannot use it again until you finish a short or long rest.</p>
+		</description>
+		<sheet usage="1/Short Rest" action="Bonus Action">
+			<description>As a bonus action, you can mark a target that you can see for 1 hour. The marked target is perfectly visible to you even through total cover as long as they are within the range of your darkvision.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Prowler" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SHADOWTAMER_PROWLER">
 		<description>
-			<p></p>
+			<p>Starting at 7th level, your darkvision range increases by 30 feet, and your darkvision now allows you to see normally in magical and nonmagical darkness as if it were bright light.</p>
+			<p class="indent">Additionally, whenever a creature that is in dim light or darkness or marked by your Tracking Sight makes an attack roll against you, you can use your reaction to impose disadvantage on it.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>Your darkvision range increases by 30 feet, and your darkvision now allows you to see normally in magical and nonmagical darkness as if it were bright light.
+			Additionally, whenever a creature that is in dim light or darkness or marked by your Tracking Sight makes an attack roll against you, you can use your reaction to impose disadvantage on it.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Swift Retaliation" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SHADOWTAMER_SWIFT_RETALIATION">
 		<description>
-			<p></p>
+			<p>Starting at 11th level, when a hostile creature you can see misses you with an attack, you can make a weapon attack against them (no action required).</p>
+			<p class="indent">You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses of it when you finish a long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="{{wisdom:modifier}}/Long Rest">
+			<description>When a hostile creature you can see misses you with an attack, you can make a weapon attack against them (no action required).</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
+	<element name="Predator and Prey" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_SHADOWTAMER_PREDATOR_AND_PREY">
 		<description>
-			<p></p>
+			<p>Starting at 15th level, after you hit a creature with an attack, you gain a +2 bonus to AC and have proficiency in all saving throws against that creature’s attacks and spells until the start of your next turn.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>After you hit a creature with an attack, you gain a +2 bonus to AC and have proficiency in all saving throws against that creature’s attacks and spells until the start of your next turn.</description>
 		</sheet>
 	</element>
 </elements>

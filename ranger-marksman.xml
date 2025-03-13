@@ -1,61 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="ranger-marksman.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/ranger-marksman.xml" />
+		</update>
+	</info>
+    <element name="Marksman" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_RANGER_MARKSMAN">
+        <supports>Ranger Archetype</supports>
 		<description>
-			<p></p>
+			<p>Heirs to the high elf archery traditions of the old Empire, marksmen are undisputed masters of their art. Amongst the deadliest combatants on Solasta, their specialized training allows them to accurately target their enemies in almost any situation, including close-quarters combat. They are also taught to fletch arrows in all environments, ensuring they are also effective deep behind enemy lines.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_MARKSMAN_PROFICIENCY" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_MARKSMAN_REACTION_SHOT" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_MARKSMAN_STEPBACK_SHOOTER" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_MARKSMAN_FOCUS_FIRE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_MARKSMAN_EXTRA_ATTACK" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="1" />
-			<grant type="Archetype Feature" id="ID___" level="1" />
-			<grant type="Archetype Feature" id="ID____" level="1" />
-			<grant type="Archetype Feature" id="ID_____" level="1" />
-			<grant type="Archetype Feature" id="ID______" level="1" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_MARKSMAN_PROFICIENCY" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_MARKSMAN_REACTION_SHOT" level="3" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_MARKSMAN_STEPBACK_SHOOTER" level="7" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_MARKSMAN_FOCUS_FIRE" level="11" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_MARKSMAN_EXTRA_ATTACK" level="15" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Additional Proficiency" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_MARKSMAN_PROFICIENCY">
 		<description>
-			<p></p>
+			<p>Starting at 3rd level, you gain proficiency with fletcher’s tools. As part of a short rest, you can craft up to five arrows. As part of a long rest, you can craft up to twenty.</p>
+			<p class="indent">You must have enough wood on hand to produce these arrows.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You gain proficiency with fletcher’s tools. As part of a short rest, you can craft up to five arrows. As part of a long rest, you can craft up to twenty.
+			You must have enough wood on hand to produce these arrows.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_FLETCHERS_TOOLS" />
+		</rules>
+	</element>
+	<element name="Reaction Shot" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_MARKSMAN_REACTION_SHOT">
+		<description>
+			<p>Starting at 3rd level, when a creature you can see that is not within 5 feet of you casts a spell or makes a ranged attack, you can use your reaction to make a ranged weapon attack against them.</p>
+		</description>
+		<sheet action="Reaction">
+			<description>When a creature you can see that is not within 5 feet of you casts a spell or makes a ranged attack, you can use your reaction to make a ranged weapon attack against them.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Stepback Shooter" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_MARKSMAN_STEPBACK_SHOOTER">
 		<description>
-			<p></p>
+			<p>Starting at 7th level, when you make a ranged weapon attack against a creature on your turn, it can’t make opportunity attacks against you for the rest of your turn.</p>
+			<p class="indent">Additionally, being within 5 feet of a hostile creature does not impose disadvantage on your ranged weapon attack rolls.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>When you make a ranged weapon attack against a creature on your turn, it can’t make opportunity attacks against you for the rest of your turn.
+			Additionally, being within 5 feet of a hostile creature does not impose disadvantage on your ranged weapon attack rolls.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Focus Fire" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_MARKSMAN_FOCUS_FIRE">
 		<description>
-			<p></p>
+			<p>Starting at 11th level, after you hit a creature twice with a ranged weapon on your turn, you can immediately make an additional attack with that ranged weapon against the same target.</p>
+			<p class="indent">You can only use this feature once per turn.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="1/Turn">
+			<description>After you hit a creature twice with a ranged weapon on your turn, you can immediately make an additional attack with that ranged weapon against the same target.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Extra Attack (2)" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_RANGER_MARKSMAN_EXTRA_ATTACK">
 		<description>
-			<p></p>
+			<p>Starting at 15th level, you can attack three times whenever you take the Attack action on your turn.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You can attack three times whenever you take the Attack action on your turn.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
+	<element name="Tool Proficiency (Fletcher's Tools)" type="Proficiency" source="Solasta" id="ID_PROFICIENCY_TOOL_PROFICIENCY_FLETCHERS_TOOLS">
+		<supports>Tool, Artisan tools</supports>
+		<requirements/>
 		<description>
-			<p></p>
+			<p>These special tools include the items needed to pursue a craft or trade. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft.</p>
 		</description>
-		<sheet>
-			<description></description>
-		</sheet>
+		<rules/>
+	</element>
+	<element name="Fletcher's Tools" type="Item" source="Solasta" id="ID_SOLASTA_ITEM_TOOLS_FLETCHERS_TOOLS">
+		<description>Tools to create arrows. In particualar the feathers.</description>
+		<setters>
+			<set name="category">Tools</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lbs.</set>
+			<set name="type">Tool</set>
+			<set name="proficiency">ID_PROFICIENCY_TOOL_PROFICIENCY_FLETCHERS_TOOLS</set>
+		</setters>
 	</element>
 </elements>
