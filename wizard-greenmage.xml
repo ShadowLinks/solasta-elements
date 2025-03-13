@@ -8,63 +8,96 @@
     <element name="Greenmage" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_WIZARD_GREENMAGE">
         <supports>Arcane Tradition</supports>
 		<description>
-			<p></p>
-			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<p>This arcane tradition was born among the sylvan elves and reflects their close relationship with nature. The original greenmages patrolled the borders of the sylvan lands, using their magic to back up guard patrols and discourage would-be invaders. After the Cataclysm they were forced to develop non-magical methods, which made them all the stronger when Solasta’s mana slowly returned. In the centuries since then, wizards of all species have studied the greenmage tradition.</p>
+			<p class="indent">In addition to its nature-related spells, this tradition incorporates an unusual degree of martial training, including archery and outdoor survival. Any greenmage is quite at home in a forest environment. It is said that the most learned and powerful greenmages can imbue their bows and arrows – and even their bodies – with magical qualities.</p>
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_GREENMAGE_GREEN_MAGIC" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_GREENMAGE_WARDEN_OF_THE_FOREST" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_GREENMAGE_ENTANGLING_SHOT" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_GREENMAGE_LEAF_SCALES" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_GREENMAGE_INFUSED_SHOT" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="2" />
-			<grant type="Archetype Feature" id="ID___" level="2" />
-			<grant type="Archetype Feature" id="ID____" level="6" />
-			<grant type="Archetype Feature" id="ID_____" level="10" />
-			<grant type="Archetype Feature" id="ID______" level="14" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_GREENMAGE_GREEN_MAGIC" level="2" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_GREENMAGE_WARDEN_OF_THE_FOREST" level="2" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_GREENMAGE_ENTANGLING_SHOT" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_GREENMAGE_LEAF_SCALES" level="10" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_GREENMAGE_INFUSED_SHOT" level="14" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Green Magic" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_GREENMAGE_GREEN_MAGIC">
 		<description>
-			<p></p>
+			<p>Starting at 2nd level, you gain access to an expanded list of spells when you learn a wizard spell. The following spells are added to the wizard spell list for you.</p>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td>entangle, speak with animals</td></tr>
+				<tr><td>2nd</td><td>animal messenger, locate animals or plants</td></tr>
+				<tr><td>3rd</td><td>call lightning, speak with plants</td></tr>
+				<tr><td>4th</td><td>freedom of movementm, dominate beast</td></tr>
+				<tr><td>5th</td><td>commune with nature, tree stride</td></tr>
+			</table>
 		</description>
 		<sheet>
 			<description></description>
 		</sheet>
+		<spellcasting name="Wizard" extend="true">
+			<extend>ID_PHB_SPELL_ENTANGLE</extend>
+			<extend>ID_PHB_SPELL_SPEAK_WITH_ANIMALS</extend>
+			<extend>ID_PHB_SPELL_ANIMAL_MESSENGER</extend>
+			<extend>ID_PHB_SPELL_LOCATE_ANIMALS_OR_PLANTS</extend>
+			<extend>ID_PHB_SPELL_CALL_LIGHTNING</extend>
+			<extend>ID_PHB_SPELL_SPEAK_WITH_PLANTS</extend>
+			<extend>ID_PHB_SPELL_FREEDOM_OF_MOVEMENT</extend>
+			<extend>ID_PHB_SPELL_DOMINATE_BEAST</extend>
+			<extend>ID_PHB_SPELL_COMMUNE_WITH_NATURE</extend>
+			<extend>ID_PHB_SPELL_TREE_STRIDE</extend>
+		</spellcasting>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Warden of the Forest" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_GREENMAGE_WARDEN_OF_THE_FOREST">
 		<description>
-			<p></p>
+			<p>Starting at 2nd level, you gain proficiency with light armor and shortbows. Additionally, you gain the Archery Fighting Style, granting you a +2 bonus to attack rolls you make with ranged weapons. If you already have this Fighting Style from another class, you may replace the option from that class with a different one available to the class.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You gain the Archery Fighting Style, granting you a +2 bonus to attack rolls you make with ranged weapons. If you already have this Fighting Style from another class, you may replace the option from that class with a different one available to the class.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" />
+			<grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_GROUP_BOWS" />
+		</rules>
+	</element>
+	<element name="Entangling Shot" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_GREENMAGE_ENTANGLING_SHOT">
+		<description>
+			<p>Starting at 6th level, after you hit an enemy with a ranged weapon, you can use your bonus action to transform the ammunition into a vine. The target takes piercing damage equal to your Wizard level and must succeed on a Strength saving throw or be restrained until the end of your next turn.</p>
+			<p class="indent">You can use this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses of it when you finish a long rest.</p>
+		</description>
+		<sheet usage="{{intelligence:modifier}}/Long Rest" action="Bonus Action">
+			<description>After you hit an enemy with a ranged weapon, you can use your bonus action to transform the ammunition into a vine. The target takes {{level:wizard}} piercing damage and must succeed on a Strength saving throw or be restrained until the end of your next turn.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Leaf Scales" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_GREENMAGE_LEAF_SCALES">
 		<description>
-			<p></p>
+			<p>Starting at 10th level, when a hostile creature damages you with a ranged attack or a spell, you can use your reaction to halve the damage you take from it.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet action="Reaction">
+			<description>When a hostile creature damages you with a ranged attack or a spell, you can use your reaction to halve the damage you take from it.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Infused Shot" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_GREENMAGE_INFUSED_SHOT">
 		<description>
-			<p></p>
+			<p>Starting at 14th level, when you attack with a ranged weapon, you can use your Intelligence modifier instead of Dexterity for the attack and damage rolls.</p>
+			<p class="indent">Additionally, as a bonus action, you can touch a piece of ammunition and cast a spell of 1st level or higher that has a casting time of 1 action and doesn’t have a range of Self. The spell has no immediate effect when cast in this way; instead, its magic is stored in the piece of ammunition. If the spell requires concentration, you must maintain concentration as you would normally. If you hit a creature by firing the infused ammunition from a ranged weapon, the stored spell takes effect, targeting the creature you hit or using its location as the spell’s point of origin. The magic stored in the ammunition then dissipates. The stored magic also dissipates if your attack misses, after 1 minute, or if you use this feature again.</p>
+			<p class="indent">If the spell requires an attack roll, it automatically succeeds against the creature you hit. If the spell requires targets to make a saving throw, the creature hit by the infused shot has disadvantage on their first saving throw against the spell. The spell automatically fails if the target is not valid, such as trying to cast Charm Person on a non-humanoid creature or Haste on an unwilling creature.</p>
+			<p class="indent">Once you hit a creature with an infused shot, you cannot infuse another piece of ammunition until you finish a short or long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
-		</sheet>
-	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
-		<description>
-			<p></p>
-		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="1/Short Rest" action="Bonus Action">
+			<description>When you attack with a ranged weapon, you can use your Intelligence modifier instead of Dexterity for the attack and damage rolls.
+			Additionally, as a bonus action, you can touch a piece of ammunition and cast a spell of 1st level or higher that has a casting time of 1 action and doesn’t have a range of Self. The spell has no immediate effect when cast in this way; instead, its magic is stored in the piece of ammunition. If the spell requires concentration, you must maintain concentration as you would normally. If you hit a creature by firing the infused ammunition from a ranged weapon, the stored spell takes effect, targeting the creature you hit or using its location as the spell’s point of origin. The magic stored in the ammunition then dissipates. The stored magic also dissipates if your attack misses, after 1 minute, or if you use this feature again.
+			If the spell requires an attack roll, it automatically succeeds against the creature you hit. If the spell requires targets to make a saving throw, the creature hit by the infused shot has disadvantage on their first saving throw against the spell. The spell automatically fails if the target is not valid, such as trying to cast Charm Person on a non-humanoid creature or Haste on an unwilling creature.
+			Once you hit a creature with an infused shot, you cannot infuse another piece of ammunition until you finish a short or long rest.</description>
 		</sheet>
 	</element>
 </elements>

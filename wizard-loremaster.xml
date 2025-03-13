@@ -8,63 +8,102 @@
     <element name="Loremaster" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_WIZARD_LOREMASTER">
         <supports>Arcane Tradition</supports>
 		<description>
-			<p></p>
+			<p>This tradition was built over centuries of continuing efforts to salvage the lost magical knowledge of the Manacalon Empire. Loremasters are highly skilled at finding and learning new magic, and in their insatiable quest continuously train their memory to retain ever more spells. It has been said that knowledge is power, and Loremasters are masters of knowledge.</p>
 			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_LOREMASTER_KEEN_MIND" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_LOREMASTER_PURSUIT_OF_KNOWLEDGE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_LOREMASTER_SPELL_ACADEMIC" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_LOREMASTER_ARCANE_MEMORY" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_LOREMASTER_ARCANE_PROFESSOR" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="2" />
-			<grant type="Archetype Feature" id="ID___" level="2" />
-			<grant type="Archetype Feature" id="ID____" level="6" />
-			<grant type="Archetype Feature" id="ID_____" level="10" />
-			<grant type="Archetype Feature" id="ID______" level="14" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_LOREMASTER_KEEN_MIND" level="2" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_LOREMASTER_PURSUIT_OF_KNOWLEDGE" level="2" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_LOREMASTER_SPELL_ACADEMIC" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_LOREMASTER_ARCANE_MEMORY" level="10" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_LOREMASTER_ARCANE_PROFESSOR" level="14" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Keen Mind" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_LOREMASTER_KEEN_MIND">
 		<description>
-			<p></p>
+			<p>Starting at 2nd level, you gain proficiency in the Arcana and History skills. If you are already proficient in one (or both skills), you gain proficiency in one (or two) of the following skills of your choice: Investigation, Nature, Religion, Medicine.</p>
+            <p class="indent">Additionally, you reduce by half the time and money you require to craft scrolls and potions.</p>
 		</description>
 		<sheet>
 			<description></description>
 		</sheet>
+        <rules>
+            <select type="Proficiency" name="Skill Proficiency, Keen Mind" requirements="ID_PROFICIENCY_SKILL_ARCANA" supports="ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_RELIGION|ID_PROFICIENCY_SKILL_MEDICINE" />
+            <select type="Proficiency" name="Skill Proficiency, Keen Mind" requirements="ID_PROFICIENCY_SKILL_HISTORY" supports="ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_RELIGION|ID_PROFICIENCY_SKILL_MEDICINE" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_HISTORY" />
+        </rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Pursuit of Knowledge" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_LOREMASTER_PURSUIT_OF_KNOWLEDGE">
 		<description>
-			<p></p>
+			<p>Starting at 2nd level, choose one additional level 1 spell and one additional cantrip from any class. The chosen cantrip is a wizard cantrip for you and doesn’t count against the number of wizard cantrips you know. The chosen spell counts as a wizard spell for you and is added to your spellbook.</p>
 		</description>
 		<sheet>
 			<description></description>
 		</sheet>
+        <rules>
+            <select type="Spell" name="Pursuit of Knowledge" supports="0" />            
+            <select type="Spell" name="Pursuit of Knowledge" supports="1" />
+        </rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Spell Academic" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_LOREMASTER_SPELL_ACADEMIC">
 		<description>
-			<p></p>
+			<p>Starting at 6th level, each time you gain a wizard level you can now add three wizard spells of your choice to your spellbook instead of two, and you may select one of the spells from any class provided it has the ritual tag. The chosen spell counts as a wizard spell for you and is added to your spellbook.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>Each time you gain a wizard level you can now add three wizard spells of your choice to your spellbook instead of two, and you may select one of the spells from any class provided it has the ritual tag. The chosen spell counts as a wizard spell for you and is added to your spellbook.</description>
 		</sheet>
+        <rules>
+            <select type="Spell" name="Spell Academic (Wizard)" supports="$(spellcasting:list), $(spellcasting:slots)" level="6" number="1" spellcasting="Wizard"/>
+            <select type="Spell" name="Spell Academic (Wizard)" supports="$(spellcasting:list), $(spellcasting:slots)" level="7" number="1" spellcasting="Wizard"/>
+            <select type="Spell" name="Spell Academic (Wizard)" supports="$(spellcasting:list), $(spellcasting:slots)" level="8" number="1" spellcasting="Wizard"/>
+            <select type="Spell" name="Spell Academic (Wizard)" supports="$(spellcasting:list), $(spellcasting:slots)" level="9" number="1" spellcasting="Wizard"/>
+            <select type="Spell" name="Spell Academic (Wizard)" supports="$(spellcasting:list), $(spellcasting:slots)" level="10" number="1" spellcasting="Wizard"/>
+            <select type="Spell" name="Spell Academic (Wizard)" supports="$(spellcasting:list), $(spellcasting:slots)" level="11" number="1" spellcasting="Wizard"/>
+            <select type="Spell" name="Spell Academic (Wizard)" supports="$(spellcasting:list), $(spellcasting:slots)" level="12" number="1" spellcasting="Wizard"/>
+            <select type="Spell" name="Spell Academic (Wizard)" supports="$(spellcasting:list), $(spellcasting:slots)" level="13" number="1" spellcasting="Wizard"/>
+            <select type="Spell" name="Spell Academic (Wizard)" supports="$(spellcasting:list), $(spellcasting:slots)" level="14" number="1" spellcasting="Wizard"/>
+            <select type="Spell" name="Spell Academic (Wizard)" supports="$(spellcasting:list), $(spellcasting:slots)" level="15" number="1" spellcasting="Wizard"/>
+            <select type="Spell" name="Spell Academic (Wizard)" supports="$(spellcasting:list), $(spellcasting:slots)" level="16" number="1" spellcasting="Wizard"/>
+            <select type="Spell" name="Spell Academic (Wizard)" supports="$(spellcasting:list), $(spellcasting:slots)" level="17" number="1" spellcasting="Wizard"/>
+            <select type="Spell" name="Spell Academic (Wizard)" supports="$(spellcasting:list), $(spellcasting:slots)" level="18" number="1" spellcasting="Wizard"/>
+            <select type="Spell" name="Spell Academic (Wizard)" supports="$(spellcasting:list), $(spellcasting:slots)" level="19" number="1" spellcasting="Wizard"/>
+            <select type="Spell" name="Spell Academic (Wizard)" supports="$(spellcasting:list), $(spellcasting:slots)" level="20" number="1" spellcasting="Wizard"/>
+        </rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Arcane Memory" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_LOREMASTER_ARCANE_MEMORY">
 		<description>
-			<p></p>
+			<p>Starting at 10th level, you can prepare an additional number of spells equal to your Proficiency Bonus.</p>
+            <p class="indent">Additionally, once per day when you finish a short rest, you can replace one spell from your list of prepared spells with another one from your spellbook.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>Once per day when you finish a short rest, you can replace one spell from your list of prepared spells with another one from your spellbook.</description>
 		</sheet>
+        <rules>
+            <stat name="wizard:spellcasting:prepare" value="proficiency"/>
+        </rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
+	<element name="Arcane Professor" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_LOREMASTER_ARCANE_PROFESSOR">
 		<description>
-			<p></p>
+			<p>Starting at 14th level, you gain one extra 1st level, 2nd level, 3rd level, and 4th level spell slots. Additionally, you learn 4 cantrips from any class. The chosen cantrips count as wizard cantrips for you and don’t count against the number of wizard cantrips you know.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>you gain one extra 1st level, 2nd level, 3rd level, and 4th level spell slots. Additionally, you learn 4 cantrips from any class. The chosen cantrips count as wizard cantrips for you and don’t count against the number of wizard cantrips you know.</description>
 		</sheet>
+        <rules>
+            <stat name="wizard:spellcasting:slots:1" value="1"  />
+            <stat name="wizard:spellcasting:slots:2" value="1"  />
+            <stat name="wizard:spellcasting:slots:3" value="1"  />
+            <stat name="wizard:spellcasting:slots:4" value="1"  />
+            <select type="Spell" name="Arcane Professor" supports="0" level="14" number="4" spellcasting="Wizard" />
+        </rules>
 	</element>
 </elements>

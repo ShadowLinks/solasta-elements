@@ -10,7 +10,9 @@
 	</info>
     <files>
         <file name="source.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/source.xml" />
+        
         <file name="langauges.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/languages.xml"/>
+        
         <file name="backgrounds.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/backgrounds.xml" />
 
         <file name="elf-sylvan.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/elf-sylvan.xml" />
@@ -61,7 +63,10 @@
         <file name="warlock-timekeeper.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/warlock-timekeeper.xml" />
         <file name="warlock-tree.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/warlock-tree.xml" />
 
-        
+        <file name="wizard-courtmage.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/wizard-courtmage.xml" />
+        <file name="wizard-greenmage.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/wizard-greenmage.xml" />
+        <file name="wizard-loremaster.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/wizard-loremaster.xml" />
+        <file name="wizard-shockarcanist.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/wizard-shockarcanist.xml" />
 
 
 	</files>

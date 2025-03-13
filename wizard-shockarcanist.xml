@@ -8,63 +8,99 @@
     <element name="Shock Arcanist" type="Archetype" source="Solasta" id="ID_SOLASTA_ARCHETYPE_WIZARD_SHOCKARCANIST">
         <supports>Arcane Tradition</supports>
 		<description>
-			<p></p>
-			<p class="indent"></p>
-			<div element="ID__" />
-			<div element="ID___" />
-			<div element="ID____" />
-			<div element="ID_____" />
-			<div element="ID______" />
+			<p>This tradition is one of the most ancient on Solasta, dating back to the armies of the Manacalon Empire. Shock Arcanists are elite battle-mages, specializing in offensive and destructive magic. Most of their training focuses on making these spells more powerful, which is the origin of the “Arcane Shock.” Experts in this tradition can overload their spells with mana, making them more destructive. However, losing control of the excess mana risks a dangerous magical backlash.</p>
+			<p class="indent">Legend has it that the greatest shock arcanists of the Manacalon Empire could also cast spells as a group, utilizing a magical resonance that greatly amplified a spell’s power. However, this art seems to have been lost since the Cataclysm.</p>
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_ARCANE_WARFARE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_ARCANE_SHOCK" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_ARCANE_SHOCK_POWER" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_PREPARED_FOR_WAR" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_ARCANE_SHOCK_PIERCE" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_ARCANE_SHOCK_OVERWHELM" />
+			<div element="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_WRATH_OF_THE_MAGISTER" />
 		</description>
 		<sheet display="false">
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID__" level="2" />
-			<grant type="Archetype Feature" id="ID___" level="2" />
-			<grant type="Archetype Feature" id="ID____" level="6" />
-			<grant type="Archetype Feature" id="ID_____" level="10" />
-			<grant type="Archetype Feature" id="ID______" level="14" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_ARCANE_WARFARE" level="2" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_ARCANE_SHOCK" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_ARCANE_SHOCK_POWER" level="6" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_PREPARED_FOR_WAR" level="10" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_ARCANE_SHOCK_PIERCE" level="10" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_ARCANE_SHOCK_OVERWHELM" level="14" />
+			<grant type="Archetype Feature" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_WRATH_OF_THE_MAGISTER" level="14" />
 		</rules>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID__">
+	<element name="Arcane Warfare" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_ARCANE_WARFARE">
 		<description>
-			<p></p>
+			<p>Starting at 2nd level, when you cast a spell whose damage roll increases when cast at higher levels, you can cast it as if you were using a slot of one level higher.</p>
+			<p class="indent">You can use this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses of it when you finish a long rest.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="{{intelligence:modifier}}/Long Rest">
+			<description>When you cast a spell whose damage roll increases when cast at higher levels, you can cast it as if you were using a slot of one level higher.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID___">
+	<element name="Arcane Shock" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_ARCANE_SHOCK">
 		<description>
-			<p></p>
+			<p>Starting at 6th level, you gain the ability to overload your spells with unstable power to increase their effect at the cost of a detrimental backlash upon yourself. You start with one Arcane Shock option: Power. Until 14th level, you can use only one Arcane Shock option on a spell when you cast it.</p>
+			<p class="indent">The first time you use this power after each long rest, you don’t suffer from the drawback of Arcane Shock.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>The first time you use this power after each long rest, you don’t suffer from the drawback of Arcane Shock.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID____">
+	<element name="Arcane Shock: Power" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_ARCANE_SHOCK_POWER">
 		<description>
-			<p></p>
+			<p>Starting at 6th level, when you cast a spell of 1st level or higher, you can use your Arcane Shock to let its magic run wild. You roll damage for the spell twice and use the higher of the two rolls.</p>
+			<p class="indent"></p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>When you cast a spell of 1st level or higher, you can use your Arcane Shock to let its magic run wild. You roll damage for the spell twice and use the higher of the two rolls.
+			However, after casting the spell you take psychic damage equal to twice the level of spell slot used. This self-inflicted damage cannot be reduced in any way.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID_____">
+	<element name="Prepared for War" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_PREPARED_FOR_WAR">
 		<description>
-			<p></p>
+			<p>Starting at 10th level, you have pushed the limits of your endurance with the backlash of Arcane Shock. Your wizard Hit Dice are converted to d8s, and your hit point maximum immediately increases by 10 in consequence. Whenever you gain a Wizard level thereafter, your hit point maximum increases by 1d8 (or 5) + your Constitution modifier instead of 1d6 (or 4) + your Constitution modifier.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description> Your Hit Die are converted to d8</description>
+		</sheet>
+		<rules>
+			<stat name="hp" value="level" />
+		</rules>
+		<setters>
+			<set name="hd">d8</set>
+		</setters>
+	</element>
+	<element name="Arcane Shock: Pierce" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_ARCANE_SHOCK_PIERCE">
+		<description>
+			<p>Starting at 10th level, when you cast a spell of 1st level or higher, you can pour even more magic into your Arcane Shock. The spell bypasses the Magic Resistance feature (often possessed by powerful extraplanar entities), as well as any type of damage resistance.</p>
+			<p class="indent">However, after casting the spell you take psychic damage equal to three times the level of spell slot used. This self-inflicted damage cannot be reduced in any way.</p>
+		</description>
+		<sheet>
+			<description>When you cast a spell of 1st level or higher, you can pour even more magic into your Arcane Shock. The spell bypasses the Magic Resistance feature (often possessed by powerful extraplanar entities), as well as any type of damage resistance.
+			However, after casting the spell you take psychic damage equal to three times the level of spell slot used. This self-inflicted damage cannot be reduced in any way.</description>
 		</sheet>
 	</element>
-	<element name="name" type="Archetype Feature" source="Solasta" id="ID______">
+	<element name="Arcane Shock: Overwhelm" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_ARCANE_SHOCK_OVERWHELM">
 		<description>
-			<p></p>
+			<p>Starting at 14th level, you can use your Arcane Shock to overload your spell with power. When you cast a spell of 1st level or higher that allows its targets to take half damage on a successful saving throw, you can cause them to take full damage regardless of the outcome of their saving throw</p>
+			<p class="indent">However, after casting the spell you are blinded and deafened until the end of your next turn.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>When you cast a spell of 1st level or higher that allows its targets to take half damage on a successful saving throw, you can cause them to take full damage regardless of the outcome of their saving throw.
+			However, after casting the spell you are blinded and deafened until the end of your next turn.</description>
+		</sheet>
+	</element>
+	<element name="Wrath of the Magister" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_WIZARD_SHOCKARCANIST_WRATH_OF_THE_MAGISTER">
+		<description>
+			<p>Starting at 14th level you have mastered the ancient arts of the Shock Arcanists. You can now apply multiple Arcane Shock options to a spell, combining their effects and drawbacks.</p>
+			<p class="indent">Additionally, when using Arcane Warfare, you now cast the spell as if you were using a slot of two levels higher instead.</p>
+		</description>
+		<sheet>
+			<description>You can now apply multiple Arcane Shock options to a spell, combining their effects and drawbacks.
+			Additionally, when using Arcane Warfare, you now cast the spell as if you were using a slot of two levels higher instead.</description>
 		</sheet>
 	</element>
 </elements>
