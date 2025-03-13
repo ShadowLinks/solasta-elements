@@ -10,7 +10,7 @@
 	</info>
     <files>
         <file name="source.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/source.xml" />
-
+        <file name="langauges.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/languages.xml"/>
         <file name="backgrounds.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/backgrounds.xml" />
 
         <file name="elf-sylvan.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/elf-sylvan.xml" />
@@ -45,6 +45,22 @@
         <file name="monk-light.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/monk-light.xml" />
         <file name="monk-survival.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/monk-survival.xml" />
 		
+        <file name="paladin-judgement.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/paladin-judgement.xml" />
+        <file name="paladin-motherland.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/paladin-motherland.xml" />
+		<file name="paladin-tirmar.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/paladin-tirmar.xml" />
+
+        <file name="ranger-marksman.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/ranger-marksman.xml" />
+		<file name="ranger-shadowtamer.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/ranger-shadowtamer.xml" />
+        <file name="ranger-swiftblade.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/ranger-swiftblade.xml" />
+
+        <file name="sorcerer-hauntedsoul.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/sorcerer-hauntedsoul.xml" />
+        <file name="sorcerer-manapainter.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/sorcerer-manapainter.xml" />
+        <file name="sorcerer-rift.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/sorcerer-rift.xml" />
+
+        <file name="warlock-hive.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/warlock-hive.xml" />
+        <file name="warlock-timekeeper.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/warlock-timekeeper.xml" />
+        <file name="warlock-tree.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/warlock-tree.xml" />
+
         
 
 
