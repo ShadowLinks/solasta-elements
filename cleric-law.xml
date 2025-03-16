@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="cleric-law.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/cleric-law.xml" />
 		</update>
 	</info>
@@ -49,16 +49,16 @@
 			<description></description>
 		</sheet>
         <rules>
-            <grant type="Spell" level="1" id="ID_PHB_SPELL_SHIELD_OF_FAITH" />
-            <grant type="Spell" level="1" id="ID_PHB_SPELL_SLEEP" />
-            <grant type="Spell" level="3" id="ID_PHB_SPELL_SEE_INVISIBILITY" />
-            <grant type="Spell" level="3" id="ID_PHB_SPELL_ZONE_OF_TRUTH" />
-            <grant type="Spell" level="5" id="ID_PHB_SPELL_COUNTERSPELL" />
-            <grant type="Spell" level="5" id="ID_PHB_SPELL_HYPNOTIC_PATTERN" />
-            <grant type="Spell" level="7" id="ID_PHB_SPELL_OTILUKES_RESILIENT_SPHERE" />
-            <grant type="Spell" level="7" id="ID_PHB_SPELL_MORDENKAINENS_FAITHFUL_HOUND" />
-            <grant type="Spell" level="9" id="ID_PHB_SPELL_GEAS" />
-            <grant type="Spell" level="9" id="ID_PHB_SPELL_HOLD_MONSTER" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_SHIELD_OF_FAITH" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_SLEEP" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_SEE_INVISIBILITY" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_ZONE_OF_TRUTH" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_COUNTERSPELL" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_HYPNOTIC_PATTERN" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_OTILUKES_RESILIENT_SPHERE" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_MORDENKAINENS_FAITHFUL_HOUND" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_GEAS" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_HOLD_MONSTER" spellcasting="Cleric" prepared="true" />
         </rules>
 	</element>
 	<element name="Commanding Presence" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_LAW_DOMAIN_COMMANDING_PRESENCE">

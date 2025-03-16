@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="cleric-elemental.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/cleric-elemental.xml" />
 		</update>
 	</info>
@@ -49,16 +49,16 @@
 			<description></description>
 		</sheet>
         <rules>
-            <grant type="Spell" level="1" id="ID_PHB_SPELL_BURNING_HANDS" />
-            <grant type="Spell" level="1" id="ID_PHB_SPELL_THUNDERWAVE" />
-            <grant type="Spell" level="3" id="ID_PHB_SPELL_LEVITATE" />
-            <grant type="Spell" level="3" id="ID_PHB_SPELL_SCORCHING_RAY" />
-            <grant type="Spell" level="5" id="ID_PHB_SPELL_LIGHTNING_BOLT" />
-            <grant type="Spell" level="5" id="ID_PHB_SPELL_SLEET_STORM" />
-            <grant type="Spell" level="7" id="ID_PHB_SPELL_CONTROL_WATER" />
-            <grant type="Spell" level="7" id="ID_PHB_SPELL_STONE_SHAPE" />
-            <grant type="Spell" level="9" id="ID_PHB_SPELL_CONE_OF_COLD" />
-            <grant type="Spell" level="9" id="ID_PHB_SPELL_CONJURE_ELEMENTAL" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_BURNING_HANDS" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_THUNDERWAVE" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_LEVITATE" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_SCORCHING_RAY" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_LIGHTNING_BOLT" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_SLEET_STORM" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_CONTROL_WATER" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_STONE_SHAPE" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_CONE_OF_COLD" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_CONJURE_ELEMENTAL" spellcasting="Cleric" prepared="true" />
         </rules>
 	</element>
 	<element name="Bonus Cantrip" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_ELEMENTAL_DOMAIN_BONUS_CANTRIP" >

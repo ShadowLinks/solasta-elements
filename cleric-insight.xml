@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="cleric-insight.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/cleric-insight.xml" />
 		</update>
 	</info>
@@ -49,16 +49,16 @@
 			<description></description>
 		</sheet>
         <rules>
-            <grant type="Spell" level="1" id="ID_PHB_SPELL_COMPREHEND_LANGUAGES" />
-            <grant type="Spell" level="1" id="ID_PHB_SPELL_IDENTIFY" />
-            <grant type="Spell" level="3" id="ID_PHB_SPELL_DETECT_THOUGHTS" />
-            <grant type="Spell" level="3" id="ID_PHB_SPELL_AUGURY" />
-            <grant type="Spell" level="5" id="ID_PHB_SPELL_CLAIRVOYANCE" />
-            <grant type="Spell" level="5" id="ID_PHB_SPELL_TONGUES" />
-            <grant type="Spell" level="7" id="ID_PHB_SPELL_ARCANE_EYE" />
-            <grant type="Spell" level="7" id="ID_PHB_SPELL_LOCATE_CREATURE" />
-            <grant type="Spell" level="9" id="ID_PHB_SPELL_LEGEND_LORE" />
-            <grant type="Spell" level="9" id="ID_PHB_SPELL_SCRYING" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_COMPREHEND_LANGUAGES" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_IDENTIFY" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_DETECT_THOUGHTS" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_AUGURY" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_CLAIRVOYANCE" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_TONGUES" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_ARCANE_EYE" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_LOCATE_CREATURE" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_LEGEND_LORE" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_SCRYING" spellcasting="Cleric" prepared="true" />
         </rules>
 	</element>
 	<element name="Divine Intuition" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_INSIGHT_DOMAIN_DIVINE_INTUITION">

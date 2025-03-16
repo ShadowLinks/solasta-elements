@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="cleric-sun.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/cleric-sun.xml" />
 		</update>
 	</info>
@@ -47,16 +47,16 @@
 			<description></description>
 		</sheet>
         <rules>
-            <grant type="Spell" level="1" id="ID_PHB_SPELL_COLOR_SPRAY" />
-            <grant type="Spell" level="1" id="ID_PHB_SPELL_FAERIE_FIRE" />
-            <grant type="Spell" level="3" id="ID_PHB_SPELL_CONTINUAL_FLAME" />
-            <grant type="Spell" level="3" id="ID_PHB_SPELL_HEAT_METAL" />
-            <grant type="Spell" level="5" id="ID_PHB_SPELL_DAYLIGHT" />
-            <grant type="Spell" level="5" id="ID_PHB_SPELL_PLANT_GROWTH" />
-            <grant type="Spell" level="7" id="ID_PHB_SPELL_FIRE_SHIELD" />
-            <grant type="Spell" level="7" id="ID_PHB_SPELL_WALL_OF_FIRE" />
-            <grant type="Spell" level="9" id="ID_PHB_SPELL_FLAME_STRIKE" />
-            <grant type="Spell" level="9" id="ID_PHB_SPELL_HALLOW" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_COLOR_SPRAY" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_FAERIE_FIRE" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_CONTINUAL_FLAME" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_HEAT_METAL" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_DAYLIGHT" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_PLANT_GROWTH" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_FIRE_SHIELD" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_WALL_OF_FIRE" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_FLAME_STRIKE" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_HALLOW" spellcasting="Cleric" prepared="true" />
         </rules>
 	</element>
 	<element name="Holy Radiance" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_SUN_DOMAIN_POTENT_CD_HOLY_RADIANCE">

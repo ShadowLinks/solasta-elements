@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="cleric-mischief.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/cleric-mischief.xml" />
 		</update>
 	</info>
@@ -49,16 +49,16 @@
 			<description></description>
 		</sheet>
         <rules>
-            <grant type="Spell" level="1" id="ID_PHB_SPELL_SILENT_IMAGE" />
-            <grant type="Spell" level="1" id="ID_PHB_SPELL_GREASE" />
-            <grant type="Spell" level="3" id="ID_PHB_SPELL_BLUR" />
-            <grant type="Spell" level="3" id="ID_PHB_SPELL_INVISIBILITY" />
-            <grant type="Spell" level="5" id="ID_PHB_SPELL_HYPNOTIC_PATTERN" />
-            <grant type="Spell" level="5" id="ID_PHB_SPELL_NONDETECTION" />
-            <grant type="Spell" level="7" id="ID_PHB_SPELL_CONFUSION" />
-            <grant type="Spell" level="7" id="ID_PHB_SPELL_GREATER_INVISIBILITY" />
-            <grant type="Spell" level="9" id="ID_PHB_SPELL_DREAM" />
-            <grant type="Spell" level="9" id="ID_PHB_SPELL_MISLEAD" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_SILENT_IMAGE" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_GREASE" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_BLUR" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_INVISIBILITY" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_HYPNOTIC_PATTERN" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_NONDETECTION" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_CONFUSION" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_GREATER_INVISIBILITY" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_DREAM" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_MISLEAD" spellcasting="Cleric" prepared="true" />
         </rules>
 	</element>
 	<element name="Borrowed Luck" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_MISCHIEF_DOMAIN_BORROWED_LUCK">

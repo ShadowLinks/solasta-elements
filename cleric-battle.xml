@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="cleric-battle.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/cleric-battle.xml" />
 		</update>
 	</info>
@@ -49,16 +49,16 @@
 			<description></description>
 		</sheet>
         <rules>
-            <grant type="Spell" level="1" id="ID_PHB_SPELL_MAGIC_MISSLE" />
-            <grant type="Spell" level="1" id="ID_PHB_SPELL_SHIELD" />
-            <grant type="Spell" level="3" id="ID_PHB_SPELL_BRANDING_SMITE" />
-            <grant type="Spell" level="3" id="ID_PHB_SPELL_ENLARGE_REDUCE" />
-            <grant type="Spell" level="5" id="ID_PHB_SPELL_PHANTOM_STEED" />
-            <grant type="Spell" level="5" id="ID_PHB_SPELL_HASTE" />
-            <grant type="Spell" level="7" id="ID_PHB_SPELL_STONESKIN" />
-            <grant type="Spell" level="7" id="ID_PHB_SPELL_FIRE_SHIELD" />
-            <grant type="Spell" level="9" id="ID_PHB_SPELL_HOLD_MONSTER" />
-            <grant type="Spell" level="9" id="ID_PHB_SPELL_TELEKINESIS" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_MAGIC_MISSLE" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_SHIELD" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_BRANDING_SMITE" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_ENLARGE_REDUCE" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_PHANTOM_STEED" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_HASTE" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_STONESKIN" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_FIRE_SHIELD" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_HOLD_MONSTER" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_TELEKINESIS" spellcasting="Cleric" prepared="true" />
         </rules>
 	</element>
 	<element name="Armed and Ready" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_BATTLE_DOMAIN_ARMED_AND_READY">

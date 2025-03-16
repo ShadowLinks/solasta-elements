@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="cleric-oblivion.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/cleric-oblivion.xml" />
 		</update>
 	</info>
@@ -51,16 +51,16 @@
 			<description></description>
 		</sheet>
         <rules>
-            <grant type="Spell" level="1" id="ID_PHB_SPELL_SLEEP" />
-            <grant type="Spell" level="1" id="ID_PHB_SPELL_INFLICT_WOUNDS" />
-            <grant type="Spell" level="3" id="ID_PHB_SPELL_CALM_EMOTIONS" />
-            <grant type="Spell" level="3" id="ID_PHB_SPELL_SILENCE" />
-            <grant type="Spell" level="5" id="ID_PHB_SPELL_REMOVE_CURSE" />
-            <grant type="Spell" level="5" id="ID_PHB_SPELL_SPEAK_WITH_DEAD" />
-            <grant type="Spell" level="7" id="ID_PHB_SPELL_BANISHMENT" />
-            <grant type="Spell" level="7" id="ID_PHB_SPELL_BLIGHT" />
-            <grant type="Spell" level="9" id="ID_PHB_SPELL_DREAM" />
-            <grant type="Spell" level="9" id="ID_PHB_SPELL_CONTACT_OTHER_PLANE" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_SLEEP" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="1" id="ID_PHB_SPELL_INFLICT_WOUNDS" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_CALM_EMOTIONS"spellcasting="Cleric" prepared="true"  />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_SILENCE" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_REMOVE_CURSE" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="5" id="ID_PHB_SPELL_SPEAK_WITH_DEAD" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_BANISHMENT" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="7" id="ID_PHB_SPELL_BLIGHT" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_DREAM" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" level="9" id="ID_PHB_SPELL_CONTACT_OTHER_PLANE" spellcasting="Cleric" prepared="true" />
         </rules>
 	</element>
     <element name="Bonus Cantrip" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_OBLIVION_DOMAIN_BONUS_CANTRIP">
