@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="paladin-judgement.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/paladin-judgement.xml" />
 		</update>
 	</info>
@@ -59,16 +59,16 @@
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Spell" level="3" id="ID_PHB_SPELL_GUIDING_BOLT" />
-			<grant type="Spell" level="3" id="ID_PHB_SPELL_INFLICT_WOUNDS" />
-			<grant type="Spell" level="5" id="ID_PHB_SPELL_SILENCE" />
-			<grant type="Spell" level="5" id="ID_PHB_SPELL_HEAT_METAL" />
-			<grant type="Spell" level="9" id="ID_PHB_SPELL_HASTE" />
-			<grant type="Spell" level="9" id="ID_PHB_SPELL_FEAR" />
-			<grant type="Spell" level="13" id="ID_PHB_SPELL_BLIGHT" />
-			<grant type="Spell" level="13" id="ID_PHB_SPELL_OTILUKES_RESILIENT_SPHERE" />
-			<grant type="Spell" level="17" id="ID_PHB_SPELL_SCRYING" />
-			<grant type="Spell" level="17" id="ID_PHB_SPELL_WALL_OF_FORCE" />
+			<grant type="Spell" prepared="true" level="3" id="ID_PHB_SPELL_GUIDING_BOLT" />
+			<grant type="Spell" prepared="true" level="3" id="ID_PHB_SPELL_INFLICT_WOUNDS" />
+			<grant type="Spell" prepared="true" level="5" id="ID_PHB_SPELL_SILENCE" />
+			<grant type="Spell" prepared="true" level="5" id="ID_PHB_SPELL_HEAT_METAL" />
+			<grant type="Spell" prepared="true" level="9" id="ID_PHB_SPELL_HASTE" />
+			<grant type="Spell" prepared="true" level="9" id="ID_PHB_SPELL_FEAR" />
+			<grant type="Spell" prepared="true" level="13" id="ID_PHB_SPELL_BLIGHT" />
+			<grant type="Spell" prepared="true" level="13" id="ID_PHB_SPELL_OTILUKES_RESILIENT_SPHERE" />
+			<grant type="Spell" prepared="true" level="17" id="ID_PHB_SPELL_SCRYING" />
+			<grant type="Spell" prepared="true" level="17" id="ID_PHB_SPELL_WALL_OF_FORCE" />
 		</rules>
 	</element>
 	<element name="Channel Divinity" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_JUDGEMENT_CD">
