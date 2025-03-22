@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="paladin-tirmar.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/paladin-tirmar.xml" />
 		</update>
 	</info>
@@ -61,16 +61,16 @@
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Spell" level="3" id="ID_PHB_SPELL_FAERIE_FIRE" />
-			<grant type="Spell" level="3" id="ID_PHB_SPELL_SHIELD" />
-			<grant type="Spell" level="5" id="ID_PHB_SPELL_SEE_INVISIBILITY" />
-			<grant type="Spell" level="5" id="ID_PHB_SPELL_MOONBEAM" />
-			<grant type="Spell" level="9" id="ID_PHB_SPELL_DAYLIGHT" />
-			<grant type="Spell" level="9" id="ID_PHB_SPELL_DISPEL_MAGIC" />
-			<grant type="Spell" level="13" id="ID_PHB_SPELL_COMPULSION" />
-			<grant type="Spell" level="13" id="ID_PHB_SPELL_BANISHMENT" />
-			<grant type="Spell" level="17" id="ID_PHB_SPELL_HOLD_MONSTER" />
-			<grant type="Spell" level="17" id="ID_PHB_SPELL_WALL_OF_FORCE" />
+			<grant type="Spell" prepared="true" spellcasting="Paladin" level="3" id="ID_PHB_SPELL_FAERIE_FIRE" />
+			<grant type="Spell" prepared="true" spellcasting="Paladin" level="3" id="ID_PHB_SPELL_SHIELD" />
+			<grant type="Spell" prepared="true" spellcasting="Paladin" level="5" id="ID_PHB_SPELL_SEE_INVISIBILITY" />
+			<grant type="Spell" prepared="true" spellcasting="Paladin" level="5" id="ID_PHB_SPELL_MOONBEAM" />
+			<grant type="Spell" prepared="true" spellcasting="Paladin" level="9" id="ID_PHB_SPELL_DAYLIGHT" />
+			<grant type="Spell" prepared="true" spellcasting="Paladin" level="9" id="ID_PHB_SPELL_DISPEL_MAGIC" />
+			<grant type="Spell" prepared="true" spellcasting="Paladin" level="13" id="ID_PHB_SPELL_COMPULSION" />
+			<grant type="Spell" prepared="true" spellcasting="Paladin" level="13" id="ID_PHB_SPELL_BANISHMENT" />
+			<grant type="Spell" prepared="true" spellcasting="Paladin" level="17" id="ID_PHB_SPELL_HOLD_MONSTER" />
+			<grant type="Spell" prepared="true" spellcasting="Paladin" level="17" id="ID_PHB_SPELL_WALL_OF_FORCE" />
 		</rules>
 	</element>
 	<element name="Channel Divinity" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_TIRMAR_CD">

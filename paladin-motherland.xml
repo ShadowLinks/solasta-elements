@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="paladin-motherland.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/paladin-motherland.xml" />
 		</update>
 	</info>
@@ -59,16 +59,16 @@
 			<description></description>
 		</sheet>
 		<rules>
-			<grant type="Spell" level="3" id="ID_PHB_SPELL_BANE" />
-			<grant type="Spell" level="3" id="ID_PHB_SPELL_BURNING_HANDS" />
-			<grant type="Spell" level="5" id="ID_PHB_SPELL_BRANDING_SMITE" />
-			<grant type="Spell" level="5" id="ID_PHB_SPELL_SCORCHING_RAY" />
-			<grant type="Spell" level="9" id="ID_PHB_SPELL_FIREBALL" />
-			<grant type="Spell" level="9" id="ID_PHB_SPELL_PROTECTION_FROM_ENERGY" />
-			<grant type="Spell" level="13" id="ID_PHB_SPELL_WALL_OF_FIRE" />
-			<grant type="Spell" level="13" id="ID_PHB_SPELL_STONESKIN" />
-			<grant type="Spell" level="17" id="ID_PHB_SPELL_FLAME_STRIKE" />
-			<grant type="Spell" level="17" id="ID_PHB_SPELL_WALL_OF_STONE" />
+			<grant type="Spell" prepared="true" spellcasting="Paladin" level="3" id="ID_PHB_SPELL_BANE" />
+			<grant type="Spell" prepared="true" spellcasting="Paladin" level="3" id="ID_PHB_SPELL_BURNING_HANDS" />
+			<grant type="Spell" prepared="true" spellcasting="Paladin" level="5" id="ID_PHB_SPELL_BRANDING_SMITE" />
+			<grant type="Spell" prepared="true" spellcasting="Paladin" level="5" id="ID_PHB_SPELL_SCORCHING_RAY" />
+			<grant type="Spell" prepared="true" spellcasting="Paladin" level="9" id="ID_PHB_SPELL_FIREBALL" />
+			<grant type="Spell" prepared="true" spellcasting="Paladin" level="9" id="ID_PHB_SPELL_PROTECTION_FROM_ENERGY" />
+			<grant type="Spell" prepared="true" spellcasting="Paladin" level="13" id="ID_PHB_SPELL_WALL_OF_FIRE" />
+			<grant type="Spell" prepared="true" spellcasting="Paladin" level="13" id="ID_PHB_SPELL_STONESKIN" />
+			<grant type="Spell" prepared="true" spellcasting="Paladin" level="17" id="ID_PHB_SPELL_FLAME_STRIKE" />
+			<grant type="Spell" prepared="true" spellcasting="Paladin" level="17" id="ID_PHB_SPELL_WALL_OF_STONE" />
 		</rules>
 	</element>
 	<element name="Channel Divinity" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_CD">
