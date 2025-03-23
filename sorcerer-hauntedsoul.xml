@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="sorcerer-hauntedsoul.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/sorcerer-hauntedsoul.xml" />
 		</update>
 	</info>
@@ -46,16 +46,16 @@
 			<description>>Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an enchantment or a necromancy spell from the sorcerer, warlock, or wizard spell list, and it becomes a sorcerer spell for you.</description>
 		</sheet>
 		<rules>
-			<grant type="Spell" level="1" id="ID_PHB_SPELL_BANE" />
-			<grant type="Spell" level="1" id="ID_PHB_SPELL_INFLICT_WOUNDS" />
-			<grant type="Spell" level="3" id="ID_PHB_SPELL_ENTHRALL" />
-			<grant type="Spell" level="3" id="ID_PHB_SPELL_RAY_OF_ENFEEBLEMENT" />
-			<grant type="Spell" level="5" id="ID_PHB_SPELL_ANIMATE_DEAD" />
-			<grant type="Spell" level="5" id="ID_PHB_SPELL_BESTOW_CURSE" />
-			<grant type="Spell" level="7" id="ID_PHB_SPELL_COMPULSION" />
-			<grant type="Spell" level="7" id="ID_PHB_SPELL_PHANTASMAL_KILLER" />
-			<grant type="Spell" level="9" id="ID_PHB_SPELL_DREAM" />
-			<grant type="Spell" level="9" id="ID_PHB_SPELL_GEAS" />
+			<grant type="Spell" spellcasting="Sorcerer" level="1" id="ID_PHB_SPELL_BANE" />
+			<grant type="Spell" spellcasting="Sorcerer" level="1" id="ID_PHB_SPELL_INFLICT_WOUNDS" />
+			<grant type="Spell" spellcasting="Sorcerer" level="3" id="ID_PHB_SPELL_ENTHRALL" />
+			<grant type="Spell" spellcasting="Sorcerer" level="3" id="ID_PHB_SPELL_RAY_OF_ENFEEBLEMENT" />
+			<grant type="Spell" spellcasting="Sorcerer" level="5" id="ID_PHB_SPELL_ANIMATE_DEAD" />
+			<grant type="Spell" spellcasting="Sorcerer" level="5" id="ID_PHB_SPELL_BESTOW_CURSE" />
+			<grant type="Spell" spellcasting="Sorcerer" level="7" id="ID_PHB_SPELL_COMPULSION" />
+			<grant type="Spell" spellcasting="Sorcerer" level="7" id="ID_PHB_SPELL_PHANTASMAL_KILLER" />
+			<grant type="Spell" spellcasting="Sorcerer" level="9" id="ID_PHB_SPELL_DREAM" />
+			<grant type="Spell" spellcasting="Sorcerer" level="9" id="ID_PHB_SPELL_GEAS" />
 		</rules>
 	</element>
 	<element name="A Helping Hand" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_SORCERER_HAUNTEDSOUL_A_HELPING_HAND">
