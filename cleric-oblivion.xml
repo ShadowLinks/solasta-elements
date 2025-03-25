@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.2">
+		<update version="0.0.3">
 			<file name="cleric-oblivion.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/cleric-oblivion.xml" />
 		</update>
 	</info>
