@@ -53,7 +53,7 @@
         <rules>
             <grant type="Spell" level="1" id="ID_PHB_SPELL_SLEEP" spellcasting="Cleric" prepared="true" />
             <grant type="Spell" level="1" id="ID_PHB_SPELL_INFLICT_WOUNDS" spellcasting="Cleric" prepared="true" />
-            <grant type="Spell" level="3" id="ID_PHB_SPELL_CALM_EMOTIONS"spellcasting="Cleric" prepared="true"  />
+            <grant type="Spell" level="3" id="ID_PHB_SPELL_CALM_EMOTIONS" spellcasting="Cleric" prepared="true"  />
             <grant type="Spell" level="3" id="ID_PHB_SPELL_SILENCE" spellcasting="Cleric" prepared="true" />
             <grant type="Spell" level="5" id="ID_PHB_SPELL_REMOVE_CURSE" spellcasting="Cleric" prepared="true" />
             <grant type="Spell" level="5" id="ID_PHB_SPELL_SPEAK_WITH_DEAD" spellcasting="Cleric" prepared="true" />
