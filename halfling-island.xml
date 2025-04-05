@@ -21,7 +21,8 @@
         <rules>
             <stat name="charisma" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
             <select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Island Halfling)" supports="Custom Ability Score Increase 1" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
-			<stat name="acrobatics:proficiency" value="proficiency" bonus="double"/>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ACROBATICS" />
+            <stat name="acrobatics:proficiency" value="proficiency" bonus="double" />
         </rules>
     </element>
 </elements>

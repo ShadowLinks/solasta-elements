@@ -70,7 +70,8 @@
 		</sheet>
         <rules>
             <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
-			<stat name="intimidation:proficiency" value="proficiency" bonus="double"/>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" />
+			<stat name="intimidation:proficiency" value="proficiency" value="proficiency" bonus="double" />
         </rules>
 	</element>
 	<element name="Unyielding Enforcer" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_LAW_DOMAIN_UNYIELDING_ENFORCER">

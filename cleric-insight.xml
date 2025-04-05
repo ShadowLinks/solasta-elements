@@ -69,7 +69,8 @@
 			<description></description>
 		</sheet>
         <rules>
-			<stat name="insight:proficiency" value="proficiency" bonus="double"/>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
+			<stat name="insight:proficiency" value="proficiency" bonus="double" />
             <select type="Proficiency" name="Proficiency, Divine Intuition" supports="ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_INTIMIDATION|ID_PROFICIENCY_SKILL_PERSUASION|ID_PROFICIENCY_SKILL_PERFORMANCE"  number="2"/>
         </rules>
 	</element>
