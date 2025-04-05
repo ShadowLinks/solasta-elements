@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <elements>
     <info>
-        <update version="0.0.1">
+        <update version="0.0.2">
             <file name="halfling-island.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/halfling-island.xml" />
         </update>
     </info>
@@ -21,7 +21,7 @@
         <rules>
             <stat name="charisma" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
             <select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Island Halfling)" supports="Custom Ability Score Increase 1" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
-            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ACROBATICS" bonus="double"/>
+			<stat name="acrobatics:proficiency" value="proficiency" bonus="double"/>
         </rules>
     </element>
 </elements>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.2">
+		<update version="0.0.3">
 			<file name="cleric-insight.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/cleric-insight.xml" />
 		</update>
 	</info>
@@ -69,7 +69,7 @@
 			<description></description>
 		</sheet>
         <rules>
-            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" bonus="double" />
+			<stat name="insight:proficiency" value="proficiency" bonus="double"/>
             <select type="Proficiency" name="Proficiency, Divine Intuition" supports="ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_INTIMIDATION|ID_PROFICIENCY_SKILL_PERSUASION|ID_PROFICIENCY_SKILL_PERFORMANCE"  number="2"/>
         </rules>
 	</element>
