@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.3">
+		<update version="0.0.4">
 			<file name="cleric-law.xml" url="https://raw.githubusercontent.com/ShadowLinks/solasta-elements/refs/heads/main/cleric-law.xml" />
 		</update>
 	</info>
@@ -71,7 +71,7 @@
         <rules>
             <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
 			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" />
-			<stat name="intimidation:proficiency" value="proficiency" value="proficiency" bonus="double" />
+			<stat name="intimidation:proficiency" value="proficiency" bonus="double" />
         </rules>
 	</element>
 	<element name="Unyielding Enforcer" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_CLERIC_LAW_DOMAIN_UNYIELDING_ENFORCER">
