@@ -93,7 +93,7 @@
 		<sheet usage="Channel Divinity">
 			<description>As an action, you can use your Channel Divinity to make fire spurt from the ground and envelop a creature you can see within 30 feet of you. The target rolls a Dexterity saving throw, taking 2d6 + your paladin level of fire damage on a failed save, or half as much damage on a successful one. After a failed save, a target is also engulfed in flames for up to 1 minute, taking your paladin level in fire damage at the start of each of its turns. A creature can use an action on its turn to extinguish the flames.</description>
 		</sheet>
-	</element>>
+	</element>
 	<element name="Fiery Presence" type="Archetype Feature" source="Solasta" id="ID_SOLASTA_ARCHETYPE_FEATURE_PALADIN_MOTHERLAND_CD_PRESENCE">
 		<description>
 			<p></p>
